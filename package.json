@@ -1,0 +1,24 @@
+{
+  "name": "cs103project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndersonBlanco/CS103Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AndersonBlanco/CS103Project/issues"
+  },
+  "homepage": "https://github.com/AndersonBlanco/CS103Project#readme",
+  "dependencies": {
+    "stripe": "^20.4.1"
+  }
+}
