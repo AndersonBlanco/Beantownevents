@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/AndersonBlanco/CS103Project#readme",
   "dependencies": {
-    "stripe": "^20.4.1"
+    "create-next-app": "^16.2.1"
   }
 }
