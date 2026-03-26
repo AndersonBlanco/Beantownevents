@@ -1,0 +1,19 @@
+table{ 
+
+}
+table th{ 
+  border-bottom: solid black 2px;
+    padding: 0px 10px;
+}
+
+table th:not(:last-child){ 
+    border-right: solid black 2px; 
+}
+
+table td:not(:last-child){ 
+    border-right: solid black 2px; 
+}
+table td{
+    padding: 0px 10px;
+
+}
