@@ -1,7 +1,8 @@
 export default class Event{
-    constructor(type, title, description, extras = Object()){
+    constructor(type, title, description, image = null, extras = Object()){
         this.title = title; 
-        this.description = description; 
+        this.description = description;
+        this.image = image;  
         this.extras = extras; //an object dType; will be displayed in a table 
     }
 
@@ -30,6 +31,7 @@ export default class Event{
     render(){
         return( 
             <div >
+                {this.image ? <img src = {this.image}/> : null}
                 <h2 style = {{textDecoration:"underline"}}>{this.title}</h2>
                 <h3>{this.description}</h3>
                 {
