@@ -17,16 +17,3 @@ table td{
     padding: 0px 10px;
 
 }
-
-
-.homeContainer{
-    background-color: rgb(0, 0, 0);
-    justify-content: center;
-    display:flex; 
-    flex-direction:column; 
-
-   height: 100vh;
-
-    
-}
-

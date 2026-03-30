@@ -2,7 +2,7 @@ export default class Event{
     constructor(type, title, description, image = null, extras = Object()){
         this.title = title; 
         this.description = description;
-        this.image = image;  
+        this.image = "https://plus.unsplash.com/premium_photo-1689530775582-83b8abdb5020?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tJTIwcGVyc29ufGVufDB8fDB8fHww"; 
         this.extras = extras; //an object dType; will be displayed in a table 
     }
 
@@ -31,7 +31,11 @@ export default class Event{
     render(){
         return( 
             <div >
-                {this.image ? <img src = {this.image}/> : null}
+                {this.image ? <img style = {{ 
+                    height: 100, 
+                    width: "auto", 
+                    
+                }} src = {this.image}/> : null}
                 <h2 style = {{textDecoration:"underline"}}>{this.title}</h2>
                 <h3>{this.description}</h3>
                 {

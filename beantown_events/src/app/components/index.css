@@ -1,0 +1,97 @@
+/*HEADER:*/
+header{
+    padding: 0px; 
+    justify-content: center; 
+    display: block; 
+    overflow: hidden; 
+    align-items: center;
+
+    border-bottom: solid rgba(0,0,0,.1) calc((1vw + 1vh)*0.1); 
+}
+header ul{
+    display: flex; 
+    position: absolute; 
+    flex-direction: row; 
+    align-content: center; 
+    gap: 10vw; 
+    list-style-type: none; 
+    margin:0px; 
+    background-color: rgb(63, 63, 63); 
+    width: 100%; 
+    justify-content: center;
+    padding-block: 1vh; 
+    z-index: 2;
+
+}
+
+
+header ul li h1{
+    font-size: calc((1vw + 1vh)*1);
+    font-weight: 200; 
+    color: white;
+}
+
+
+.logoPlaceholder{ 
+    background-color: rgb(74, 56, 215); 
+    height: 75px; 
+    width: 75px; 
+    position: absolute; 
+    left: 5%; 
+    z-index: 5; 
+}
+/*HEADER's embedded custom Google Map*/
+
+.customMapContainer{
+    display: flex;
+    position: relative;
+    justify-content: center;
+
+    top: 0vh; 
+   height: 90vh; 
+    width: 100vw; 
+    overflow: hidden;
+    background-color: rgba(0, 128, 0, 0);
+
+
+}
+
+.customMapContainer iframe{ 
+ 
+      height: inherit; 
+      width: inherit; 
+    overflow: hidden;
+    object-fit: fill; 
+
+
+
+
+ 
+    
+}
+
+.mapOverlay{
+    height: inherit; 
+    width: inherit; 
+    background-color: rgba(0, 0, 0, 0.25);
+    transition-duration: 1s;
+    z-index: 0;  
+}
+
+
+/*FOOTER:*/
+
+footer{
+    
+    bottom: 0px; 
+    position: fixed; 
+    justify-content: center;
+    display: flex;
+    width: 100%; 
+    background-color: rgb(68, 68, 68);
+    color: white; 
+}
+
+
+
+

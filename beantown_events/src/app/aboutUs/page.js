@@ -2,17 +2,22 @@
 import { createCheckoutSessionAction } from "../../libs/stripe/stripe";
 import Event from "@/dataModels/events";
 import "../globals.css"
-
-
 import "./index.css"
 
-export default function Home() {
-  return (
-    
-        <div className="homeContainer"> 
+export default function AboutUs() {
 
-       <h1>Welcome to Beantown Events!</h1>
+
+
+  return (
+
+        
+      <div className={{/* styles.className */}}> 
+      <h1>About Us</h1>
+
 
       </div>
+     
+
+  
   );
 }

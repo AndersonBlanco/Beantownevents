@@ -1,0 +1,75 @@
+.mapMenuOverlay{
+    position: absolute;
+    right: 0px; 
+
+    transition-duration: 1s;
+    height: 100%;
+
+}
+
+.menuIcon{
+   
+}
+
+.backIcon{
+    position: relative; 
+    height: calc((1vw + 1vh)*1); 
+    width: calc((1vw + 1vh)*1); 
+    left: -10px; 
+    z-index: 100; 
+cursor: pointer; 
+color: white;
+
+
+
+
+}
+
+
+.sideMenuOverlay{
+     background-color: rgba(0, 0, 0, 0.555); 
+     height: 100%; 
+     padding-top: 15vh; 
+     width: 12vw; 
+     margin: 0px; 
+     position: relative;
+     text-align: center; 
+     justify-content: center;
+     display: block; 
+    transition-duration: 1s; 
+    padding-inline: 24px; 
+    color: white; 
+    text-align: left;
+
+
+
+}
+
+.sideMenuContentBlock{
+    padding-top: 50px; 
+}
+
+.sideMenuContentBlock  ul{
+    list-style-type: none; 
+    padding: 0px; 
+    margin: 0px; 
+    position: relative;
+    background-color:transparent;
+    display: flex;
+    flex-direction: column;
+    font-size: calc((1vw + 1vh)*0.8);
+    align-items: left;
+    gap: 10px;
+    
+
+}
+
+
+.filterOptionContainer {
+         justify-content: space-between;
+         display: flex;
+
+}
+
+
+ 
