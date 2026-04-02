@@ -15,8 +15,8 @@ function getStripe() {
   return stripeClient;
 }
 
-const success_url = "https://google.com"
-const cancel_url = "https://youtube.com"
+const success_url = process.env.SUCCESS_URL
+const cancel_url = process.env.CANCEL_URL
 
 async function createCheckoutSession({ priceId, quantity=1 }) {
   const stripe = getStripe();
