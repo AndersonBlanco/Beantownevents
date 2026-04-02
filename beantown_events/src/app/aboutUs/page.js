@@ -5,19 +5,17 @@ import "../globals.css"
 import "./index.css"
 
 export default function AboutUs() {
-
-
-
   return (
+        <>
 
-        
-      <div className={{/* styles.className */}}> 
+         <div> 
       <h1>About Us</h1>
-
-
       </div>
      
 
+        
+        </>
+     
   
   );
 }

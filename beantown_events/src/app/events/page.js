@@ -40,7 +40,7 @@ export default function Events() {
       <div className={{/* styles.className */}}>
       <h1>Hello Home</h1>
 
-      <CheckoutButton priceId={"price_1TDL4ZK0qyE7igDrcoYLZCUP"}/>
+      <CheckoutButton priceId={"price_1THnbpHo5oc8DhhwZWBpyK5X"}/>
 
       <hr/>
       <h1>Sample Event: </h1>

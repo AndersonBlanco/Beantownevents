@@ -28,7 +28,7 @@ const pathName = usePathname();
 
             }}>Events</h1></li>
             <li><h1 onClick = {() =>{
-                route.push("/about")
+                route.push("/aboutUs")
 
             }}>AboutUs</h1></li>
 
