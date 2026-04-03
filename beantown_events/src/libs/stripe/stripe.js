@@ -14,6 +14,7 @@ function getStripe() {
   }
   return stripeClient;
 }
+ 
 
 const success_url = process.env.SUCCESS_URL
 const cancel_url = process.env.CANCEL_URL
