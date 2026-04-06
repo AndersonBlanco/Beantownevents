@@ -239,7 +239,7 @@ document.getElementById("search-input").addEventListener("keyup", function () {
                                 <button className="expand-btn">Expand</button>
                             </div>
                             <div className="card-right">
-                                <Image src={jcole} alt="J.Cole" className="artist-photo"/>
+                                <Image loading = "eager"src={jcole} alt="J.Cole" className="artist-photo"/>
                             </div>
                         </div>
                         <div >
@@ -253,7 +253,7 @@ document.getElementById("search-input").addEventListener("keyup", function () {
                                 <button className="btn-secondary seating-btn"> See Seating Chart</button>
                             </div>
                             <div >
-                                <Image src={tdgarden_chart_jcole} alt="Seating Chart for J. Cole" className="seating-Image"/>
+                                <Image loading = "eager"src={tdgarden_chart_jcole} alt="Seating Chart for J. Cole" className="seating-Image"/>
                             </div>
                         </div>
                     </div>
@@ -274,7 +274,7 @@ document.getElementById("search-input").addEventListener("keyup", function () {
                                 <button className="expand-btn">Expand</button>
                             </div>
                             <div className="card-right">
-                                <Image src={th_fray} alt="The Fray" className="artist-photo"/>
+                                <Image loading = "eager"src={th_fray} alt="The Fray" className="artist-photo"/>
                             </div>
                         </div>
                         <div >
@@ -290,7 +290,7 @@ document.getElementById("search-input").addEventListener("keyup", function () {
                                 <button className="btn-secondary seating-btn"> See Seating Chart</button>
                             </div>
                             <div >
-                                <Image src={lbp_chart} alt="Seating Chart for The Fray" className="seating-Image"/>
+                                <Image loading = "eager"src={lbp_chart} alt="Seating Chart for The Fray" className="seating-Image"/>
                             </div>
                         </div>
                     </div>
@@ -311,7 +311,7 @@ document.getElementById("search-input").addEventListener("keyup", function () {
                                 <button className="expand-btn">Expand</button>
                             </div>
                             <div className="card-right">
-                                <Image src={boone}alt="Benson Boone" className="artist-photo"/>
+                                <Image loading = "eager"src={boone}alt="Benson Boone" className="artist-photo"/>
                             </div>
                         </div>
                         <div >
@@ -325,7 +325,7 @@ document.getElementById("search-input").addEventListener("keyup", function () {
                                 <button className="btn-secondary seating-btn"> See Seating Chart</button>
                             </div>
                             <div >
-                                <Image src={tdgarden_chart_boone} alt="Seating Chart for Benson Boone"
+                                <Image loading = "eager"src={tdgarden_chart_boone} alt="Seating Chart for Benson Boone"
                                      className="seating-Image"/>
                             </div>
                         </div>
@@ -347,7 +347,7 @@ document.getElementById("search-input").addEventListener("keyup", function () {
                                 <button className="expand-btn">Expand</button>
                             </div>
                             <div className="card-right">
-                                <Image src={zachbryan} alt="Zach Bryan" className="artist-photo"/>
+                                <Image loading = "eager"src={zachbryan} alt="Zach Bryan" className="artist-photo"/>
                             </div>
                         </div>
                         <div >
@@ -363,7 +363,7 @@ document.getElementById("search-input").addEventListener("keyup", function () {
                                 <button className="btn-secondary seating-btn"> See Seating Chart</button>
                             </div> 
                             <div >
-                                <Image src={gillette_chart} alt="Seating Chart for Zach Bryan" className="seating-Image"/>
+                                <Image loading = "eager"src={gillette_chart} alt="Seating Chart for Zach Bryan" className="seating-Image"/>
                             </div>
                         </div>
                     </div>
