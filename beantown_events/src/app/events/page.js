@@ -5,20 +5,22 @@ import "./index.css"
 import "../globals.css"
 import Header from "../components/header/header";
 
-export default function Events() {
-  //js logic: 
-  
-  const CheckoutButton = ({priceId}) =>{
-    const handleCheckout = async () =>{
+export const handleCheckout = async (priceId, quantity = 1) =>{
       try {
         const { url } = await createCheckoutSessionAction({ priceId, quantity: 1 });
         window.location.href = url;
       } catch (err) {
         console.error(err);
       }
-    }
+    } 
 
-    return <button onClick = {handleCheckout}>Checkout</button>
+export default function Events() {
+  //js logic: 
+  
+  const CheckoutButton = ({priceId}) =>{
+   
+
+    return <button onClick = {() => handleCheckout(priceId)}>Checkout</button>
   }
 
   const TestEvent = new Event(

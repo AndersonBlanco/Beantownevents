@@ -11,6 +11,7 @@ import tdgarden_chart_boone from "../../src/tdgarden-chart-boone.jpg"
 import zachbryan from "../../src/zachbryan.jpg"
 import gillette_chart from "../../src/gillette-chart.jpg"
 import { useEffect } from "react"
+import { handleCheckout } from "../page";
 export default function Page(){
 
     // Jackson //
@@ -20,6 +21,11 @@ export default function Page(){
 // Shows/hides cards based on the selected category.
 // Resets all buttons to "btn" then sets the clicked one to "btn active"
 // .btn.active pattern - from W3Schools
+
+//useState variables layer: 
+
+
+
 useEffect(() =>{ 
 function filterSelection(category) {
     let cards = document.getElementsByClassName("filterDiv");
@@ -103,12 +109,12 @@ let expandBtn = document.getElementsByClassName("expand-btn");
 let seatingBtn = document.getElementsByClassName("seating-btn");
 
 // COLLAPSE ALL SECTION
-// Hides all card-details and seating-chart divs at once.
+// Hides all card-details and seating-Image divs at once.
 //Resets all expand and seating button text back to default.
 
 document.getElementById("collapse-all-btn").addEventListener("click", function () {
     let details = document.getElementsByClassName("card-details");
-    let seatingCharts = document.getElementsByClassName("seating-chart");
+    let seatingCharts = document.getElementsByClassName("seating-Image");
 
     for (let i = 0; i < details.length; i++) {
         details[i].style.display = "none";
@@ -127,13 +133,17 @@ document.getElementById("collapse-all-btn").addEventListener("click", function (
 // SEATING CHART TOGGLE
 // Button is inside card-actions inside card-details.
 // parentElement goes to card-actions, parentElement again goes to card-details,
-// then finds the seating-chart sibling div.
+// then finds the seating-Image sibling div.
 // Changes button text between "See Seating Chart" and "Hide Seating Chart".
 
 for (let i = 0; i < seatingBtn.length; i++) {
+
+
+
     seatingBtn[i].addEventListener("click", function () {
-        let chart = this.parentElement.parentElement.getElementsByClassName("seating-chart")[0];
-        if (chart.style.display === "none") {
+        let chart = this.parentElement.parentElement.getElementsByClassName("seating-Image")[0];
+        let displayStyleState = window.getComputedStyle(chart).display; //Anderson
+        if (displayStyleState === "none") {
             chart.style.display = "block";
             this.innerHTML = "Hide Seating Chart";
         } else {
@@ -151,7 +161,8 @@ for (let i = 0; i < seatingBtn.length; i++) {
 for (let i = 0; i < expandBtn.length; i++) {
     expandBtn[i].addEventListener("click", function () {
         let details = this.parentElement.parentElement.parentElement.getElementsByClassName("card-details")[0];
-        if (details.style.display === "none") {
+        let displayState = window.getComputedStyle(details).display //Anderson
+        if (displayState === "none") {
             details.style.display = "block";
             this.innerHTML = "Shrink";
         } else {
@@ -242,14 +253,14 @@ document.getElementById("search-input").addEventListener("keyup", function () {
                                 <Image loading = "eager"src={jcole} alt="J.Cole" className="artist-photo"/>
                             </div>
                         </div>
-                        <div >
+                        <div className = "card-details" >
                             <p className="concert-description">
                                 J.Cole is bringing his long-awaited tour, The Fall-Off Tour to the TD Garden and is
                                 as of now said to be his final tour ever. J.Cole is known for his deep lyricism and
                                 the energy he brings to the stage, this tour is a must-see for a Hip-Hop fan in Boston.
                             </p>
                             <div className="card-actions">
-                                <a href="">Get Tickets</a>
+                                <a style ={{cursor: "pointer"}} onClick={() => handleCheckout("price_1THnbpHo5oc8DhhwZWBpyK5X")}>Get Tickets</a>
                                 <button className="btn-secondary seating-btn"> See Seating Chart</button>
                             </div>
                             <div >
@@ -277,7 +288,7 @@ document.getElementById("search-input").addEventListener("keyup", function () {
                                 <Image loading = "eager"src={th_fray} alt="The Fray" className="artist-photo"/>
                             </div>
                         </div>
-                        <div >
+                        <div className="card-details">
                             <p className="concert-description">
                                 The Fray is a band that really made it big in the early 2000s. They are back
                                 and playing their big hits, like their song "How to Save a Life" which is 11x Platinum.
@@ -314,7 +325,7 @@ document.getElementById("search-input").addEventListener("keyup", function () {
                                 <Image loading = "eager"src={boone}alt="Benson Boone" className="artist-photo"/>
                             </div>
                         </div>
-                        <div >
+                        <div  className="card-details" >
                             <p className="concert-description">
                                 Benson Boone is a big new artist who hits the stage with a large presence.
                                 He is known for his large vocal range, flips on stage, and hit songs such as "Beautiful Things".
@@ -350,7 +361,7 @@ document.getElementById("search-input").addEventListener("keyup", function () {
                                 <Image loading = "eager"src={zachbryan} alt="Zach Bryan" className="artist-photo"/>
                             </div>
                         </div>
-                        <div >
+                        <div  className="card-details">
                             <p className="concert-description">
                                 Zach Bryan wraps up the end of the year at Gillette Stadium. His raw, honest, and
                                 emotional songwriting delivered with a powerful presence. Zach Bryan has become
