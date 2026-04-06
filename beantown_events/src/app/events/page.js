@@ -1,9 +1,9 @@
 'use client';
 import { createCheckoutSessionAction } from "../../libs/stripe/stripe";
-import Event from "@/dataModels/events";
+import Event from "@/app/dataModels/events";
 import "./index.css"
 import "../globals.css"
-import Header from "../components/header";
+import Header from "../components/header/header";
 
 export default function Events() {
   //js logic: 
@@ -34,10 +34,7 @@ export default function Events() {
 
   //html code below
   return (
-
-        <>
-
-      <div className={{/* styles.className */}}>
+      <div className="eventsContainer">
       <h1>Hello Home</h1>
 
       <CheckoutButton priceId={"price_1THnbpHo5oc8DhhwZWBpyK5X"}/>
@@ -45,9 +42,11 @@ export default function Events() {
       <hr/>
       <h1>Sample Event: </h1>
       {TestEvent.render()}
+
+
+      
       </div>
      
-</>
-  
+
   );
 }

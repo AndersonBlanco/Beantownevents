@@ -73,3 +73,6 @@ export default class Event{ //hanbdle slideSHow
 //const anivasoryEvent = new Event() 
 
 
+
+
+

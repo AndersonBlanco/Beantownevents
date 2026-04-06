@@ -1,20 +1,16 @@
 'use client';
 import { createCheckoutSessionAction } from "../../libs/stripe/stripe";
-import Event from "@/dataModels/events";
+import Event from "@/app/dataModels/events";
 import "../globals.css"
-import "./index.css"
+import "./about_us.css"
 
 export default function AboutUs() {
   return (
-        <>
-
-         <div> 
+  
+         <div className="about_us_container"> 
       <h1>About Us</h1>
       </div>
-     
-
-        
-        </>
+    
      
   
   );

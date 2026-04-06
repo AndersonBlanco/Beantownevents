@@ -1,3 +1,8 @@
+.eventsContainer{
+
+    height: 100vh; 
+
+}
 table{ 
 
 }
@@ -16,4 +21,9 @@ table td:not(:last-child){
 table td{
     padding: 0px 10px;
 
+}
+
+
+.generalEventContainer{
+    height: 100vh; 
 }
