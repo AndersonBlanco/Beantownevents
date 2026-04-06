@@ -1,0 +1,316 @@
+.card-details{
+    display: none;
+}
+
+.seating-chart{
+    display: none;
+}
+
+/*  MAIN CONTENT SECTION  */
+#main {
+    padding: 3%;
+}
+
+#concerts-heading {
+    font-size: calc(16px + .8vw);
+    color: #18206f;
+    margin-bottom: 2%;
+}
+
+/* Search Section */
+#search-area {
+    margin-bottom: 2%;
+}
+
+#search-input {
+    width: 15%;
+    padding: 1% 2%;
+    font-size: calc(10px + .3vw);
+    border: 2px solid #18206f;
+    color: #1a1a1a;
+    transition: width 0.4s ease-in-out;
+}
+
+#search-input:hover {
+    border: 2px solid #18206f;
+}
+
+#search-input:focus {
+    width: 25%;
+}
+
+/* FILTER BUTTONS */
+#myBtnContainer {
+    margin-bottom: 2%;
+}
+
+.btn {
+    border: none;
+    /* outline: none - from the webside you gave us: W3Schools
+    Removes the default browser focus outline that appears around buttons.
+    I used on all filter buttons. */
+    outline: none;
+    padding: 1% 2%;
+    background-color: #e0e0e0;
+    color: #1a1a1a;
+    cursor: pointer;
+    font-size: calc(10px + .3vw);
+    margin: .5%;
+}
+
+.btn:hover {
+    background-color: #18206f;
+    color: #ffffff;
+}
+
+.btn:active {
+    background-color: #18206f;
+    color: #ffd700;
+    padding: .85% 1.85%;
+}
+
+/*  COLLAPSE ALL BUTTON  */
+#collapse-all-btn {
+    border: none;
+    background-color: #18206f;
+    color: #ffd700;
+    padding: 1% 2%;
+    font-size: calc(10px + .3vw);
+    cursor: pointer;
+    margin-bottom: 2%;
+    margin-left: 1%;
+}
+
+#collapse-all-btn:hover {
+    background-color: #18206f;
+}
+
+#collapse-all-btn:active {
+    padding: .85% 1.85%;
+}
+
+
+/* CONTAINER FOR CARDS */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10%;
+    margin-top: 2%;
+    align-items: flex-start;
+    column-gap: 2%; 
+    row-gap: 2%; 
+
+}
+
+/* CARDS */
+.filterDiv {
+    background-color: #ffffff;
+    border: 2px solid #18206f;
+    width: 48%;
+    margin-block: 1%; 
+    display: none;
+}
+
+.card-body {
+    padding: 4%;
+}
+
+/* CARD TOP AND LEFT SECTION */
+.card-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card-left {
+    width: 55%;
+    padding-right: 3%;
+}
+
+/* CARD RIGHT SECTION */
+.artist-name {
+    font-size: calc(14px + .4vw);
+    color: #18206f;
+    margin-bottom: 1%;
+}
+
+.card-right {
+    width: 45%;
+}
+
+.tour-name {
+    font-size: calc(10px + .3vw);
+    color: #18206f;
+    margin-bottom: 3%;
+}
+
+.concert-details {
+    list-style: none;
+    font-size: calc(10px + .3vw);
+    color: #333333;
+    margin-bottom: 3%;
+    line-height: 1.8;
+}
+
+/* EXPAND BUTTON */
+.expand-btn {
+    border: none;
+    background-color: #18206f;
+    color: #FFD700;
+    padding: 2% 4%;
+    font-size: calc(10px + .3vw);
+    cursor: pointer;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.expand-btn:hover {
+    background-color: #18206f;
+}
+
+.expand-btn:active {
+    padding: 1.75% 3.75%;
+}
+
+/* PHOTOS OF ARTIST */
+.artist-photo {
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 0;
+}
+
+/* CARD DETAILS */
+.card-details {
+    margin-top: 2%;
+}
+
+.concert-description {
+    font-size: calc(10px + .3vw);
+    color: #555555;
+    line-height: 1.6;
+    margin-bottom: 4%;
+}
+
+/* CARD ACTIONS */
+.card-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card-actions a {
+    padding: 2% 4%;
+    background-color: #ffd700;
+    color: #18206f;
+    text-decoration: none;
+    font-size: calc(10px + .3vw);
+    font-weight: bold;
+    margin-right: 2%;
+}
+
+.card-actions a:link {
+}
+
+.card-actions a:visited {
+}
+
+.card-actions a:hover {
+    background-color: #18206f;
+    color: #ffd700;
+}
+
+.card-actions a:active {
+    padding: 1.85% 3.85%;
+}
+
+/* SECONDARY BUTTON (Seating chart) */
+.btn-secondary {
+    padding: 2% 4%;
+    background-color: #ffffff;
+    color: #18206f;
+    border: 2px solid #18206f;
+    font-size: calc(10px + .3vw);
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background-color: #18206f;
+    color: #ffffff;
+}
+
+/* SEATING CHART */
+.seating-chart {
+    margin-top: 3%;
+}
+
+/*
+.seating-img  {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+    */
+
+
+.seating-Image, .seating-img {
+    width: 100%; 
+    height: auto;
+       object-fit: contain;
+}
+
+/* SELLING FAST SECTION */
+#selling-fast {
+    background-color: #18206f;
+    padding: 3%;
+    margin-bottom: 3%;
+}
+
+#selling-fast h2 {
+    font-size: calc(14px + .5vw);
+    color: #ffd700;
+    margin-bottom: 2%;
+}
+
+#selling-fast-choice h3 {
+    font-size: calc(12px + .4vw);
+    color: #ffffff;
+    margin-bottom: 1%;
+}
+
+#selling-fast-choice p {
+    font-size: calc(10px + .3vw);
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 2%;
+}
+
+#selling-fast-choice a {
+    padding: 1% 3%;
+    background-color: #ffd700;
+    color: #18206f;
+    border: none;
+    font-size: calc(10px + .3vw);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#selling-fast-choice a:link {
+}
+
+#selling-fast-choice a:visited {
+}
+
+#selling-fast-choice a:hover {
+    background-color: #ffffff;
+}
+
+#selling-fast-choice a:active {
+    padding: .85% 2.85%;
+}
+
+
+
+
