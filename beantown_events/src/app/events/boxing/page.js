@@ -3,7 +3,7 @@ import "./boxing.css"
 import NewEnglandSilverGloves from "../../src/boxing/NewEnglandSIlverGlovesImg1.jpg"; 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 export default function Page(){
     const router = useRouter(); 
 
@@ -108,7 +108,7 @@ export default function Page(){
     ];
 
 
-    //used Gemini to egnetate fdummy filters 
+    //used Gemini to egnetate fdummy filters
     const [filters, setFilters] = useState([
         {
             title: "Region",
@@ -187,53 +187,42 @@ export default function Page(){
     ]);
      
     const [query, setQuery] = useState(""); //search arguemnt, search for title of event 
+    const [selectedFilters, setSelectedFilters] = useState([])
+    const [filteredEventTitles, set_filteredEventTitles] = useState([]); //array of event titles that match the search and filter criteria, used to determine which events to show in the UI
 
     function handleQuery(e){
-        setQuery(e.target.value); 
+        setQuery(String(e.target.value).trim().toLowerCase()); 
     }
 
-    function toggleFilterOption(filterTitle, optionLabel){
-        setFilters((prevFilters) => {
-            return prevFilters.map((filter) => {
-                if (filter.title !== filterTitle) {
-                    return filter;
+
+
+    
+    function handleFilterOptionTozggle(optionLabel){
+        setSelectedFilters((prevSelectedFilters) => {
+
+            Events.map((event) =>{
+                if(event.attributes.includes(optionLabel)){
+                    if(!filteredEventTitles.includes(event.title)){
+                        set_filteredEventTitles((prevFilteredEventTitles) => [...prevFilteredEventTitles, event.title])
+                    }else{
+                         set_filteredEventTitles((prevFilteredEventTitles) => prevFilteredEventTitles.filter((title) => title !== event.title))
+                    }
                 }
+            })
 
-                return {
-                    ...filter,
-                    options: filter.options.map((option) => {
-                        if (option.label !== optionLabel) {
-                            return option;
-                        }
-
-                        return { ...option, selected: !option.selected };
-                    }),
-                };
-            });
-        });
+            if (prevSelectedFilters.includes(optionLabel)) {
+                return prevSelectedFilters.filter((label) => label !== optionLabel);
+            }
+            return [...prevSelectedFilters, optionLabel];
+        })
+      
     }
 
-    const selectedOptions = filters.flatMap((filter) => {
-        return filter.options
-            .filter((option) => option.selected) //returns array of filters for which the attribute selected is set to true since user selected them
-            .map((option) => option.label); //terate through the array
-    });
-
-    const cleaned_query = query.trim().toLowerCase(); //trim gets rid of white space around the string
-    const hasQuery = cleaned_query.length > 0;
-    const hasSelectedFilters = selectedOptions.length > 0;
-
-    const filteredEvents = Events.filter((itm) => { //returns filtered array
-        if (!hasQuery && !hasSelectedFilters) {
-            return true;
-        }
-
-        const matchesQuery = hasQuery && itm.title.toLowerCase().includes(cleaned_query);
-        const matchesFilters = hasSelectedFilters && selectedOptions.some((option) => itm.attributes.includes(option));
-
-        return matchesQuery || matchesFilters;
-    });
-
+    useEffect(() =>{
+        console.log(
+            selectedFilters
+        )
+    }, [selectedFilters])
 
        
     return(
@@ -258,7 +247,7 @@ export default function Page(){
                                     filter.options.map((option) => {
                                         return (
                                             <div className = "filter_checbox_row" key = {`${filter.title}-${option.label}`}>
-                                            <label>{option.label}</label><input type = "checkbox" checked = {option.selected} onChange = {() => toggleFilterOption(filter.title, option.label)} />
+                                            <label>{option.label}</label><input type = "checkbox" checked = {selectedFilters.includes(option.label)} onChange = {() => handleFilterOptionTozggle(option.label)} />
                                             </div>
                                         )
                                     })
@@ -274,16 +263,27 @@ export default function Page(){
         <div className = "events">
 
 {
-    filteredEvents.map((itm, idx) =>{
-            return(
-                <div key = {idx} className = "item_container" onClick = {() => router.push("/events/boxing/boxingEventViewer")}>
-                <Image className = "img" src = {itm.img} alt = {`${itm.title} event image`}/>
-                <h1>{itm.title}</h1>
-                <h4>{itm.date}</h4>
+  Events.map((event, idx) =>{
+    if(filteredEventTitles.length === 0){
+        return <div key = {idx} className = "item_container" onClick = {() => router.push("/events/boxing/boxingEventViewer")}>
+                    <Image className = "img" src = {event.img} alt = {`${event.title} event image`}/>
+                    <h1>{event.title}</h1>
+                    <h4>{event.date}</h4>
+
+                    </div>
+    }
+
+  if(filteredEventTitles.includes(event.title)){
+    return <div key = {idx} className = "item_container" onClick = {() => router.push("/events/boxing/boxingEventViewer")}>
+                <Image className = "img" src = {event.img} alt = {`${event.title} event image`}/>
+                <h1>{event.title}</h1>
+                <h4>{event.date}</h4>
 
                 </div>
-            )
-    })
+  }
+  })
+
+
 }
 
         </div>
