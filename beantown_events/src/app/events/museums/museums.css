@@ -1,4 +1,347 @@
-.prev, .next{ 
-    height: 100vh; 
-    width: 100vh;
+/* Jackson */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+/*  HEADER SECTION */
+header {
+    background-color: #18206f;
+    padding: 2% 3%;
+}
+
+#logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#site-logo {
+    width: 8%;
+    object-fit: contain;
+    margin-right: 2%;
+}
+
+#site-title h1 {
+    font-size: calc(16px + 1.2vw);
+    color: #d88373;
+}
+
+#slogan {
+    font-size: calc(10px + 0.4vw);
+    color: #f5e2c8;
+}
+
+/*  NAV SECTION */
+nav {
+    background-color: #18206f;
+    padding: 0 3%;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+nav ul li {
+    display: block;
+    padding: 1% 2%;
+    color: #ffffff;
+    font-size: calc(10px + .4vw);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f5e2c8;
+}
+
+nav ul li a:link {
+}
+
+nav ul li a:visited {
+}
+
+nav ul li a:hover {
+    background-color: #d88373;
+    color: #50190f;
+}
+
+nav ul li a:active {
+    color: #f5e2c8;
+    font-size: calc(10px + .38vw);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #50190f;
+    z-index: 1;
+    border: 2px solid #d88373;
+    border-top: none;
+    min-width: 180px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 4% 6%;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: calc(10px + .4vw);
+    border-bottom: 1px solid #d88373;
+}
+
+.dropdown-content a:link {
+}
+
+.dropdown-content a:visited {
+}
+
+.dropdown-content a:hover {
+    background-color: #50190f;
+    color: #d88373;
+}
+
+.dropdown-content a:active {
+    padding: 3% 5%;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* slideshow INFO FROM w3SCHOOLS*/
+    .slideshow-container {
+        max-width: 70%;
+        position: relative;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center ;
+    }
+
+    .slideshow-container img {
+        max-width: 100%;
+        object-fit: cover;
+
+    }
+
+    /* hides images by default until activated with click on js */
+    .mySlides {
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* advances photos one slide to next */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 2%;
+        color: white;
+        font-weight: bold;
+        font-size: calc(10px + .4vw);
+        transition: 0.6s ease;
+        border-radius: 0 2% 2% 0;
+        user-select: none;
+    }
+
+    /* next button to advance to next photo */
+    .next {
+        right: 0;
+        border-radius: 2% 0 0 2%;
+    }
+
+    /* Caption text */
+    .text {
+        color: #f2f2f2;
+        font-size: calc(10px + .4vw);
+        padding: 1% 8%;
+        position: absolute;
+        bottom: 3%;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+        color: #f2f2f2;
+        font-size: calc(10px + .4vw);
+        padding: 2% 2%;
+        position: absolute;
+        top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    #dots{
+        text-align: center;
+        margin-bottom: 1%;
+    }
+
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+
+
+/*  MAIN CONTENT SECTION  */
+#main {
+    padding: 3%;
+}
+
+.museum-heading {
+    font-size: calc(16px + .8vw);
+    color: #18206f;
+    margin: 2%;
+}
+
+/* CONTAINER FOR CARDS */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5%;
+    margin-top: 2%;
+    align-items: flex-start;
+}
+
+/* CARDS */
+.allcards {
+    background-color: #f5e2c8;
+    border: 2px solid #d88373;
+    width: 48%;
+    margin: 1%;
+    display: block;
+}
+
+.card-body {
+    padding: 4%;
+}
+
+/* CARD TOP AND LEFT SECTION */
+.card-inside {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card-left {
+    width: 55%;
+    padding-right: 3%;
+}
+
+/* CARD RIGHT SECTION */
+.museum-name {
+    font-size: calc(14px + .4vw);
+    color: #18206f;
+    margin-bottom: 1%;
+}
+
+.card-right {
+    width: 45%;
+}
+
+.museum-details {
+    list-style: none;
+    font-size: calc(10px + .3vw);
+    color: #333333;
+    margin-bottom: 3%;
+    line-height: 1.8;
+}
+
+/* EXPAND BUTTON taken from w3schools' collapse tutorial*/
+.collapsible {
+    border: none;
+    background-color: #18206f;
+    color: #f5e2c8;
+    padding: 2% 4%;
+}
+
+.collapsible-content {
+    font-size: calc(10px + .3vw);
+    cursor: pointer;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: none;
+    overflow: hidden;
+}
+
+.collapsible:hover {
+    background-color: #d88373;
+}
+
+.collapsible:active {
+    padding: 1.75% 3.75%;
+}
+
+/* PHOTOS OF MUSEUM */
+.museum-photo {
+    max-width: 100%;
+    height: 20vw;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 0;
+}
+
+/* FOOTER SECTION */
+footer {
+    background-color: #18206f;
+    text-align: center;
+    line-height: 2;
+    padding: 2% 3%;
+}
+
+footer p {
+    font-size: calc(10px + .3vw);
+    color: #f5e2c8;
+}
+
+footer a {
+    color: #d88373;
+    text-decoration: none;
+}
+
+footer a:link {
+}
+
+footer a:visited {
+}
+
+footer a:hover {
+    text-decoration: underline;
 }

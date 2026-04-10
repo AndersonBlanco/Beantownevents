@@ -1,0 +1,101 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    align-items: center;
+    justify-content: center;
+
+}
+
+.eventDetailContainer{
+    display: flex;
+    flex-direction: row;
+
+        background-color: transparent;
+        align-items: center;
+        justify-content: center;
+        gap: calc(10px + 2vw);
+        width: fit-content; 
+        padding-inline: 1px; 
+    
+}
+
+
+.eventDetailContainer p, .eventDetailContainer h1{
+    max-width: 90%; 
+}
+
+.eventDetailContainer h1{
+    font-size: calc(10px + 2.5vw);
+}
+
+.eventDetailContainer p{
+    font-size: calc(10px + 1vw);
+}
+
+
+.eventTextDetail{
+    display: flex; 
+    flex-direction: column;
+    text-align:left; 
+}
+
+.attributesList{
+
+    align-self:flex-start;
+    width: 100%; 
+    padding-left: 16%; 
+}
+
+.attributesList ul{
+    list-style-type: none;
+    display: flex; 
+    flex-direction: row;
+
+    font-size: medium;
+    gap: 20px; 
+}
+
+
+.attributesList ul li{
+    background-color: rgb(38, 38, 212); 
+    color: white; 
+    padding: 1px 10px; 
+    border-radius: 5px;
+    width: fit-content; 
+    text-align: center;
+
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.attributesList ul li p{
+    font-size: calc(5px + 0.5vw);
+    text-align: left;
+}
+
+.ticketSaleContainer{
+    display: flex;
+    flex-direction: row;
+
+    align-items:center;
+    justify-content: center;
+    display: flex;
+    gap: 100px
+
+
+}
+
+
+.ticketsCounter{
+        display: flex;
+    flex-direction: row;
+
+    align-items:center;
+    justify-content: center;
+    display: flex;
+    gap: 100px
+}
+

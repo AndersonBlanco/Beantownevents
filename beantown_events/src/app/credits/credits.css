@@ -1,0 +1,96 @@
+
+/* MAIN CONTEXT */
+main {
+    padding: 3%;
+    min-height: 63vh;
+}
+/* Credits Banner */
+#credits-banner {
+    background-color: #18206f;
+    text-align: center;
+    padding: 5% 3%;
+}
+
+#credits-title {
+    font-size: calc(24px + 2vw);
+    color: #ffffff;
+    margin-bottom: 2%;
+}
+
+/* Underline accent bar */
+#underline {
+    width: 10%;
+    height: 4px;
+    background-color: #222e9a;
+    margin-left: 45%;
+    margin-bottom: 2%;
+}
+
+#credits-intro {
+    font-size: calc(10px + .5vw);
+    color: #ffffff;
+}
+
+/* CREDITS SECTION */
+.credits-section {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border: 2px solid #18206f;
+}
+
+/* Collapsible button toggle */
+.collapsible-btn {
+    width: 100%;
+    padding: 2% 3%;
+    background-color: #18206f;
+    color: #ffffff;
+    border: none;
+    font-size: calc(12px + .4vw);
+    cursor: pointer;
+    text-align: left;
+}
+
+.collapsible-btn:hover {
+    background-color: #18206f;
+}
+
+.collapsible-btn:active {
+    background-color: #222e9a;
+    color: #ffffff;
+    padding: 1.85% 2.85%;
+}
+
+/* Hidden credits by default so the JS toggle will show and hide them */
+.credits-content {
+    display: none;
+    padding: 3%;
+    background-color: #f9f9f9;
+}
+
+/* Credits groups and lists */
+.credits-group {
+    margin-bottom:3%;
+}
+
+.credits-group-title {
+    font-size: calc(10px + .3vw);
+    color: #ffffff;
+    line-height: 1.8;
+    padding: 1% 2%;
+}
+
+.credit-list {
+    list-style-type: circle;
+}
+
+.credit-list li {
+    padding: 1% 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: calc(10px + .5vw);
+    font-style: italic;
+}
+
+.credit-list a {
+    text-decoration: none;
+    color: #ffffff;
+}

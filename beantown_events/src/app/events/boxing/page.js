@@ -265,7 +265,11 @@ export default function Page(){
 {
   Events.map((event, idx) =>{
     if(filteredEventTitles.length === 0){
-        return <div key = {idx} className = "item_container" onClick = {() => router.push("/events/boxing/boxingEventViewer")}>
+        return <div key = {idx} className = "item_container" onClick = {() =>{
+            //do window.localsrtorrage for cookie stored data 
+            window.localStorage.setItem("@selectedEvent", JSON.stringify(event)); 
+            router.push("/events/boxing/boxingEventViewer");
+        }}>
                     <Image className = "img" src = {event.img} alt = {`${event.title} event image`}/>
                     <h1>{event.title}</h1>
                     <h4>{event.date}</h4>
@@ -274,7 +278,12 @@ export default function Page(){
     }
 
   if(filteredEventTitles.includes(event.title)){
-    return <div key = {idx} className = "item_container" onClick = {() => router.push("/events/boxing/boxingEventViewer")}>
+    return <div key = {idx} className = "item_container"   onClick = {() =>{
+            //do window.localsrtorrage for cookie stored data 
+            window.localStorage.setItem("@selectedEvent", JSON.stringify(event)); 
+            router.push("/events/boxing/boxingEventViewer");
+        
+        }}>
                 <Image className = "img" src = {event.img} alt = {`${event.title} event image`}/>
                 <h1>{event.title}</h1>
                 <h4>{event.date}</h4>
@@ -293,3 +302,6 @@ export default function Page(){
         </>
     )
 }
+
+//iNlclude different layout for events 
+

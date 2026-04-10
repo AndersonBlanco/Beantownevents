@@ -10,6 +10,7 @@ import train from "../../src/museums/train.jpg"
 import { useEffect, useState } from "react";
 import "../index.css"
 
+import "./museums.css"
 
 export default function Page(){
 
@@ -48,17 +49,17 @@ for (i = 0; i < coll.length; i++) {
 
     let slides = [ 
         <>
-                    <a href="../credits/credits.html"><Image height = {50} width = {50} src={BostonCommon} alt="A dusktime painting of the Boston Common
+                    <a href="../credits/credits.html"><Image height = {"auto"} width = {500} src={BostonCommon} alt="A dusktime painting of the Boston Common
             by Childe Hassam"/></a>
             <div className="text">At Dusk (Boston Common at Twilight) by Childe Hassam at the MFA</div>
             </>,
 <>
-  <a href="../credits/credits.html"><Image src={eljaleo} height = {50} width = {50}
+  <a href="../credits/credits.html"><Image src={eljaleo} height = {"auto"} width = {500}
             alt="A painting of a Spanish Flamenco dancer by John Singer Sargent"/></a>
             <div className="text">El Jaleo by John Singer Sargent at the ISG</div>
 </>,
 <>
-<a href="../credits/credits.html"><Image  height = {50} width = {50} src={train} alt="A train entering the station at Saint-Lazare"/></a>
+<a href="../credits/credits.html"><Image  height = {"auto"} width = {500} src={train} alt="A train entering the station at Saint-Lazare"/></a>
             <div className="text">The Gare Saint-Lazare: Arrival of a Train at the Harvard Art Museum</div>
             </>
             
@@ -127,11 +128,18 @@ for (i = 0; i < coll.length; i++) {
                             </ul>
                         </div>
                         <div className="card-right">
-                            <a href="../credits/credits.html"><Image src ={OutsideFacadeMFA} width = {50} height = {50} alt="The outside facade of the MFA" className="museum-photo"/></a>
+                            <a href="../credits/credits.html"><Image src ={OutsideFacadeMFA} width = {500} height = {"auto"} alt="The outside facade of the MFA" className="museum-photo"/></a>
                         </div>
                     </div>
-                    <button type="button" className="collapsible" id = "collapsible">Expand</button>
-                    <div className="collapsible-content">
+                    <button type="button" className="collapsible" id = "collapsible" onClick={() => {
+                        const content = document.getElementById("collapsible-content-MFA");
+                        if (content.style.display === "block") {
+                            content.style.display = "none";
+                        } else {
+                            content.style.display = "block";
+                        }
+                    }}>Expand</button>
+                    <div className="collapsible-content" id="collapsible-content-MFA">
                         <p>
                             The MFA is the 20th-largest art museum in the world. It gets 1.2 million visitors a year
                             and was founded in 1870. It used to be in Copley Square, before it moved to its new Fenway
@@ -154,11 +162,18 @@ for (i = 0; i < coll.length; i++) {
                             </ul>
                         </div>
                         <div className="card-right">
-                            <a href="../credits/credits.html"><Image src={ISG} height={50} width = {50} alt="Picture of the ISG's main courtyard and garden" className="museum-photo"/></a>
+                            <a href="../credits/credits.html"><Image src={ISG} height={500} width = {"auto"} alt="Picture of the ISG's main courtyard and garden" className="museum-photo"/></a>
                         </div>
                     </div>
-                    <button type="button" className="collapsible" id = "collapsible">Expand</button>
-                    <div className="collapsible-content">
+                    <button type="button" className="collapsible" id = "collapsible" onClick={() => {
+                        const content = document.getElementById("collapsible-content-ISGM");
+                        if (content.style.display === "block") {
+                            content.style.display = "none";
+                        } else {
+                            content.style.display = "block";
+                        }
+                    }}>Expand</button>
+                    <div className="collapsible-content" id="collapsible-content-ISGM">
                         <p>
                             The Isabella Stewart Gardner Museum is founded by Isabella Stewart Gardner herself in 1903. The ISG is well known for the art heist that happened in 1990, where 13 works were stolen,
                             valued at $500 million (the pieces have not been recovered). Gardner built the museum from 1898-1901, curating all the works in
@@ -181,11 +196,18 @@ for (i = 0; i < coll.length; i++) {
                             </ul>
                         </div>
                         <div className="card-right">
-                            <a href="../credits/credits.html"><Image src={HAM} height = {50} width = {50} alt="Visitors in the 19th-century European art gallery" className="museum-photo"/></a>
+                            <a href="../credits/credits.html"><Image src={HAM} height = {500} width = {"auto"} alt="Visitors in the 19th-century European art gallery" className="museum-photo"/></a>
                         </div>
                     </div>
-                    <button type="button" className="collapsible" id = "collapsible">Expand</button>
-                    <div className="collapsible-content">
+                    <button type="button" className="collapsible" id = "collapsible" onClick={() => {
+                        const content = document.getElementById("collapsible-content-HAM");
+                        if (content.style.display === "block") {
+                            content.style.display = "none";
+                        } else {
+                            content.style.display = "block";
+                        }
+                    }}>Expand</button>
+                    <div className="collapsible-content" id="collapsible-content-HAM">
                         <p>
                             The Harvard Art Museum(s) are technically three: the Fogg Museum, the Busch-Reisinger Museum,
                             and the Arthur M. Sackler Museum as well as four research centers.
@@ -207,11 +229,20 @@ for (i = 0; i < coll.length; i++) {
                             </ul>
                         </div>
                         <div className="card-right">
-                            <a href="../credits/credits.html"><Image src={ICA} height = {50} width = {50} alt="The exterior of the ICA Boston at daytime" className="museum-photo"/></a>
+                            <a href="../credits/credits.html"><Image src={ICA} height = {500} width = {"auto"} alt="The exterior of the ICA Boston at daytime" className="museum-photo"/></a>
                         </div>
                     </div>
-                    <button type="button" className="collapsible" id = "collapsible">Expand</button>
-                    <div className="collapsible-content">
+                    <button type="button" className="collapsible" id = "collapsible" onClick={() => {
+                        const content = document.getElementById("collapsible-content-ICA");
+                        if (content.style.display === "block") {
+                            content.style.display = "none";
+                        } else {
+                            content.style.display = "block";
+                        }
+                    }}>
+                        Expand
+                    </button>
+                    <div className="collapsible-content" id="collapsible-content-ICA">
                         <p>
                             The ICA Boston was founded in 1936 as the Boston Museum of Modern Art; its current building was built
                             in 2006 in Seaport. The building has a beautiful glass-window view out into the Boston Harbor.
