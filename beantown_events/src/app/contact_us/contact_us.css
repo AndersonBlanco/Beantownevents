@@ -1,3 +1,249 @@
-.contact_us_container{
-    height: 100vh; 
+
+/* contact us */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#wrapper {
+    font-family: Arial, sans-serif;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url("../src/contact-us-boston.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/*
+    wrapper::before - technique from W3Schools
+    creates an empty overlay div without needing an extra html.
+    This was used so the background img could be on a seperate layer from the
+    background color, so the color is over the image.
+*/
+#wrapper::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(73 72 72 / 0.75);
+    z-index: 1;
+}
+
+#window {
+    background-color: #e3e3e3;
+    width: 40%;
+    margin: 4% auto;
+    padding: 0;
+    position: relative;
+    max-height: 88vh;
+    /* overflow-y from W3Schools - used inside the popup box and adds a scrollbar
+    so when the page goes beyond the mex-height it will still be reachable */
+    overflow-y: auto;
+    z-index: 2;
+    border: 3px solid #18206f;
+}
+
+#popup-bar {
+    background-color: #18206f;
+    padding: 3% 4%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#popup-title {
+    font-size: calc(16px + .5vw);
+    color: white;
+    width: 90%;
+    text-align: center;
+}
+
+#close-btn {
+    text-align: right;
+    width: 10%;
+    background: none;
+    border: none;
+    font-size: calc(16px + .5vw);
+    cursor: pointer;
+    color: white;
+}
+
+#close-btn:hover {
+    color: #ffffff;
+}
+
+#window-content {
+    padding: 3%;
+}
+
+#popup-subtitle {
+    font-size: calc(10px + .3vw);
+    color: #555555;
+    margin-bottom: 3%;
+    text-align: center;
+    line-height: 1.6;
+    margin-top: 2%;
+}
+
+#window label {
+    display: block;
+    font-size: calc(10px + .3vw);
+    color: #1a1a1a;
+    margin-bottom: 1%;
+    margin-top: 2%;
+}
+
+#contact-email, #contact-phone, #contact-name {
+    width: 100%;
+    padding: 2% 3%;
+    font-size: calc(10px + .3vw);
+    color: #1a1a1a;
+    border: 2px solid #18206f;
+    margin-bottom: 2%;
+}
+
+#contact-name:focus, #contact-phone:focus, #contact-email:focus {
+    border: 2px solid #18206f;
+}
+
+#contact-method-label {
+    font-size: calc(10px + .3vw);
+    color: #1a1a1a;
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+.contact-radio-group {
+    margin-bottom: 1%;
+    display: flex;
+}
+
+.contact-radio-group input {
+    display: inline;
+    margin-right: 1%;
+}
+
+.contact-radio-group label {
+    display: inline;
+    margin-top: 0;
+}
+
+#contact-message {
+    width: 100%;
+    padding: 2% 3%;
+    font-size: calc(10px + .3vw);
+    color: #1a1a1a;
+    border: 2px solid #18206f;
+    margin-bottom: 2%;
+    height: 15vw;
+}
+
+#contact-message:focus {
+    border: 2px solid #18206f;
+}
+
+#contact-error {
+    color: #cc0000;
+    font-size: calc(10px + .3vw);
+    margin-bottom: 2%;
+}
+
+#contact-submit-btn {
+    background-color: #18206f;
+    color: white;
+    border: none;
+    padding: 2% 4%;
+    font-size: calc(10px + .3vw);
+    cursor: pointer;
+    width: 100%;
+}
+
+#contact-submit-btn:hover {
+    background-color: #18206f;
+}
+
+#contact-submit-btn:active {
+    background-color: white;
+    color: #18206f;
+}
+
+ 
+#contact-close {
+    /* float: right - from W3Schools places the x close button on the right side of the alert */
+    float: right;
+    cursor: pointer;
+    color: white;
+    font-size: calc(14px + .3vw);
+}
+
+#contact-close:hover {
+    color: #ffffff;
+}
+
+#contact-success {
+    position: fixed;
+    top: 32%;
+    left: 30%;
+    width: 40%;
+    background-color: #1b5e20;
+    color: #ffffff;
+    padding: 2% 3%;
+    font-size: calc(10px + .5vw);
+    z-index: 30;
+    text-align: center;
+    border: 2px solid #2a2b2a;
+}
+
+#contact-success h3 {
+    font-size: calc(12px + 1vw);
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+#success-message {
+    margin-bottom: 2%;
+    border-bottom: 1px solid white;
+    padding-bottom: 4%;
+    padding-top: 1%;
+}
+
+#redirecting {
+    font-weight: bold;
+}
+
+
+.load {
+    border: 4px solid #a4a6a4; /* Light grey */
+    border-top: 4px solid white; /* Blue */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    /* animation from W3Schools - used for the loading symbol to spin at .75 seconds per rotation. */
+    animation: spin .75s linear infinite;
+    margin-left: 4%;
+    margin-top: 1%;
+}
+
+/*
+    @keyframes from W3Schools button loading
+    Defines the spin rotation from 0 to 360 degrees.
+*/
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#loading {
+    display: flex;
+    width: 50%;
+    margin: 4% auto;
+}
+
+
+#email-field, #phone-field, #contact-error, #contact-success{
+    display: none; 
 }

@@ -4,6 +4,14 @@ main {
     padding: 3%;
     min-height: 63vh;
 }
+
+#credits-section-container{
+    padding: 0px 100px;
+        margin-top: 2%;
+    margin-bottom: 2%;
+    border: none; 
+
+}
 /* Credits Banner */
 #credits-banner {
     background-color: #18206f;
@@ -36,6 +44,7 @@ main {
     margin-top: 2%;
     margin-bottom: 2%;
     border: 2px solid #18206f;
+
 }
 
 /* Collapsible button toggle */
@@ -92,5 +101,6 @@ main {
 
 .credit-list a {
     text-decoration: none;
-    color: #ffffff;
+    color: #222e9a;
 }
+

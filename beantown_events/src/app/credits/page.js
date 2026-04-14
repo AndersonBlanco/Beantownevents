@@ -1,7 +1,16 @@
+"use client"; 
 import "./credits.css"
+import credits_logic from "./credits"
+import { useEffect } from "react"
+
 export default function Credits() {
+    useEffect(() =>{
+        credits_logic(); 
+    }, [])
     return (
-   <div className="credits-section">
+   <div  id = "credits-section-container" className="credits-section">
+ 
+
                 <button className="collapsible-btn" id="btn-general">General Across All Pages &#9662;</button>
 
                 <div className="credits-content" id="content-general">
@@ -39,7 +48,7 @@ export default function Credits() {
                             under the <a href="https://unsplash.com/license"> Upsplash Free Use License</a>
                         </li>
                         <li>
-                            The photo of <a href="https://www.flickr.com/photos/lunchboxstudios/12779878355/in/album-72157641531951474"> The Fray</a>
+                            The photo of <a href="https://www.flickr.com/photos/lunchboxstudios/12779878355/in/album-72157641531951474">The Fray</a>
                             in the Concerts Page is provided by <a href="https://www.flickr.com/photos/lunchboxstudios/"> Lunchbox LP</a>
                             under a <a href="https://creativecommons.org/licenses/by/2.0/deed.en"> CC BY 2.0</a>
                         </li>

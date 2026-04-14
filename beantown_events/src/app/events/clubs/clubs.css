@@ -1,0 +1,114 @@
+/* Yana */
+
+/*  MAIN SECTION  */
+#main {
+    padding: 3%;
+    background-color: #f4f8f2;
+}
+
+#clubs-heading {
+    font-size: calc(16px + .8vw);
+    color: #18206f;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+/* AGE GATE */
+#age-gate {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 4% auto;
+    padding: 5%;
+    background-color: #ffffff;
+    border: 3px solid #18206f;
+    text-align: center;
+}
+
+#age-gate h3 {
+    font-size: calc(16px + .7vw);
+    color: #18206f;
+    margin-bottom: 2%;
+}
+
+#age-gate-text {
+    font-size: calc(10px + .35vw);
+    margin-bottom: 3%;
+}
+
+#age {
+    width:22%;
+    padding: 1% 2%;
+    font-size: calc(10px + .3vw);
+    border: 2px solid #18206f;
+    color: #1a1a1a;
+    margin-left: 1%;
+}
+
+#check-btn {
+    border: none;
+    padding: 1% 2%;
+    background-color: #18206f;
+    color: white;
+    cursor: pointer;
+    font-size: calc(10px + .3vw);
+}
+
+#check-btn:hover {
+    background-color: #18206f;
+}
+
+#output {
+    margin-top: 1%;
+    font-weight: bold;
+    color: #18206f;
+}
+
+#page-links {
+    margin-top: 2%;
+    display: none;
+}
+
+#page-links .link {
+    display: inline-block;
+    margin: 1%;
+    padding: 1.5% 3%;
+    background-color: #18206f;
+
+    text-decoration: none;
+    font-weight: bold;
+    font-size: calc(10px + .3vw);
+    color: white;
+}
+
+#page-links .link:hover {
+    background-color: #2735b4;
+    color: white;
+}
+
+#link-18 {
+    display: none;
+}
+
+#link-21 {
+    display: none;
+}
+
+
+@media screen and (max-width: 980px) {
+    #age {
+        width: 60%;
+        margin-right: 0;
+        margin-bottom: 2%;
+    }
+
+    #check-btn {
+        display: block;
+        margin: 0 auto;
+    }
+
+    #page-links .link {
+        display: block;
+        width: 80%;
+        margin: 2% auto;
+    }
+}

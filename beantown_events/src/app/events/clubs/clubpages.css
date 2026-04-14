@@ -1,0 +1,167 @@
+/* Yana */
+
+
+
+/*  MAIN SECTION  */
+#main {
+    padding: 3%;
+    background-color: #f4f8f2;
+}
+
+#clubs-heading {
+    font-size: calc(16px + .8vw);
+    color: #1b5e20;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4%;
+}
+
+.filterDiv {
+    width: 100%;
+    border: 2px solid #18206f;
+    background-color: #ffffff;
+    margin-bottom: 2%;
+}
+
+.card-body {
+    padding: 3%;
+}
+
+.card-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card-left {
+    width: 55%;
+    padding-right: 3%;
+}
+
+.card-right {
+    width: 45%;
+}
+
+.club-name {
+    font-size: calc(14px + .4vw);
+    color: #18206f;
+    margin-bottom: 1%;
+}
+
+.club-type {
+    font-size: calc(10px + .3vw);
+    color: #18206f;
+    margin-bottom: 3%;
+}
+
+.club-details {
+    list-style: none;
+    font-size: calc(10px + .3vw);
+    color: #333333;
+    margin-bottom: 3%;
+}
+
+.expand-btn {
+    border: none;
+    background-color: #18206f;
+    color: white;
+    padding: 2% 4%;
+    font-size: calc(10px + .3vw);
+    margin-top: 2%;
+}
+
+.expand-btn:hover {
+    background-color: #18206f;
+}
+
+.club-photo {
+    width: 100%;
+    height: 24vw;
+    display: block;
+}
+
+.card-details {
+    margin-top: 2%;
+    display: none;
+}
+
+.card-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card-action a {
+    padding: 1.5% 3%;
+    background-color: white;
+    color: #18206f;
+    text-decoration: none;
+    font-size: calc(10px + .3vw);
+    margin-right: 2%;
+}
+
+.card-action a:hover {
+    background-color: #18206f;
+    color: #ffd700;
+}
+
+/* COMPARISON TABLE */
+.comparison-table-wrapper {
+    background-color: #18206f;
+    padding: 3%;
+    margin-bottom: 3%;
+}
+
+.comparison-table-wrapper h2{
+    font-size: calc(14px + .5vw);
+    color: white;
+    margin-bottom: 2%;
+}
+
+.comparison-table {
+    width: 100%;
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+.comparison-table th {
+    border-bottom: 1px solid #18206f;
+    color: white;
+    padding: 1%;
+    text-align: left;
+    font-size: calc(10px + .3vw);
+}
+
+.comparison-table td {
+    border-bottom: 1px solid #18206f;
+    padding: 1%;
+    text-align: left;
+    font-size: calc(10px + .3vw);
+}
+
+
+@media screen and (max-width: 980px) {
+    .card-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-left {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .card-right {
+        width: 100%;
+        margin-top: 3%;
+    }
+
+    .club-photo {
+        height: auto;
+    }
+}

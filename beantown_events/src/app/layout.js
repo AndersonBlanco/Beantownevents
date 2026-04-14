@@ -1,14 +1,19 @@
+"use client"; 
 import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
-
+import { usePathname } from "next/navigation";
 export default function RootLayout({ children }) {
+  const path = usePathname(); 
+
   return (
     <html lang="en">
       <body>
         <div className="globalContainer">
-        <Header/>
+        {
+          !(path == "/contact_us")&& <Header/> 
+          }
         {children}
-        <Footer/>
+      {!(path == "/contact_us" )&& <Footer/>}
         </div>
         </body>
     </html>

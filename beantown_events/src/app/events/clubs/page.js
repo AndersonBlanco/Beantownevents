@@ -1,8 +1,37 @@
+"use client"; 
 import "../index.css"
+import "./clubs.css"
+import  "./clubslogic"
+import clubs_pages_logic from "./clubpages"
+import checkAge from "./clubslogic"
+import { useEffect } from "react"
+import Link from "next/link";
+import "./clubs.css"
+import "./clubpages.css"
 export default function Page(){
+
+    useEffect(() =>{
+        clubs_pages_logic()
+    })
+
     return(
-        <div className = "generalEventContainer">
-            <h1>Clubs</h1>
+         <div id="main">
+            <h2 id="clubs-heading">Boston Nightlife</h2>
+
+            <div id="age-gate">
+                <h3>Enter Your Age to Check Eligibility to View Events</h3>
+                <p id="age-gate-text">Some Boston nightlife events are restricted by age. Enter your age below to see which pages you can access.</p>
+
+                <label label="age">Age:</label>
+                <input type="text" id="age" placeholder="Enter your age"/>
+                <button id="check-btn" onClick={checkAge}>Submit</button>
+                <p id="output"></p>
+
+                <div id="page-links">
+                    <Link className = "link" id="link-18" href="/events/clubs/clubs18">View 18+ Events</Link>
+                    <Link className = "link"  id="link-21" href="/events/clubs/clubs21">View 21+ Events</Link>
+                </div>
+            </div>
         </div>
     )
 }
