@@ -4,110 +4,14 @@ import NewEnglandSilverGloves from "../../src/boxing/NewEnglandSIlverGlovesImg1.
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import {Events} from "./components/EventsClass";
+
+import AddCircleIcon from '@mui/icons-material/AddCircle';
+
+import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
+
 export default function Page(){
     const router = useRouter(); 
-
-    //used gemini to generate dummy data and scrape web fro valid URL for learnMore links per Event 
-    const Events = [
-        {
-            title: "New England Silver Gloves Youth Bracket",
-            description: "Regional youth tournament with multiple clubs competing in a weekend bracket.",
-            date: "September 20, 2026",
-            img: NewEnglandSilverGloves,
-            imgCitation: "https://www.nationalsilvergloves.org/regionals/",
-            attributes: ["New England", "Youth", "Open", "Flyweight", "Silver Gloves", "Tournament Bracket", "Community Gym"],
-        },
-        {
-            title: "Mid-Atlantic Golden Gloves Fall Pro Card",
-            description: "High-energy evening card featuring established regional contenders and local prospects.",
-            date: "October 4, 2026",
-            img: NewEnglandSilverGloves,
-            imgCitation: "https://www.goldenglovesusa.org/",
-            attributes: ["Mid-Atlantic", "Adult", "Elite", "Lightweight", "Golden Gloves", "Pro Card", "Arena"],
-        },
-        {
-            title: "Southeast Collegiate Team Dual Classic",
-            description: "College programs face off in a scored dual-meet format across several bouts.",
-            date: "October 11, 2026",
-            img: NewEnglandSilverGloves,
-            imgCitation: "https://usaboxing.org/",
-            attributes: ["Southeast", "Teen", "Qualifier", "Welterweight", "NCAA Boxing", "Team Dual", "College Fieldhouse"],
-        },
-        {
-            title: "Great Lakes Championship Night",
-            description: "Regional title bouts headlined by top-ranked amateurs preparing for nationals.",
-            date: "October 18, 2026",
-            img: NewEnglandSilverGloves,
-            imgCitation: "https://usaboxing.org/",
-            attributes: ["Great Lakes", "Adult", "Elite", "Middleweight", "USA Boxing", "Title Fight", "Arena"],
-        },
-        {
-            title: "West Coast Proving Grounds",
-            description: "Prospect-focused card highlighting first-year pro talent in a major boxing market.",
-            date: "October 25, 2026",
-            img: NewEnglandSilverGloves,
-            imgCitation: "https://boxrec.com/",
-            attributes: ["West Coast", "Adult", "Novice", "Heavyweight", "Independent", "Pro Card", "Casino"],
-        },
-        {
-            title: "International Amateur Exchange Showcase",
-            description: "Traveling youth teams compete in friendly exhibition bouts with international officials.",
-            date: "November 1, 2026",
-            img: NewEnglandSilverGloves,
-            imgCitation: "https://www.iba.sport/",
-            attributes: ["International", "Junior", "Invitational", "Bantamweight", "USA Boxing", "Exhibition", "Outdoor Ring"],
-        },
-        {
-            title: "New England Golden Gloves Qualifier",
-            description: "Key qualifying tournament where winners advance to the late-season regional finals.",
-            date: "November 8, 2026",
-            img: NewEnglandSilverGloves,
-            imgCitation: "https://www.goldenglovesusa.org/",
-            attributes: ["New England", "Teen", "Qualifier", "Featherweight", "Golden Gloves", "Tournament Bracket", "Community Gym"],
-        },
-        {
-            title: "Mid-Atlantic Masters Evening Card",
-            description: "Experienced fighters return for a professionally run masters division showcase.",
-            date: "November 15, 2026",
-            img: NewEnglandSilverGloves,
-            imgCitation: "https://usaboxing.org/",
-            attributes: ["Mid-Atlantic", "Masters", "Open", "Welterweight", "Independent", "Amateur Card", "Casino"],
-        },
-        {
-            title: "Southeast Youth Development Festival",
-            description: "Entry-level youth showcase with coaching clinics and short-form supervised exhibitions.",
-            date: "November 22, 2026",
-            img: NewEnglandSilverGloves,
-            imgCitation: "https://usaboxing.org/",
-            attributes: ["Southeast", "Youth", "Novice", "Flyweight", "USA Boxing", "Exhibition", "Outdoor Ring"],
-        },
-        {
-            title: "Great Lakes Silver Gloves Juniors",
-            description: "Junior division card emphasizing technical scoring and championship progression points.",
-            date: "December 6, 2026",
-            img: NewEnglandSilverGloves,
-            imgCitation: "https://www.nationalsilvergloves.org/",
-            attributes: ["Great Lakes", "Junior", "Open", "Bantamweight", "Silver Gloves", "Amateur Card", "Community Gym"],
-        },
-        {
-            title: "West Coast Collegiate Invitational Duals",
-            description: "Top college squads meet in an invitational dual format with national-level judging crews.",
-            date: "December 13, 2026",
-            img: NewEnglandSilverGloves,
-            imgCitation: "https://www.usiba.org/",
-            attributes: ["West Coast", "Adult", "Invitational", "Lightweight", "NCAA Boxing", "Team Dual", "College Fieldhouse"],
-        },
-        {
-            title: "International Golden Gloves Championship Series",
-            description: "Season-ending championship card featuring cross-border matchups and title defenses.",
-            date: "December 20, 2026",
-            img: NewEnglandSilverGloves,
-            imgCitation: "https://www.goldenglovesusa.org/",
-            attributes: ["International", "Masters", "Elite", "Featherweight", "Golden Gloves", "Title Fight", "Arena"],
-        },
-    ];
-
-
     //used Gemini to egnetate fdummy filters
     const [filters, setFilters] = useState([
         {
@@ -224,7 +128,122 @@ export default function Page(){
         )
     }, [selectedFilters])
 
-       
+    const [itemsInCart, setItemsInCart] = useState({});
+    const [cartPrice, setCartPrice] = useState(0); 
+    const [itemsInCart_count, set_itemsInCart_count] = useState(0); 
+
+
+ 
+
+    const handleAddButton = (event) =>{
+
+         try{
+                setItemsInCart(prev => {
+                        return{
+                                ...prev,
+                                [event.id]: prev[event.id] ? 1 + prev[event.id] : 1
+                            }
+                        });
+
+            set_itemsInCart_count(prev =>  prev + 1);
+            setCartPrice(prev => prev + event.price)
+
+                        console.log("Added item", itemsInCart)
+                        }catch(e){
+                            console.log("Error adding item: ", e.message)
+                        }
+    }
+
+    const handleRemoveItemFromCart = (event) =>{
+        try{
+
+            setItemsInCart(prev =>{
+                return{
+                    ...prev,
+                    [event.id]: prev[event.id] && prev[event.id] - 1 
+                }
+            });
+
+            if( itemsInCart_count > 1){ 
+            set_itemsInCart_count(prev => prev - 1);
+            setCartPrice(prev => prev + event.price)
+            }else{
+            set_itemsInCart_count(prev => 0);
+
+            }
+
+
+
+        }catch(e){
+            console.log("Error removing item from cartP: ", e.message); 
+        }
+    }
+
+    const EventItem = ({event, idx}) =>{
+        return(
+            <div key = {idx} className = "item_container" onClick = {() =>{
+   
+          
+        }}>
+
+
+                    <Image className = "img" src = {event.img} alt = {`${event.title} event image`} onClick = {() => {
+                                 //do window.localsrtorrage for cookie stored data 
+                      window.localStorage.setItem("@selectedEvent", JSON.stringify(event)); 
+             
+                        router.push("/events/boxing/boxingEventViewer");
+                    }}/>
+
+                    <div className = "text_details" onClick = {() =>{
+                           //do window.localsrtorrage for cookie stored data 
+                      window.localStorage.setItem("@selectedEvent", JSON.stringify(event)); 
+             
+                        router.push("/events/boxing/boxingEventViewer");
+                    }}>
+                    <h1>{event.title}</h1>
+                    <h4>{event.date}</h4>
+                    </div>
+
+                   <div className = "eventItemInstanceInCart">
+                    <RemoveCircleIcon className = "removeCircleIcon" onClick = {() =>{ 
+                       handleRemoveItemFromCart(event)
+
+
+
+
+
+                }}
+                    />
+                    <h2>{itemsInCart[event.id] ? itemsInCart[event.id] : 0 }</h2>
+                    <AddCircleIcon className = "addCircleIcon"  
+                    onClick = {() => handleAddButton(event)}
+                    />
+
+            </div>
+
+                    </div>
+        )
+    }
+
+    
+
+
+    const MyCartQuickViewSlip = ( 
+        //bottom slip with fixed position showing the user's total ex[ected amount to pay dependent on how many tickets tehy've added to their cart thus far]
+        <>
+        {//this renders the shopping cart only if both conditions is true, of which the html component is true and thus the andn statement can only be true if the shopping cart is of > 0 length
+            itemsInCart_count > 0 && <div className = "my_cart_quick_view_slip">
+                <h2>{itemsInCart_count} Items</h2>
+                <h2>${cartPrice} </h2>
+            <button className = "checkout_button">Checkout</button>
+        </div>
+        }
+        </>
+    
+    )
+
+
+ 
     return(
         <>
 
@@ -259,36 +278,18 @@ export default function Page(){
                 }
             </div>
 
-
-        <div className = "events">
+<div className = "events">
 
 {
   Events.map((event, idx) =>{
     if(filteredEventTitles.length === 0){
-        return <div key = {idx} className = "item_container" onClick = {() =>{
-            //do window.localsrtorrage for cookie stored data 
-            window.localStorage.setItem("@selectedEvent", JSON.stringify(event)); 
-            router.push("/events/boxing/boxingEventViewer");
-        }}>
-                    <Image className = "img" src = {event.img} alt = {`${event.title} event image`}/>
-                    <h1>{event.title}</h1>
-                    <h4>{event.date}</h4>
 
-                    </div>
+        return <EventItem key = {idx} event = {event} idx = {idx} />
     }
 
   if(filteredEventTitles.includes(event.title)){
-    return <div key = {idx} className = "item_container"   onClick = {() =>{
-            //do window.localsrtorrage for cookie stored data 
-            window.localStorage.setItem("@selectedEvent", JSON.stringify(event)); 
-            router.push("/events/boxing/boxingEventViewer");
-        
-        }}>
-                <Image className = "img" src = {event.img} alt = {`${event.title} event image`}/>
-                <h1>{event.title}</h1>
-                <h4>{event.date}</h4>
+    return <EventItem key = {idx} event = {event} idx = {idx} />
 
-                </div>
   }
   })
 
@@ -297,6 +298,8 @@ export default function Page(){
 
         </div>
 
+ 
+        {MyCartQuickViewSlip}
         </div>
 
         </>

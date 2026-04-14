@@ -12,20 +12,31 @@
 .item_container{
     border: solid 2px rgb(0, 73, 128);
     color: black; 
-    height: auto; 
-    width: 25vw; 
-    height: 16vw; 
+
+    width: inherit; 
+    height: fit-content; 
     margin: 10px; 
     padding-inline: 50px; 
-    padding-block: 20px; 
+    padding-block: 10px; 
 
-    display: block;
+    display: flex;
+    flex-direction: row;
     text-align: left;
+    align-items: center;
     cursor: pointer; 
+    gap: 10px; 
+}
+.item_container .event_item_checkbox{ 
+    width: 2vh; 
+    height: 2vh;
+
+}
+.item_container .text_details{
+    display: block;
 }
 
 .item_container .img{
-    height: calc(10px + 10vw);
+    height: calc(5px + 5vw);
     width: auto; 
     align-self: center;
      
@@ -33,16 +44,15 @@
 
 .item_container h1{
     font-size: calc(1px + 1.5vw); 
+    max-lines: 1; 
 }
 
 
 .events{
-    display: grid; 
-    grid-template-columns: auto auto;
-    
+    display: flex; 
+    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-
+    width: 50vw;
 
 
 }
@@ -81,4 +91,55 @@ padding-inline: 50px;
 
 .section_outer_container{
     margin-top: 50px;
+}
+
+
+.my_cart_quick_view_slip{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-block: 10px; 
+    width: 100vw; 
+    position: fixed;
+    background-color: #18206f;
+    bottom: 0px; 
+
+}
+
+
+.removeCircleIcon{
+
+}
+
+.addCircleIcon{
+
+}
+
+.text_details{
+    width: 32vw;
+}
+.eventItemInstanceInCart{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px; 
+    width: 50px;
+    padding-inline: 10px; 
+
+}
+ 
+
+.my_cart_quick_view_slip h2{
+    color: white;
+}
+
+
+
+.checkout_button{
+        background-color: white; 
+    color: #18206f;
+    outline: none;
+    border: none; 
 }
