@@ -130,6 +130,9 @@ padding-inline: 50px;
 
 }
  
+.my_cart_quick_view_slipz{
+    z-index: 2; 
+}
 
 .my_cart_quick_view_slip h2{
     color: white;
@@ -138,8 +141,12 @@ padding-inline: 50px;
 
 
 .checkout_button{
-        background-color: white; 
+    background-color: white; 
     color: #18206f;
     outline: none;
     border: none; 
+    font-size: calc(10px + 1vw);
+    border-radius: 5px;
+    padding: 5px 50px;
+    cursor: pointer; 
 }

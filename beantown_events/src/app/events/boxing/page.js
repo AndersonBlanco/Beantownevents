@@ -235,7 +235,7 @@ export default function Page(){
             itemsInCart_count > 0 && <div className = "my_cart_quick_view_slip">
                 <h2>{itemsInCart_count} Items</h2>
                 <h2>${cartPrice} </h2>
-            <button className = "checkout_button">Checkout</button>
+            <button className = "checkout_button" onClick = {{/* nav to My Cart page */}}>Checkout</button>
         </div>
         }
         </>

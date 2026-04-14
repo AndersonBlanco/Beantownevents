@@ -4,7 +4,7 @@ import {useRouter, usePathname} from "next/navigation"
 import "./header.css"
 import "../../globals.css"
 import MenuIcon from '@mui/icons-material/Menu';
-
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import MapMenuOverlay from "../mapMenuOverlay/mapMenuOverlay";
 import { useState } from "react";
 import Image from "next/image";
@@ -28,6 +28,7 @@ return(
                 <p id="slogan">Find Boston Events Near You</p>
             </div>
         </div>
+              <ShoppingCartIcon sx = {{color: "white"}} className = "shoppingCart" />
     </header>
 
     <nav>
@@ -46,6 +47,8 @@ return(
             <li><Link href="/about_us">About Us</Link></li>
             <li><Link href="/contact_us">Contact Us</Link></li>
         </ul>
+
+  
     </nav>
 
   

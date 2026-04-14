@@ -2,7 +2,7 @@
 import Image from "next/image"
 import { useParams } from "next/navigation"
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./eventViewer.css"
 
 //usin g Material UI fro icons: 
@@ -15,10 +15,19 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
 
 export default function BoxingEventViewer(){
-    
+    const [obj, setObj] = useState(null);
+        const [ticketsToVuy, setTicketsToBuy] = useState(0); 
 
-    const obj = JSON.parse(window.localStorage.getItem("@selectedEvent")); 
-    const [ticketsToVuy, setTicketsToBuy] = useState(0); 
+    useEffect(() =>{
+        const stored = window.localStorage.getItem("@selectedEvent"); 
+        if(stored){
+            setObj(JSON.parse(stored)); 
+        }
+    }, [])
+
+    if (!obj) {
+        return <div className="container">Loading event details...</div>;
+    }
 
 
     const ticketCounterCOmponent = (
