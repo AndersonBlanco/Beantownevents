@@ -247,7 +247,7 @@ export default function Page(){
     return(
         <>
 
-        <div className = "container">
+        <div className = "boxing_container">
             <div className = "filter_menu">
                 {/* depriccated: <input type = "text" placeholder="Search for events..." className="search_bar" onChange = {handleQuery}/> */} 
                 {

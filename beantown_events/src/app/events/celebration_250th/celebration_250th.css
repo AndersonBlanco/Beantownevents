@@ -19,7 +19,7 @@
 }
 
 /* Container around content */
-.container {
+.celeb_container {
     padding: 10px 40px;
     position: relative;
     background-color: inherit;
@@ -27,7 +27,7 @@
 }
 
 /* The circles on the timeline */
-.container::after {
+.celeb_container::after {
     content: '';
     position: absolute;
     width: 25px;
@@ -94,7 +94,7 @@
     width: 100%
 }
 
-img {
+.celeb_container img {
 
     object-fit: contain;
     height: 20vh;
@@ -110,14 +110,14 @@ img {
     }
 
     /* Full-width containers */
-    .container {
+    .celeb_container {
         width: 100%;
         padding-left: 70px;
         padding-right: 25px;
     }
 
     /* Make sure that all arrows are pointing leftwards */
-    .container::before {
+    .celeb_container::before {
         left: 60px;
         border: medium solid white;
         border-width: 10px 10px 10px 0;

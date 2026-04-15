@@ -109,12 +109,12 @@ for (i = 0; i < coll.length; i++) {
 
     
     return(
-    <>
+    <div className = "museum_container">
 
      {/*Meusms section*/} 
     <h2 className="museum-heading">Art Museums in Boston</h2>
 
-        <div className="container" id = "museumsContainer">
+        <div className="container-card" id = "museumsContainer">
             <div className="allcards" id="card-MFA">
                 <div className="card-body">
                     <div className="card-inside">
@@ -279,6 +279,6 @@ for (i = 0; i < coll.length; i++) {
         <span className="dot" onClick={() => currentSlide(3)}></span>
     </div>
 
-        </>
+        </div>
     )
 }

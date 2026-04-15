@@ -1,6 +1,6 @@
 /* Jackson */
 
-* {
+.museum_container * {
     margin: 0;
     box-sizing: border-box;
 }
@@ -231,8 +231,8 @@ nav ul li a:active {
     margin: 2%;
 }
 
-/* CONTAINER FOR CARDS */
-.container {
+/* CONTAINER FOR CARDS: */
+.container-card {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 5%;

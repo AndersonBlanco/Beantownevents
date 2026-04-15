@@ -91,7 +91,7 @@
 
 
 /* CONTAINER FOR CARDS */
-.container {
+.card-container {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 10%;
