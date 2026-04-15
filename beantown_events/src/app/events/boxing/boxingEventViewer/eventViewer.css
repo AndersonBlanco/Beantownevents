@@ -1,101 +1,98 @@
-.container{
-    display: flex;
-    flex-direction: column;
-    gap: 10px; 
-    align-items: center;
-    justify-content: center;
-
+.preview_container{
+     padding-block: 75px;
+     display: flex;
+     flex-direction: column;
+     gap: 50px;
+}
+.image{
+    width: calc(100px + 30vw); 
+    height: auto; 
 }
 
-.eventDetailContainer{
-    display: flex;
-    flex-direction: row;
-
-        background-color: transparent;
-        align-items: center;
-        justify-content: center;
-        gap: calc(10px + 2vw);
-        width: fit-content; 
-        padding-inline: 1px; 
-    
-}
-
-
-.eventDetailContainer p, .eventDetailContainer h1{
-    max-width: 90%; 
-}
-
-.eventDetailContainer h1{
-    font-size: calc(10px + 2.5vw);
-}
-
-.eventDetailContainer p{
-    font-size: calc(10px + 1vw);
-}
-
-
-.eventTextDetail{
-    display: flex; 
-    flex-direction: column;
-    text-align:left; 
-}
-
-.attributesList{
-
-    align-self:flex-start;
-    width: 100%; 
-    padding-left: 16%; 
-}
-
-.attributesList ul{
-    list-style-type: none;
+.row{ 
     display: flex; 
     flex-direction: row;
 
-    font-size: medium;
-    gap: 20px; 
-}
-
-
-.attributesList ul li{
-    background-color: rgb(38, 38, 212); 
-    color: white; 
-    padding: 1px 10px; 
-    border-radius: 5px;
-    width: fit-content; 
-    text-align: center;
-
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    padding-inline: 100px;
+    gap: 50px;
+}
 
+.row h2{ 
+    font-size: calc(5px + 2vw);
+}
+
+.row p{
+    font-size: calc(1px + 2vw);
 
 }
 
-.attributesList ul li p{
-    font-size: calc(5px + 0.5vw);
+.column{
+    display: flex;
+    flex-direction: column;
     text-align: left;
+    justify-content: flex-start;
+
 }
+
+.photoGallery{ 
+    background-color: transparent; 
+    display:flex;
+    flex-wrap: wrap;
+    height: fit-content;
+    align-items: center;
+    justify-content: flex-start;
+    padding-inline: 20px; 
+    padding-block: 20px; 
+
+}
+.placeholderImageFrame{
+    height: 200px;
+     width: 200px; 
+     background-color: blue;
+}
+
+
 
 .ticketSaleContainer{
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
+    font-size: calc(10px + 1vw); 
+    gap: 50px;
 
-    align-items:center;
-    justify-content: center;
-    display: flex;
-    gap: 100px
-
-
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
 }
 
+.ticketSaleContainer button{
+    outline: none;
+    border: none; 
+    border-radius: 5px; 
+    background-color: #18206f; 
+    color: white; 
+    padding: 12px 24px;
+    font-weight: medium;
+    font-size: calc(5px + 1vw); 
+    cursor: pointer; /*specifies the mouse icon when the element is on hover (ie, mouse-over) */ 
+}
 
 .ticketsCounter{
-        display: flex;
-    flex-direction: row;
-
-    align-items:center;
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
-    display: flex;
-    gap: 100px
+    gap: 20px;
 }
 
+.removeCircleIcon, .addCircleIcon{
+    cursor: pointer;
+}
+
+.ticketsCounter input{ 
+    font-size: calc(5px + 1vw);
+    width: fit-content; 
+    text-align: center;
+    border: none;
+    outline: none; 
+    width: 10vw;
+}

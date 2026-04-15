@@ -187,7 +187,7 @@ export default function Page(){
         }}>
 
 
-                    <Image className = "img" src = {event.img} alt = {`${event.title} event image`} onClick = {() => {
+                    <Image  className = "img" src = {event.img} alt = {`${event.title} event image`} onClick = {() => {
                                  //do window.localsrtorrage for cookie stored data 
                       window.localStorage.setItem("@selectedEvent", JSON.stringify(event)); 
              
@@ -248,10 +248,8 @@ export default function Page(){
         <>
 
         <div className = "container">
-
-
             <div className = "filter_menu">
-                <input type = "text" placeholder="Search for events..." className="search_bar" onChange = {handleQuery}/>
+                {/* depriccated: <input type = "text" placeholder="Search for events..." className="search_bar" onChange = {handleQuery}/> */} 
                 {
                     filters.map((filter, idx) => {
                         return (

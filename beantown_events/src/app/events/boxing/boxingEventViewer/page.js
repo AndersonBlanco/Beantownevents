@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import "./eventViewer.css"
 
+
 //usin g Material UI fro icons: 
     /* 
     * Shopping cart
@@ -16,7 +17,7 @@ import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
 
 export default function BoxingEventViewer(){
     const [obj, setObj] = useState(null);
-        const [ticketsToVuy, setTicketsToBuy] = useState(0); 
+        const [ticketsToVuy, setTicketsToBuy] = useState(1); 
 
     useEffect(() =>{
         const stored = window.localStorage.getItem("@selectedEvent"); 
@@ -33,7 +34,7 @@ export default function BoxingEventViewer(){
     const ticketCounterCOmponent = (
         <div className = "ticketsCounter">
             <RemoveCircleIcon className = "removeCircleIcon" onClick = {() => setTicketsToBuy(ticketsToVuy -1)}/>
-            <p>{ticketsToVuy}</p>
+            <input type = "number" value = {ticketsToVuy} onChange={(e) => setTicketsToBuy(JSON.parse(e.currentTarget.value))} />
             <AddCircleIcon className = "addCircleIcon"  onClick = {() => setTicketsToBuy(ticketsToVuy +1)}/>
         </div>
     )
@@ -44,35 +45,32 @@ export default function BoxingEventViewer(){
 
             </div>
     )
-    return(
-        <div className = "container">
-            <div className = "eventDetailContainer">
-                <Image src = {obj.img} height = {200} width = {"auto"} />
-                <div className = "eventTextDetails">
-                <h1>{obj.title}</h1>
-                <p>{obj.description}</p>
-         <p className = "date">
-                    {obj.date}
-                </p>
-                   
-                
-                </div>
 
-             
+
+
+    return(
+        <div className = "preview_container">
+            <div className = "row" >
+                <Image alt = {`${obj.title}bxoing event image`} src = {obj.img} className = "image" />
+                <div className = "column" >
+                    <h2>{obj.title}</h2>
+                    <p>{obj.description}</p>
+                            {PurchaseTickets}
+                </div>
                 
             </div>
-            <div className = "attributesList">
-                    <ul>
-                    {
-                        obj.attributes.map(itm => <li>
-                            <p style = {{}}>{itm}</p>
-                        </li>)
-                    }
-                    </ul>
-                </div>
 
 
-                    {PurchaseTickets}
+
+            <div className = "photoGallery">
+                {
+                    ["red", "blue", "green", "gray", "cyan", ].map((itm, idx) =>{
+                        return <div key = {idx} className = "placeholderImageFrame" style = {{backgroundColor: itm}}>
+
+                        </div>
+                    })
+                }
+            </div>
 
         </div>
     )

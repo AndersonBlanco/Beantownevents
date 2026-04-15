@@ -134,3 +134,14 @@ img {
         left: 0%;
     }
 }
+
+
+
+
+/*resolving slider: */
+.slider-container{
+     display: flex;
+     flex-direction: row;
+     gap: 20px;
+
+}
