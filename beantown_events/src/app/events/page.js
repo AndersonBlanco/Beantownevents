@@ -8,7 +8,9 @@ import Header from "../components/header/header";
 export const handleCheckout = async (priceId, quantity = 1) =>{
       try {
         const { url } = await createCheckoutSessionAction({ priceId, quantity: 1 });
+        console.log(url)
         window.location.href = url;
+        
       } catch (err) {
         console.error(err);
       }
