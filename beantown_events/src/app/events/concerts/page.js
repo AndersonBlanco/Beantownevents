@@ -233,7 +233,7 @@ document.getElementById("search-input").addEventListener("keyup", function () {
             <button id="collapse-all-btn">Collapse All</button>
 
            {/* <!--    CARDS FOR CONCERTS     --> */}
-            <div className="container">
+            <div className="card-container">
 
                 <div className="filterDiv hip-hop tdgarden" id="card-jcole">
                     <div className="card-body">

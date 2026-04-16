@@ -4,8 +4,7 @@ import { useParams } from "next/navigation"
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import "./eventViewer.css"
-
-
+import { createCheckoutSessionAction } from "@/libs/stripe/stripe";
 //usin g Material UI fro icons: 
     /* 
     * Shopping cart
@@ -15,7 +14,21 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
 
+const handleCheckout = async (priceId, quantity = 1) =>{
+          try {
+            const { url } = await createCheckoutSessionAction({ priceId, quantity: 1 });
+            console.log(url)
+            window.location.href = url;
+            
+          } catch (err) {
+            console.error(err);
+          }
+        } 
+
 export default function BoxingEventViewer(){
+
+
+
     const [obj, setObj] = useState(null);
         const [ticketsToVuy, setTicketsToBuy] = useState(1); 
 
@@ -41,7 +54,7 @@ export default function BoxingEventViewer(){
     const PurchaseTickets = ( 
         <div className = "ticketSaleContainer">
             {ticketCounterCOmponent}
-            <button>Add to Cart</button>
+            <button onClick = {() => handleCheckout("price_1THnbpHo5oc8DhhwZWBpyK5X")}>Add to Cart</button>
 
             </div>
     )
