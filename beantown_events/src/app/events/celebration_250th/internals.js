@@ -1,6 +1,7 @@
 "use client"; 
-import "./timeline.css"
+
 import "./groupproject.css"
+import "./timeline.css"
 import Harbor from "./src/harbor.jpg"
 import Tea from "./src/tea.jpg"
 import Horse from "./src/horse.jpg"
@@ -24,8 +25,12 @@ export const GroupProject = (
             </h2>
             <p>Boston Lighthouse Cruises and the 250th Anniversary of Siege of Boston</p>
             <Image src={Harbor} alt="250th Celebration"/>    {/* I figured out how to add the images and place them to fit in the boxes nut i know that's css */}
+            
+            <button className="pop-btn" id="harbor-btn" onClick={() => openPopupHarbor()}>See More</button> {/* creates a clickable button. class is the styling hook, id is the unique identifier, and onClick links to the JavaScript funtion */}
+
+
           </div>
-                  <button className="pop-btn" id="harbor-btn" onClick={() => openPopupHarbor()}>See More</button> {/* creates a clickable button. class is the styling hook, id is the unique identifier, and onClick links to the JavaScript funtion */}
+
 
         </div>
 
@@ -36,8 +41,9 @@ export const GroupProject = (
             </h2>
             <p>Boston Tea Party Tea Blending Activations</p>
             <Image src={Tea} alt="250th Celebration"/>
+                             <button className="pop-btn" id="tea-btn" onClick={() => openPopupTea()}>See More</button> {/* creates a clickable button. class is the styling hook, id is the unique identifier, and onClick links to the JavaScript funtion */}
+
           </div>
-                            <button className="pop-btn" id="tea-btn" onClick={() => openPopupTea()}>See More</button> {/* creates a clickable button. class is the styling hook, id is the unique identifier, and onClick links to the JavaScript funtion */}
         </div>
          
          
@@ -48,8 +54,9 @@ export const GroupProject = (
               </h2>
               <p>Paul Revere’s Ride Reenactment</p>
               <Image src={Horse} alt="250th Celebration"/>
+                                  <button className="pop-btn" id="paul-btn" onClick={() => openPopupPaul()}>See More</button> {/* creates a clickable button. class is the styling hook, id is the unique identifier, and onClick links to the JavaScript funtion */}
+
             </div>
-                    <button className="pop-btn" id="paul-btn" onClick={() => openPopupPaul()}>See More</button> {/* creates a clickable button. class is the styling hook, id is the unique identifier, and onClick links to the JavaScript funtion */}
 
           </div>
         <div className="container right"> {/* positions items right on the timeline, controlled through css though */}
@@ -59,8 +66,9 @@ export const GroupProject = (
             </h2>
             <p>251st Anniversary of the Battle of Lexington Patriots' Day Brunch</p>
             <Image src={Lexington} alt="250th Celebration"/>
+                              <button className="pop-btn" id="battle-btn" onClick={() => openPopupBattle()}>See More</button> {/* creates a clickable button. class is the styling hook, id is the unique identifier, and onClick links to the JavaScript funtion */}
+
           </div>
-                  <button className="pop-btn" id="battle-btn" onClick={() => openPopupBattle()}>See More</button> {/* creates a clickable button. class is the styling hook, id is the unique identifier, and onClick links to the JavaScript funtion */}
 
         </div>                                          {/* end of w3 code */}
       </div>

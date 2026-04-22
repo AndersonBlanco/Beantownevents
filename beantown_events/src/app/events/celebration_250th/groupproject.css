@@ -11,7 +11,7 @@ h1 {
 
 .nav{
    background-color: #d3d3d3;
-
+   height: auto;
     justify-content: center;
     padding-right: 100px;
     text-align: left;
@@ -147,6 +147,9 @@ img {
 
 
 
+
+
+
 @media screen and (max-width: 560px) {
     #container {
         display: flex;
@@ -185,6 +188,8 @@ img {
 .celeb_container{
     display: inline-flex;
     gap: 50px;
+    background-color: red;
+
 }
 
 .GroupX_Image{
@@ -198,6 +203,7 @@ img {
     text-align: center;
     align-items: center;
     justify-content:  center;
+
     
 }
 

@@ -6,7 +6,7 @@
 // Resets all buttons to "btn" then sets the clicked one to "btn active"
 // .btn.active pattern - from W3Schools
 
-function filterSelection(category) {
+export function filterSelection(category) {
     let cards = document.getElementsByClassName("filterDiv");
     let buttons = document.getElementsByClassName("btn");
 

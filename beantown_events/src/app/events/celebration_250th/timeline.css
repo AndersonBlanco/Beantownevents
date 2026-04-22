@@ -42,7 +42,7 @@
     position: relative;
     background-color: inherit; /*uses the parent's background color*/
     width: 36%; /* makes each item take up 36 percent the timeline*/
-
+    
 }
 
 /* This creates the dots that sit on the timeline at each date */
@@ -119,7 +119,7 @@
 
 /* The actual content */
 .content {
-    padding: 20px 30px; /*space inside the box*/
+    padding: 20px 20px; /*space inside the box*/
     background-color: white;
     position: relative;
     border-radius: 6px; /*rounds the corners of the rectangle*/
@@ -145,29 +145,45 @@ img {
 top/left to move them.*/
 
 #tea-btn {
-    top: 84%; /*moves the position of the box up or down*/
-    left: 78%; /*moves the position of the box left or right*/
+    bottom: 5%; /*moves the position of the box up or down*/
+    right: 0%; /*moves the position of the box right or right*/
+    margin-left: 20%;
+    margin-top: 10%; 
+
 }
 
 #paul-btn {
-    top: 118%; /*moves the position of the box up or down*/
-    left: 39%; /*moves the position of the box left or right*/
+    bottom: 5%; /*moves the position of the box up or down*/
+    right: 0%; /*moves the position of the box right or right*/
+    margin-left: 20%;
+    margin-top: 10%; 
+
 }
 
 #battle-btn {
-    top: 153%; /*moves the position of the box up or down*/
-    left: 78%; /*moves the position of the box left or right*/
+    bottom: 5%; /*moves the position of the box up or down*/
+    right: 0%; /*moves the position of the box right or right*/
+    margin-left: 10%;
+    margin-top: 10%; 
+
+
 }
 
 #harbor-btn {
-    top: 51%; /*moves the position of the box up or down*/
-    left: 39%; /*moves the position of the box left or right*/
+    bottom: 5%; /*moves the position of the box up or down*/
+    right: 0%; /*moves the position of the box right or right*/
+    margin-left: 20%;
+    margin-top: 10%; 
+
+
+
 }
 
 /* SHARED STYLE FOR EVERY BUTTON */
 
 .pop-btn {
     position: relative;
+
 
     color: #ca0202; /*text color*/
     background-color: navy;
@@ -178,6 +194,7 @@ top/left to move them.*/
     transition: background-color .2s ease; /* creates hover effect*/
     z-index: 2; /*sits above timeline elements*/
 }
+ 
 
 .pop-btn:hover {
     background-color: #30364F; /*changes color on hover*/
