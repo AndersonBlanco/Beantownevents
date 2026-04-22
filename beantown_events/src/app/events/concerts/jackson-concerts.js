@@ -1,4 +1,6 @@
+'use client';
 // Jackson //
+
 
 // FILTER SELECTION SECTION:
 // Some code techniques from W3Schools and their Filter Elements.
@@ -44,7 +46,7 @@ export function filterSelection(category) {
 
 // FILTER BUTTON EVENT LISTENERS SECTION
 // Each button calls filterSelection() with its category.
-
+export function filterButtonListenerSections(){
 document.getElementById("btn-all").addEventListener("click", function () {
     filterSelection("all");
 })
@@ -168,3 +170,4 @@ document.getElementById("search-input").addEventListener("keyup", function () {
     }
 });
 
+}
