@@ -37,7 +37,7 @@ return(
             <li className="dropdown" >
                 <Link href="/events">Events</Link>
                    <div className="dropdown-content" id= "dropdown-content">
-                    <Link href = "/events/concerts">Concerts</Link>
+                    <Link href = "/events/concerts/concerts-intro">Concerts</Link>
                     <Link href = "/events/boxing">Boxing</Link>
                     <Link href = "/events/celebration_250th">250th Celebration</Link>
                     <Link href = "/events/clubs">Clubs</Link>

@@ -23,8 +23,7 @@ export default function Page(){
 
     
     return(
-        <>
-              <div id="main">
+        <div className = "main">
             <h2 id="concerts-heading">Upcoming Concerts in Boston</h2>
 
             <div id="search-area">
@@ -33,13 +32,12 @@ export default function Page(){
             </div>
 
 
-           {/* <!-- FILTER BUTTONS
-                    id="myBtnContainer", className="btn", className="filterDiv"
-                    From the webside you gave us: W3Schools
-                    These class and id names are taken from this websites pattern.
-                    the JS in jackson-concerts.js uses getElementByClassName("filterDiv")
-                    and getElementByClassName("btn") to find and filter the cards
-                    and highlight the active button. -->*/}
+            {/* FILTER BUTTONS
+                id="myBtnContainer", className="btn", className="filterDiv"
+                From W3Schools - https://www.w3schools.com/howto/howto_js_filter_elements.asp
+                these class and id names are taken from ths website's pattern. The JS
+                in jackson.js uses getElementsByClassName("filterDiv") and getElementsByClass("btn")
+                to find and filter the cards and highlight the active button. */}
             <div id="myBtnContainer">
                 <button className="btn active" id="btn-all">Show All</button>
                 <button className="btn" id="btn-hip-hop">Hip-Hop</button>
@@ -51,10 +49,10 @@ export default function Page(){
                 <button className="btn" id="btn-gillette">Gillette Stadium</button>
             </div>
 
-            {/*<!--    COLLAPSE ALL BUTTON    --> */}
+            {/* COLLAPSE ALL BUTTON */}
             <button id="collapse-all-btn">Collapse All</button>
 
-            {/*<!--    CARDS FOR CONCERTS     -->*/}
+            {/* CARDS FOR CONCERTS */}
             <div className="container">
 
                 <div className="filterDiv hip-hop tdgarden" id="card-jcole">
@@ -72,10 +70,13 @@ export default function Page(){
                                 <button className="expand-btn">Expand</button>
                             </div>
                             <div className="card-right">
-                                <Image src={jcole} alt="J.Cole" className="artist-photo"/>
+                                <Image src={jcole} alt="J.Cole" className="artist-photo" />
                             </div>
                         </div>
-                        <div className="card-details" style={{display: "none"}}>
+                        {/* inline style display: none is used here instead of external CSS because
+                        the JavaScript toggle checks element.style.display to determine visibility state.
+                        The JS sets display to "block" or "none" directly, which uses inline style for initial state detection. */}
+                        <div className="card-details" style = {{display: "none"}}>
                             <p className="concert-description">
                                 J.Cole is bringing his long-awaited tour, The Fall-Off Tour to the TD Garden and is
                                 as of now said to be his final tour ever. J.Cole is known for his deep lyricism and
@@ -85,14 +86,17 @@ export default function Page(){
                                 <a href="">Get Tickets</a>
                                 <button className="btn-secondary seating-btn"> See Seating Chart</button>
                             </div>
-                            <div className="seating-chart" style={{display: "none"}}>
-                                <Image src={tdgarden_chart_jcole} alt="Seating Chart for J. Cole" className="seating-img"/>
+                            {/* inline style display: none is used here instead of external CSS because
+                            the JavaScript toggle checks element.style.display to determine visibility state.
+                            The JS sets display to "block" or "none" directly, which uses inline style for initial state detection. */}
+                            <div className="seating-chart" style = {{display: "none"}}>
+                                <Image src={tdgarden_chart_jcole} alt="Seating Chart for J. Cole" className="seating-img" />
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="filterDiv pop lbp" id="card-the-fray">
+                <div className="filterDiv rock lbp" id="card-the-fray">
                     <div className="card-body">
                         <div className="card-top">
                             <div className="card-left">
@@ -107,10 +111,13 @@ export default function Page(){
                                 <button className="expand-btn">Expand</button>
                             </div>
                             <div className="card-right">
-                                <Image src={th_fray} alt="The Fray" className="artist-photo"/>
+                                <Image src={th_fray} alt="The Fray" className="artist-photo" />
                             </div>
                         </div>
-                        <div className="card-details" style={{display: "none"}}>
+                        {/* inline style display: none is used here instead of external CSS because
+                        the JavaScript toggle checks element.style.display to determine visibility state.
+                        The JS sets display to "block" or "none" directly, which uses inline style for initial state detection. */}
+                        <div className="card-details" style = {{display: "none"}}>
                             <p className="concert-description">
                                 The Fray is a band that really made it big in the early 2000s. They are back
                                 and playing their big hits, like their song "How to Save a Life" which is 11x Platinum.
@@ -122,14 +129,17 @@ export default function Page(){
                                 <a href="">Get Tickets</a>
                                 <button className="btn-secondary seating-btn"> See Seating Chart</button>
                             </div>
-                            <div className="seating-chart" style={{display: "none"}}>
-                                <Image src={lbp_chart} alt="Seating Chart for The Fray" className="seating-img"/>
+                            {/* inline style display: none is used here instead of external CSS because
+                            the JavaScript toggle checks element.style.display to determine visibility state.
+                            The JS sets display to "block" or "none" directly, which uses inline style for initial state detection. */}
+                            <div className="seating-chart" style = {{display: "none"}}>
+                                <Image src={lbp_chart} alt="Seating Chart for The Fray" className="seating-img" />
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="filterDiv rock tdgarden" id="card-benson-boone">
+                <div className="filterDiv pop tdgarden" id="card-benson-boone">
                     <div className="card-body">
                         <div className="card-top">
                             <div className="card-left">
@@ -144,10 +154,13 @@ export default function Page(){
                                 <button className="expand-btn">Expand</button>
                             </div>
                             <div className="card-right">
-                                <Image src={boone} alt="Benson Boone" className="artist-photo"/>
+                                <Image src={boone} alt="Benson Boone" className="artist-photo" />
                             </div>
                         </div>
-                        <div className="card-details" style={{display: "none"}}>
+                        {/* inline style display: none is used here instead of external CSS because
+                        the JavaScript toggle checks element.style.display to determine visibility state.
+                        The JS sets display to "block" or "none" directly, which uses inline style for initial state detection. */}
+                        <div className="card-details" style = {{display: "none"}}>
                             <p className="concert-description">
                                 Benson Boone is a big new artist who hits the stage with a large presence.
                                 He is known for his large vocal range, flips on stage, and hit songs such as "Beautiful Things".
@@ -157,9 +170,15 @@ export default function Page(){
                                 <a href="">Get Tickets</a>
                                 <button className="btn-secondary seating-btn"> See Seating Chart</button>
                             </div>
-                            <div className="seating-chart" style={{display: "none"}}>
-                                <Image src={tdgarden_chart_boone} alt="Seating Chart for Benson Boone"
-                                     className="seating-img"/>
+                            {/* inline style display: none is used here instead of external CSS because
+                            the JavaScript toggle checks element.style.display to determine visibility state.
+                            The JS sets display to "block" or "none" directly, which uses inline style for initial state detection. */}
+                            <div className="seating-chart" style = {{display: "none"}}>
+                                <Image
+                                    src={tdgarden_chart_boone}
+                                    alt="Seating Chart for Benson Boone"
+                                    className="seating-img"
+                                />
                             </div>
                         </div>
                     </div>
@@ -180,14 +199,17 @@ export default function Page(){
                                 <button className="expand-btn">Expand</button>
                             </div>
                             <div className="card-right">
-                                <Image src={zachbryan} alt="Zach Bryan" className="artist-photo"/>
+                                <Image src={zachbryan} alt="Zach Bryan" className="artist-photo" />
                             </div>
                         </div>
-                        <div className="card-details" style={{display: "none"}}>
+                        {/* inline style display: none is used here instead of external CSS because
+                        the JavaScript toggle checks element.style.display to determine visibility state.
+                        The JS sets display to "block" or "none" directly, which uses inline style for initial state detection. */}
+                        <div className="card-details" style = {{display: "none"}}>
                             <p className="concert-description">
                                 Zach Bryan wraps up the end of the year at Gillette Stadium. His raw, honest, and
                                 emotional songwriting delivered with a powerful presence. Zach Bryan has become
-                                one of te biggest live musicians in the country, and it's for a reason. This concert is right
+                                one of the biggest live musicians in the country, and it's for a reason. This concert is right
                                 outside of
                                 Boston where you can take the MBTA Commuter Rail right to the Stadium.
                             </p>
@@ -195,16 +217,19 @@ export default function Page(){
                                 <a href="">Get Tickets</a>
                                 <button className="btn-secondary seating-btn"> See Seating Chart</button>
                             </div>
-                            <div className="seating-chart" style={{display: "none"}}>
-                                <Image src={gillette_chart} alt="Seating Chart for Zach Bryan" className="seating-img"/>
+                            {/* inline style display: none is used here instead of external CSS because
+                            the JavaScript toggle checks element.style.display to determine visibility state.
+                            The JS sets display to "block" or "none" directly, which uses inline style for initial state detection. */}
+                            <div className="seating-chart" style = {{display: "none"}}>
+                                <Image src={gillette_chart} alt="Seating Chart for Zach Bryan" className="seating-img" />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-           {/* <!--   CONTAINER ENDS  --> */
-}
-            {/*<!--   SELLING FAST SECTION   -->*/}
+            {/* CONTAINER ENDS */}
+
+            {/* SELLING FAST SECTION */}
             <div id="selling-fast">
                 <h2>Selling Fast</h2>
                 <div id="selling-fast-choice">
@@ -215,12 +240,11 @@ export default function Page(){
                         this one.
                     </p>
                     <div className="card-actions">
-                        <a href="">Get Tickets Before Their Gone!</a>
+                        <a href="">Get Tickets Before They're Gone!</a>
                     </div>
                 </div>
             </div>
+
         </div>
-      
-        </>
     )
 }

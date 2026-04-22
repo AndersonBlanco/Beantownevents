@@ -13,8 +13,9 @@ export default function RootLayout({ children }) {
           !(path == "/contact_us")&& <Header/> 
           }
         {children}
-      {!(path == "/contact_us" )&& <Footer/>}
+      {!(path == "/contact_us" || path.includes("concerts-intro"))&& <Footer style = {{}} />}
         </div>
+        
         </body>
     </html>
   );

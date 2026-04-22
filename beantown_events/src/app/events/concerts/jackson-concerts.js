@@ -1,93 +1,54 @@
-'use client';
 // Jackson //
 
-
-// FILTER SELECTION SECTION:
-// Some code techniques from W3Schools and their Filter Elements.
-// Shows/hides cards based on the selected category.
-// Resets all buttons to "btn" then sets the clicked one to "btn active"
-// .btn.active pattern - from W3Schools
+// Parallel arrays: BtnIds[i] is the id of the button, btnCategories[i] is the category it filters.
+// Same index ties them together, so one loop can wire up all 8 buttons.
+const btnIds = ["btn-all", "btn-hip-hop", "btn-pop", "btn-country", "btn-rock", "btn-tdgarden", "btn-lbp", "btn-gillette"];
+const btnCategories = ["all", "hip-hop", "pop", "country", "rock", "tdgarden", "lbp", "gillette"];
 
 export function filterSelection(category) {
     let cards = document.getElementsByClassName("filterDiv");
     let buttons = document.getElementsByClassName("btn");
 
-
     for (let i = 0; i < cards.length; i++) {
         cards[i].style.display = "none";
         if (category === "all") {
             cards[i].style.display = "block";
-        } else if (cards[i].className.includes(category)) {
+        } else if (cards[i].className.indexOf(category) !== -1) {
             cards[i].style.display = "block";
         }
     }
 
+    // Reset every button to "btn", then activate the ones whose category matches.
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].className = "btn";
     }
-    if (category === "all") {
-        document.getElementById("btn-all").className = "btn active";
-    } else if (category === "hip-hop") {
-        document.getElementById("btn-hip-hop").className = "btn active";
-    } else if (category === "pop") {
-        document.getElementById("btn-pop").className = "btn active";
-    } else if (category === "country") {
-        document.getElementById("btn-country").className = "btn active";
-    } else if (category === "rock") {
-        document.getElementById("btn-rock").className = "btn active";
-    } else if (category === "tdgarden") {
-        document.getElementById("btn-tdgarden").className = "btn active";
-    } else if (category === "lbp") {
-        document.getElementById("btn-lbp").className = "btn active";
-    } else if (category === "gillette") {
-        document.getElementById("btn-gillette").className = "btn active";
+    for (let i = 0; i < btnIds.length; i++) {
+        if (btnCategories[i] === category) {
+            document.getElementById(btnIds[i]).className = "btn active";
+        }
     }
 }
 
-// FILTER BUTTON EVENT LISTENERS SECTION
-// Each button calls filterSelection() with its category.
-export function filterButtonListenerSections(){
-document.getElementById("btn-all").addEventListener("click", function () {
-    filterSelection("all");
-})
 
-document.getElementById("btn-hip-hop").addEventListener("click", function () {
-    filterSelection("hip-hop");
-})
+export function filterButtonListenerSections (){
+// Filter Button Event Listeners Section
+// One loop wires up all 8 filter buttons, each calling filterSelection()() with its category.
+for (let i = 0; i < btnIds.length; i++) {
+    document.getElementById(btnIds[i]).addEventListener("click", function() {
+        filterSelection(btnCategories[i]);
+    });
+}
 
-document.getElementById("btn-pop").addEventListener("click", function () {
-    filterSelection("pop");
-})
-
-document.getElementById("btn-country").addEventListener("click", function () {
-    filterSelection("country");
-})
-
-document.getElementById("btn-rock").addEventListener("click", function () {
-    filterSelection("rock");
-})
-
-document.getElementById("btn-tdgarden").addEventListener("click", function () {
-    filterSelection("tdgarden");
-})
-
-document.getElementById("btn-lbp").addEventListener("click", function () {
-    filterSelection("lbp");
-})
-
-document.getElementById("btn-gillette").addEventListener("click", function () {
-    filterSelection("gillette");
-})
-
-// filterSelection("all") so the page will show all cards as the default
-
+// Show all cards as the default on page load.
 filterSelection("all");
 
-// These variables are shared between multiple spots, so it is declared once at
+// These variables are shared between multiple spots, so it are declared once at
 // the top level so both the collapse all button and the individual buttons can use them.
+// Declared const because the references themselves never get reassigned.
 
-let expandBtn = document.getElementsByClassName("expand-btn");
-let seatingBtn = document.getElementsByClassName("seating-btn");
+
+const expandBtn = document.getElementsByClassName("expand-btn");
+const seatingBtn = document.getElementsByClassName("seating-btn");
 
 // COLLAPSE ALL SECTION
 // Hides all card-details and seating-chart divs at once.
@@ -112,6 +73,8 @@ document.getElementById("collapse-all-btn").addEventListener("click", function (
 });
 
 // SEATING CHART TOGGLE
+// parentElement from W3Schools https://www.w3schools.com/jsref/prop_node_parentelement.asp
+// This returns the parent element of the specified element.
 // Button is inside card-actions inside card-details.
 // parentElement goes to card-actions, parentElement again goes to card-details,
 // then finds the seating-chart sibling div.
@@ -125,12 +88,13 @@ for (let i = 0; i < seatingBtn.length; i++) {
             this.innerHTML = "Hide Seating Chart";
         } else {
             chart.style.display = "none";
-            this.innerHTML = "Show Seating Chart";
+            this.innerHTML = "See Seating Chart";
         }
     });
 }
 
 // EXPAND BUTTON TOGGLE
+// parentElement - https://www.w3schools.com/jsref/prop_node_parentelement.asp
 // Navigated up ParentElement three times from the button to reach card-body,
 // then finds card-details and toggles display.
 // Changes button text between "Expand" and "Shrink"
@@ -148,12 +112,20 @@ for (let i = 0; i < expandBtn.length; i++) {
     });
 }
 
-//SEARCH
-// keyup, toUpperCase(), indexOf() used from W3Schools Filter List
-// keyup activates everytime a key is released in the search input.
-// toUpperCase() makes search case-insensitive so you can type either "j. cole" or "J. COLE"
-// and it will still show the result.
-// indexOf() checks if the artist name contains the searched text.
+//SEARCH - W3Schools some techniques used for the filter
+// https://www.w3schools.com/howto/howto_js_filter_lists.asp
+// keyup used from W3Schools
+// https://www.w3schools.com/jsref/event_onkeyup.asp
+// the keyup event fires everytime a key is released on the keyboard while the element has focus.
+// this triggers the search filter to function everytime a button is clicked in the search input,
+// which allows for live search results.
+// toUpperCase() from W3Schools - Source: https://www.w3schools.com/jsref/jsref_touppercase.asp
+// converts a string to all uppercase letters and returns the new string, so the search is not case-sensitive.
+// indexOf() - https://www.w3schools.com/jsref/jsref_indexof.asp
+// Used to return the position of the first occurrence of a specified value in the string.
+// returns -1 if the value is not found.
+// this allows the searched text to appear as it checks to see of the entered value is in the artists name.
+// if indexOf() returns -1, the card is hidden, and otherwise it will be shown.
 
 document.getElementById("search-input").addEventListener("keyup", function () {
     let input = document.getElementById("search-input");

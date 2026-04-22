@@ -1,9 +1,9 @@
 'use client'; 
-import Image from "next/image"; 
+import Image from "next/image"
 import OutsideFacadeMFA from "../../src/museums/MFA.jpg"
-import ISG from "../../src/museums/ISG.jpg"
-import HAM from "../../src/museums/HAM.jpg"
-import ICA from "../../src/museums/ICA.jpg"
+import ISG from "./src/ISGFrame.jpg"
+import HAM from "./src/HAMFrame.jpg"
+import ICA from "./src/ICAFrame.jpg"
 import BostonCommon from "../../src/museums/BostonCommon.jpg"
 import eljaleo from "../../src/museums/eljaleo.jpg"
 import MFA from "./src/MFAFrame.png"
@@ -84,21 +84,21 @@ export default function Page(){
         {/*<!--images display caption texts and number-->*/}
         <div className="mySlides fade">
             <div className="numbertext">1 / 3</div>
-            <Link href="/credits"><Image src={BostonCommon} alt="A dusktime painting of the Boston Common
+            <Link href="/credits" className = "slideshow-image-link"><Image className = "slideshow-image" src={BostonCommon} alt="A dusktime painting of the Boston Common
             by Childe Hassam"/></Link>
             <div className="text">At Dusk (Boston Common at Twilight) by Childe Hassam at the MFA</div>
         </div>
 
         <div className="mySlides fade">
             <div className="numbertext">2 / 3</div>
-             <Link href="/credits"><Image src={eljaleo}
+             <Link href="/credits"><Image className = "slideshow-image" src={eljaleo}
                                                    alt="A painting of a Spanish Flamenco dancer by John Singer Sargent"/></Link>
             <div className="text">El Jaleo by John Singer Sargent at the ISG</div>
         </div>
 
         <div className="mySlides fade">
             <div className="numbertext">3 / 3</div>
-            <Link href="/credits"><Image src={train} alt="A train entering the station at Saint-Lazare"/></Link>
+            <Link href="/credits"><Image className = "slideshow-image" src={train} alt="A train entering the station at Saint-Lazare"/></Link>
             <div className="text">The Gare Saint-Lazare: Arrival of a Train at the Harvard Art Museum</div>
         </div>
 

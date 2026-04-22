@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    background-color: #0d0608;
+    font-family: Georgia, serif;
+    /*
+      overflow: hidden; from W3Schools
+      https://www.w3schools.com/css/css_overflow.asp
+      overflow controls what happens when content overflow an element's box.
+      It is used to prevent any scrollbars from appearing on the page, since the
+      curtain animation is controlled by the wheel event in JS, not by native scrolling.
+     */
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+/* CONCERT CROWD BACKGROUND */
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../src/concert-crowd-1.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+
+#background-next {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+#cinched-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background-image: url("../src/curtain-left-close.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: 11;
+}
+
+#cinched-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    background-image: url("../src/curtain-right-close.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: 11;
+}
+
+/* FRONT CURTAIN WRAPPER */
+#curtain-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 2;
+    transition: opacity .8s ease;
+}
+
+/* FRONT CURTAIN PANELS */
+.curtain {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+#curtain-left {
+    background-image: url("../src/curtain-left.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#curtain-right {
+    background-image: url("../src/curtain-right.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* SPOTLIGHT */
+#spotlight {
+    position: absolute;
+    top: -30%;
+    left: 20%;
+    width: 90%;
+    height: 100%;
+    background-image: url("../src/spot-light.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 3;
+    opacity: .9;
+    transition: opacity .8s ease;
+}
+
+#spotlight-after {
+    position: fixed;
+    top: -103.5%;
+    left: 8%;
+    width: 110%;
+    height: 190%;
+    background-image: url("../src/spot-light.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity .8s ease;
+}
+
+/* SCROLL PROMPT */
+#scroll-prompt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translate; from W3Schools
+       https://www.w3schools.com/cssref/css3_pr_transform.php
+       translate moves an element from its current position along the X and Y axes
+       by the specified amounts. Here is  move translate(-50%, -50%) shifts the scroll
+       prompt left and up by half its own width and height, which perfectly centers it over the
+       curtain seam when combined with position: absolute and top/left 50%.
+    */
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    text-align: center;
+    transition: opacity .8s ease;
+}
+
+#scroll-prompt p {
+    font-family: Georgia, serif;
+    font-size: calc(10px + 1vw);
+    font-style: italic;
+    color: #e8d08a;
+    /*
+       letter-spacing increases or decreases the space between characters in text.
+       Increases or decreases space between letters in the click prompt text to create a better
+       looking and spread out style matching the theatrical theme.
+    */
+    letter-spacing: 2%;
+    text-transform: uppercase;
+    /* text-shadow from W3Schools
+       https://www.w3schools.com/cssref/css3_pr_text-shadow.asp
+       text-shadow adds shadow effects behind text, with values for horizontal
+       offset, vertical offset, blur radius, and color. It is two layered shadows
+       create a warm spotlight glow effect, a close light gold shadow and a wider
+       dark shadow radiating from the text.
+     */
+    text-shadow: 1px 1px 3px #eadcb3, 5px 5px 10px #222121;
+}
+
+#scroll-prompt .big-text {
+    font-family: Georgia, serif;
+    font-size: calc(28px + 3vw);
+    font-style: italic;
+    color: #e8d08a;
+    display: block;
+    margin-bottom: 3%;
+    /*
+      letter-spacing increases or decreases the space between characters in text.
+      Increases or decreases space between letters in the click prompt text to create a better
+      looking and spread out style matching the theatrical theme.
+   */
+    letter-spacing: 2%;
+    /* text-shadow from W3Schools
+       https://www.w3schools.com/cssref/css3_pr_text-shadow.asp
+       text-shadow adds shadow effects behind text, with values for horizontal
+       offset, vertical offset, blur radius, and color. It is two layered shadows
+       create a warm spotlight glow effect, a close light gold shadow and a wider
+       dark shadow radiating from the text.
+     */
+    text-shadow: 1px 1px 3px #eadcb3, 5px 5px 10px #222121;
+}
+
+/* STAGE CONTENT (revealed after curtains are opened) */
+#stage-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* transform: translate; from W3Schools
+       https://www.w3schools.com/cssref/css3_pr_transform.php
+       translate moves an element from its current position along the X and Y axes
+       by the specified amounts. Here is move translate (-50%, -50%) shifts the stage content
+       left and up by half its own width and height, centering the revealed title and enter button on
+       screen when combined with position: fixed and top/left: 50%.
+    */
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .8s ease, visibility .8s ease;
+}
+
+#stage-content .subtitle {
+    font-size: calc(10px + 1vw);
+    font-style: italic;
+    color: #dfc168;
+    /*
+      letter-spacing increases or decreases the space between characters in text.
+      Increases or decreases space between letters in the click prompt text to create a better
+      looking and spread out style matching the theatrical theme.
+   */
+    letter-spacing: 3%;
+    text-transform: uppercase;
+    opacity: .75;
+    margin-bottom: 5%;
+    /* text-shadow from W3Schools
+       https://www.w3schools.com/cssref/css3_pr_text-shadow.asp
+       text-shadow adds shadow effects behind text, with values for horizontal
+       offset, vertical offset, blur radius, and color. It is two layered shadows
+       create a warm spotlight glow effect, a close light gold shadow and a wider
+       dark shadow radiating from the text.
+    */
+    text-shadow: 1px 1px 3px #d1b155, 2px 2px 3px #222121;
+}
+
+#stage-content h1 {
+    font-family: Georgia, serif;
+    font-size: calc(30px + 4vw);
+    font-weight: bold;
+    color: #e8d08a;
+    /*
+      letter-spacing increases or decreases the space between characters in text.
+      Increases or decreases space between letters in the click prompt text to create a better
+      looking and spread out style matching the theatrical theme.
+   */
+    letter-spacing: 2%;
+    text-transform: uppercase;
+    /* line-height from W3Schools https://www.w3schools.com/cssref/pr_dim_line-height.php
+       Sets the vertical height space between lines of text.
+       Here 110% tighten the line spacing on the large h1 title for a more compact look.*/
+    line-height: 110%;
+    margin-bottom: 3%;
+    /* text-shadow from W3Schools
+       https://www.w3schools.com/cssref/css3_pr_text-shadow.asp
+       text-shadow adds shadow effects behind text, with values for horizontal
+       offset, vertical offset, blur radius, and color. It is two layered shadows
+       create a warm spotlight glow effect, a close light gold shadow and a wider
+       dark shadow radiating from the text.
+     */
+    text-shadow: 1px 1px 3px #eadcb3, 5px 5px 10px #222121;
+}
+
+/* ENTER BUTTON */
+#enter-btn {
+    /* inline-block elements flow inline but accept width, height, padding, and margin
+       like block elements. Used so the anchor button can have padding and look like a button
+       while still sitting inline in the centered stage content.
+       https://www.w3schools.com/cssref/pr_class_display.asp */
+    display: inline-block;
+    padding: 3% 8%;
+    border: 2px solid #c9a84c;
+    color: #c9a84c;
+    font-family: Georgia, serif;
+    font-size: calc(10px + .5vw);
+    font-style: italic;
+    /*
+      letter-spacing increases or decreases the space between characters in text.
+      Increases or decreases space between letters in the click prompt text to create a better
+      looking and spread out style matching the theatrical theme.
+   */
+    letter-spacing: 2%;
+    background-color: #f1f0f0;
+    /* cursor: pointer; from W3Schools https://www.w3schools.com/cssref/pr_class_cursor.php
+      changes the mouse pointer appearance when hovering over an element. "pointer" shows a hand
+      icon when hovering over filter buttons, which signals to the user that the element is clickable.
+    */
+    cursor: pointer;
+    text-decoration: none;
+    transition: color .35s ease, background-color .35s ease;
+    /* box-shadow from W3Schools
+       https://www.w3schools.com/cssref/css3_pr_box-shadow.php
+       adds shadow effects around elements frame. Two layered shadows create a warm
+       glow around the entire button, matching the spotlight/theatrical lighting theme
+       of the page.
+     */
+    box-shadow: 2px 2px 4px #eadcb3, 5px 5px 10px #222121;
+}
+
+#enter-btn:hover {
+    color: #0d0608;
+    background-color: #c9a84c;
+}
+
+/* VALANCE (top drape) */
+#valance {
+    position: fixed;
+    top: -1%;
+    left: 0;
+    width: 100vw;
+    height: 35%;
+    margin: 0;
+    padding: 0;
+    background-image: url("../src/valance-curtains.jpg");
+    background-size: 100% 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    z-index: 10;
+}
