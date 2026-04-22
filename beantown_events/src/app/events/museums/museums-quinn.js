@@ -1,18 +1,19 @@
-import { useEffect } from "react";
-
 // Quinn //
+    let slideIndex = 1;
 
+export function Museums_logic(){
 
 //expand/collapse button: from w3schools collapsible tutorial. EventListener waits for a click to execute the function.
 //all classname elements are put in coll and given the variable i (used in loops to count).
 
-var coll = document.getElementsByClassName("collapsible")
-var i;
+
+let coll = document.getElementsByClassName("collapsible");
+let i;
 
 for (i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function() {
         this.classList.toggle("active");
-        var content = this.nextElementSibling;
+        let content = this.nextElementSibling;
         if (content.style.display === "block") {
             content.style.display = "none";
         } else {
@@ -27,22 +28,26 @@ for (i = 0; i < coll.length; i++) {
 
 
 //slideshow (from w3schools)
-    let slideIndex = 1;
-    ShowSlides(slideIndex);
+
+    showSlides(slideIndex);
+
+
+}
+
+
 
     // advances a slide forwards or backwards based on the current slide it's on (n)
-    function plusSlides(n) {
-        ShowSlides(slideIndex += n);
+export function plusSlides(n) {
+        showSlides(slideIndex += n);
     }
 
     // displays the current slide
-    function currentSlide(n) {
-        ShowSlides(slideIndex = n);
+export function currentSlide(n) {
+        showSlides(slideIndex = n);
     }
 
     //makes sure that when one slide shows, others do not. (active/display or none)
-    function ShowSlides(n) {
-        useEffect(() => {
+export function showSlides(n) {
         let i;
         let slides = document.getElementsByClassName("mySlides");
         let dots = document.getElementsByClassName("dot");
@@ -56,5 +61,4 @@ for (i = 0; i < coll.length; i++) {
         }
         slides[slideIndex-1].style.display = "block";
         dots[slideIndex-1].className += " active";
-    },[]); 
-}
+    }
