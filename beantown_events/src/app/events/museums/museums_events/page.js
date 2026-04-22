@@ -12,7 +12,7 @@ import BostonCommon from "../src/BostonCommon.jpg"
 import eljaleo from "../src/eljaleo.jpg"
 import MFA from "../src/MFAFrame.png"
 import train from "../src/train.jpg"
-
+import Link from "next/link";
 
 export default function Museums_Events(){
 
@@ -23,7 +23,7 @@ export default function Museums_Events(){
     return(
         <div className ="">
     <h2 className="museum-heading">Events at Museums in Boston: April</h2>
-  <a href="museums.html" className="button">Back to Museums</a>
+  <Link href="/events/museums" className="button">Back to Museums</Link>
   <div id="frames">
     <div id="MFA">
       <h3 className="museum-heading">Museum of Fine Arts, Boston</h3>
