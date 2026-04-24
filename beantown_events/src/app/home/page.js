@@ -11,12 +11,12 @@ export default function Home() {
     
         <div className = "customMapContainer">
   
+
+
       <iframe 
-        referrerPolicy="no-referrer-when-downgrade"
+         referrerPolicy="no-referrer-when-downgrade"
           loading = "eager"
-      src="https://www.google.com/maps/d/u/0/embed?mid=1onRWuFsgj7AqVnp-s1B3nOeJf_iuZso&ehbc=00000000&noprof=1" autoFocus = {false} width="640" height="480">
-        
-      </iframe>
+      src="https://www.google.com/maps/d/u/1/embed?mid=1onRWuFsgj7AqVnp-s1B3nOeJf_iuZso&ehbc=00000000&noprof=1" autoFocus = {false} width="640" height="480"></iframe>
 
      <MapMenuOverlay/>
      
