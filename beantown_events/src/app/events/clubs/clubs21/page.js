@@ -2,16 +2,17 @@
 "use client"; 
 import Image from "next/image";
 import "../clubpages.css"
+
 import VenuImage from "../src/venu.jpg"
 import BngImage from "../src/bng.jpg"; 
 import GrandImage from "../src/grand.jpg"; 
 import IconImage from "../src/icon.jpg"; 
 import clubs_pages_logic from "../clubpages";
 import { useEffect } from "react";
-
+import { handleCheckout } from "../../page";
 export default function Clubs21(){
 	useEffect(() =>{
-		clubs_pages_logic(); 
+		//clubs_pages_logic(); 
 	})
     return(
         <div id="main">
@@ -29,7 +30,7 @@ export default function Clubs21(){
 								<li>Age: 21+</li>
 								<li>Events: Fridays and Sundays at 10:30PM</li>
 							</ul>
-							<button className="expand-btn">Expand</button>
+
 						</div>
 						<div className="card-right">
 							<Image src={IconImage} alt="ICON nightclub in Boston" className="club-photo"/>
@@ -37,9 +38,23 @@ export default function Clubs21(){
 					</div>
 					<div className="card-details">
 						<p className="club-description">Popular nightclub with events every Friday and Sunday starting at 10:30PM. Known label music, dancing, and a lively Boston crowd.</p>
-						<div className="card-actions">
-							<a href="https://www.iconnightclub.com/" target="_blank">Learn More</a>
-							<a href="#" onClick={() => {}}>Buy Ticket</a>
+						<div id="card-actions">
+							<a style= {{   
+								padding:" 1.5% 3%",
+    						backgroundColor: "#d88373",
+   					 color: "#50190f",
+    					textDecoration: "none",
+    				fontSize: "calc(10px + .3vw)",
+    					marginRight: "2%"
+						}} href="https://www.iconnightclub.com/" target="_blank">Learn More</a>
+							<a style= {{   
+								padding:" 1.5% 3%",
+    						backgroundColor: "#d88373",
+   					 color: "#50190f",
+    					textDecoration: "none",
+    				fontSize: "calc(10px + .3vw)",
+    					marginRight: "2%"
+						}}  href="#" onClick={() => {handleCheckout("prod_UNfPz538dOl6zP")}}>Buy Ticket</a>
 						</div>
 					</div>
 				</div>
@@ -56,7 +71,7 @@ export default function Clubs21(){
 								<li>Age: 21+</li>
 								<li>Events: Saturdays at 10:30PM</li>
 							</ul>
-							<button className="expand-btn">Expand</button>
+
 						</div>
 						<div className="card-right">
 							<Image src={VenuImage} alt="Venu nightclub in Boston" className="club-photo"/>
@@ -65,9 +80,9 @@ export default function Clubs21(){
 					</div>
 					<div className="card-details">
 						<p className="club-description">Exciting nightclub with lively Saturday events and a high-energy crowd.</p>
-						<div className="card-actions">
+						<div id="card-actions">
 							<a href="https://www.venuboston.com/" target="_blank">Learn More</a>
-							<a href="#" onClick={() =>{}}>Buy Ticket</a>
+							<a href="#" onClick={() => {handleCheckout("prod_UNfPz538dOl6zP")}}>Buy Ticket</a>
 						</div>
 					</div>
 				</div>
@@ -86,7 +101,7 @@ export default function Clubs21(){
 								<li>April 25 - Galantis</li>
 								<li>May 2 - KSHMR</li>
 							</ul>
-							<button className="expand-btn">Expand</button>
+
 						</div>
 						<div className="card-right">
 							<Image src={BngImage} alt="Big Night Live venue in Boston" className="club-photo"/>
@@ -94,9 +109,9 @@ export default function Clubs21(){
 					</div>
 					<div className="card-details">
 						<p className="club-description">Big Night Live hosts shows with major DJs and has a late-night club atmosphere.</p>
-						<div className="card-actions">
+						<div id="card-actions">
 							<a href="https://bignightlive.com/" target="_blank">Learn More</a>
-							<a href="#" onClick={() =>{}}>Buy Ticket</a>
+							<a href="#" onClick={() => {handleCheckout("prod_UNfPz538dOl6zP")}}>Buy Ticket</a>
 						</div>
 					</div>
 				</div>
@@ -113,7 +128,7 @@ export default function Clubs21(){
 								<li>Age: 21+</li>
 								<li>Events: Fridays at 10:00PM</li>
 							</ul>
-							<button className="expand-btn">Expand</button>
+
 						</div>
 						<div className="card-right">
 							<Image src={GrandImage} alt="The Grand nightclub in Boston" className="club-photo"/>
@@ -121,21 +136,21 @@ export default function Clubs21(){
 					</div>
 					<div className="card-details">
 						<p className="club-description">One of Boston's biggest nightlife venues with Friday events, and a high-energy vibe.</p>
-						<div className="card-actions">
+						<div id="card-actions">
 							<a href="https://thegrandboston.com/" target="_blank">Learn More</a>
-							<a href="#" onClick={() =>{}}>Buy Ticket</a>
+							<a href="#" onClick={() => {handleCheckout("prod_UNfPz538dOl6zP")}}>Buy Ticket</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-	{/*<!-- COMPARISON TABLE -->*/}
-		{/*<!-- Comparison table layout based on W3Schools: https://www.w3schools.com/howto/howto_css_comparison_table.asp -->*/}
-		<div className="comparison-table-wrapper">
+		{/* COMPARISON TABLE */}
+			{/* Comparison table layout based on W3Schools: https://www.w3schools.com/howto/howto_css_comparison_table.asp */}
+	<div class="comparison-table-wrapper">
 			<h2>Compare Boston Venues</h2>
-			<table className="comparison-table">
-				<tr>
+			<table class="comparison-table">
+				<tr className = "table-headers">
 					<th>Venue</th>
 					<th>Age</th>
 					<th>Location</th>

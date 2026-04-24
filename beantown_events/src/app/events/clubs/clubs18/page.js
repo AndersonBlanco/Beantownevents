@@ -5,10 +5,10 @@ import clubs_pages_logic from "../clubpages";
 import { useEffect } from "react";
 import Image from "next/image";
 import BngImage from "../src/bng.jpg"; 
-
+import { handleCheckout } from "../../page";
 export default function Clubs18(){
 	useEffect(() =>{
-		clubs_pages_logic()
+		//clubs_pages_logic()
 	});
 
     return(
@@ -30,7 +30,7 @@ export default function Clubs18(){
 								<li>April 24 - Jeezy Live in Boston</li>
 								<li>May 1 - PEEAKABOO</li>
 							</ul>
-							<button className="expand-btn">Expand</button>
+
 						</div>
 						<div className="card-right">
 							<Image src={BngImage} alt="Big Night Live venue in Boston" className="club-photo"/>
@@ -38,8 +38,22 @@ export default function Clubs18(){
 					</div>
 					
 					<div className="card-actions">
-						<a href="https://bignightlive.com/" target="_blank">Learn More</a>
-						<a href="#" onClick={() => {}}>Buy Ticket</a>
+						<a  style= {{   
+								padding:" 1.5% 3%",
+    						backgroundColor: "#d88373",
+   					 color: "#50190f",
+    					textDecoration: "none",
+    				fontSize: "calc(10px + .3vw)",
+    					marginRight: "2%"
+						}} href="https://bignightlive.com/" target="_blank">Learn More</a>
+						<a style= {{   
+								padding:" 1.5% 3%",
+    						backgroundColor: "#d88373",
+   					 color: "#50190f",
+    					textDecoration: "none",
+    				fontSize: "calc(10px + .3vw)",
+    					marginRight: "2%"
+						}}  href="#" onClick={() => {handleCheckout("prod_UNfPz538dOl6zP")}}>Buy Ticket</a>
 					</div>
 				</div>
 			</div>

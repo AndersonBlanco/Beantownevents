@@ -1,4 +1,5 @@
 export default function clubs_pages_logic(){
+    /*
 let expandBtn = document.getElementsByClassName("expand-btn");
 
 for (let i = 0; i < expandBtn.length; i++) {
@@ -14,5 +15,6 @@ for (let i = 0; i < expandBtn.length; i++) {
         }
     };
 }
+    */
 
 }

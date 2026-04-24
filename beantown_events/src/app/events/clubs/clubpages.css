@@ -84,23 +84,25 @@
 
 .card-details {
     margin-top: 2%;
-    display: none;
+
 }
 
-.card-actions {
+#card-actions {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-top: 1%;
 }
 
-.card-action a {
+#card-actions a {
     padding: 1.5% 3%;
-    background-color: white;
-    color: #18206f;
+    background-color: #d88373;
+    color: #50190f;
     text-decoration: none;
     font-size: calc(10px + .3vw);
     margin-right: 2%;
 }
+
 
 .card-action a:hover {
     background-color: #18206f;
@@ -161,4 +163,8 @@
     .club-photo {
         height: auto;
     }
+}
+
+.table-headers th, .comparison-table-wrapper h2{
+    color: #d88373;
 }

@@ -1,6 +1,5 @@
 'use client'; 
 import "./boxing.css"
-import NewEnglandSilverGloves from "../../src/boxing/NewEnglandSIlverGlovesImg1.jpg"; 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -187,7 +186,7 @@ export default function Page(){
         }}>
 
 
-                    <Image  className = "img" src = {event.img} alt = {`${event.title} event image`} onClick = {() => {
+                    <Image  className = "img" src = {event.img} alt = {`${event.title} event image`} width = {360} height = {240} onClick = {() => {
                                  //do window.localsrtorrage for cookie stored data 
                       window.localStorage.setItem("@selectedEvent", JSON.stringify(event)); 
              
@@ -305,4 +304,3 @@ export default function Page(){
 }
 
 //iNlclude different layout for events 
-

@@ -13,17 +13,7 @@ import { createCheckoutSessionAction } from "@/libs/stripe/stripe";
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
-
-const handleCheckout = async (priceId, quantity = 1) =>{
-          try {
-            const { url } = await createCheckoutSessionAction({ priceId, quantity: 1 });
-            console.log(url)
-            window.location.href = url;
-            
-          } catch (err) {
-            console.error(err);
-          }
-        } 
+import { handleCheckout } from "../../page";
 
 export default function BoxingEventViewer(){
 
@@ -54,7 +44,7 @@ export default function BoxingEventViewer(){
     const PurchaseTickets = ( 
         <div className = "ticketSaleContainer">
             {ticketCounterCOmponent}
-            <button onClick = {() => handleCheckout("price_1THnbpHo5oc8DhhwZWBpyK5X")}>Add to Cart</button>
+            <button onClick = {() => handleCheckout("price_1TOu4kHo5oc8DhhwrGEseqvl", ticketsToVuy)}>Buy Now</button>
 
             </div>
     )
@@ -64,7 +54,7 @@ export default function BoxingEventViewer(){
     return(
         <div className = "preview_container">
             <div className = "row" >
-                <Image alt = {`${obj.title}bxoing event image`} src = {obj.img} className = "image" />
+                <Image alt = {`${obj.title} boxing event image`} src = {obj.img} className = "image" width = {1200} height = {800} />
                 <div className = "column" >
                     <h2>{obj.title}</h2>
                     <p>{obj.description}</p>
@@ -75,15 +65,6 @@ export default function BoxingEventViewer(){
 
 
 
-            <div className = "photoGallery">
-                {
-                    ["red", "blue", "green", "gray", "cyan", ].map((itm, idx) =>{
-                        return <div key = {idx} className = "placeholderImageFrame" style = {{backgroundColor: itm}}>
-
-                        </div>
-                    })
-                }
-            </div>
 
         </div>
     )

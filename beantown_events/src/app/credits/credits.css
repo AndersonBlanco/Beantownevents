@@ -4,68 +4,114 @@ main {
     padding: 3%;
     min-height: 63vh;
 }
-
-#credits-section-container{
-    padding: 0px 100px;
-        margin-top: 2%;
-    margin-bottom: 2%;
-    border: none; 
-
-}
 /* Credits Banner */
 #credits-banner {
-    background-color: #18206f;
+    position: relative;
     text-align: center;
     padding: 5% 3%;
+    background-image: url("../src/img-credits.jpg");
+    background-size: cover;
+    background-position: 0 35%;
+    background-repeat: no-repeat;
+    border-bottom: 3px groove #d88373;
+}
+
+/*
+    #credits-banner::before - from W3Schools
+    https://www.w3schools.com/cssref/sel_before.asp
+    :: before is a pseudo-element that inserts generated content before an element's
+    actual content. With content: "" it creates an empty element. This is being used to create
+    a semi-transparent dark overlay on top of the background image without needing an extra HTML tag,
+    so the title and subtitle are still readable over the top of the photo.
+*/
+#credits-banner::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(10 10 34 / 0.65);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+}
+
+#credits-title, #underline, #credits-intro {
+    z-index: 2;
 }
 
 #credits-title {
+    position: relative;
+    /* text shadow from W3Schools https://www.w3schools.com/cssref/css3_pr_text-shadow.asp
+       Adds shadow effects behind text. Values are horizontal offset, vertical offset, blur radius, color.
+       Used here to create a soft pink-orange glow behind the credits title text. */
+    text-shadow: -4px 3px 4px rgba(236,131,115,0.41);
     font-size: calc(24px + 2vw);
-    color: #ffffff;
-    margin-bottom: 2%;
+    background-color: rgb(28 28 28 / 0.78);
+    margin: 0 auto 2%;
+    width: 30%;
+    border-radius: 15px;
+    color: #ece8e5;
+    border: 1px ridge rgb(246 230 209 / 0.42);
 }
 
 /* Underline accent bar */
 #underline {
-    width: 10%;
+    position: relative;
+    width: 14%;
     height: 4px;
-    background-color: #222e9a;
-    margin-left: 45%;
+    background-color: #1c1c1c;
+    margin-left: 42%;
     margin-bottom: 2%;
 }
 
+
+
 #credits-intro {
+    position: relative;
     font-size: calc(10px + .5vw);
-    color: #ffffff;
+    color: #ece8e5;
+    background-color: rgb(28 28 28 / 0.78);
+    /* text shadow from W3Schools https://www.w3schools.com/cssref/css3_pr_text-shadow.asp
+       Adds shadow effects behind text. Values are horizontal offset, vertical offset, blur radius, color.
+       Used here to create a soft pink-orange glow behind the credits title text. */
+    text-shadow: -4px 3px 4px rgba(236,131,115,0.41);
+    width: 40%;
+    margin: auto;
+    padding: 1%;
+    border-radius: 15px;
+    border: 1px ridge rgb(246 230 209 / 0.42);
 }
 
 /* CREDITS SECTION */
 .credits-section {
     margin-top: 2%;
     margin-bottom: 2%;
-    border: 2px solid #18206f;
-
+    border: 2px solid #367BCA;
 }
 
 /* Collapsible button toggle */
 .collapsible-btn {
     width: 100%;
     padding: 2% 3%;
-    background-color: #18206f;
-    color: #ffffff;
+    background-color: #f5e2c8;
+    color: #355C96;
     border: none;
     font-size: calc(12px + .4vw);
+    /* cursor: pointer; from W3Schools https://www.w3schools.com/cssref/pr_class_cursor.php
+       changes the mouse pointer appearance when hovering over an element. "pointer" shows a hand
+       icon when hovering over collapsible button, which signals to the user that the element is clickable.
+     */
     cursor: pointer;
     text-align: left;
 }
 
 .collapsible-btn:hover {
-    background-color: #18206f;
+    background-color: rgb(245 226 200 / 0.66);
 }
 
 .collapsible-btn:active {
-    background-color: #222e9a;
-    color: #ffffff;
+    background-color: rgb(197 179 155 / 0.85);
+    color: #355C96;
     padding: 1.85% 2.85%;
 }
 
@@ -76,31 +122,24 @@ main {
     background-color: #f9f9f9;
 }
 
-/* Credits groups and lists */
-.credits-group {
-    margin-bottom:3%;
-}
-
-.credits-group-title {
-    font-size: calc(10px + .3vw);
-    color: #ffffff;
-    line-height: 1.8;
-    padding: 1% 2%;
-}
-
 .credit-list {
+    /* Makes the circle for each list have a hollow circle shape */
     list-style-type: circle;
+}
+
+.trademark {
+    font-size: calc(8px + .3vw);
+    background-color: transparent;
 }
 
 .credit-list li {
     padding: 1% 0;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #355C96;
     font-size: calc(10px + .5vw);
     font-style: italic;
 }
 
 .credit-list a {
     text-decoration: none;
-    color: #222e9a;
+    color: #355C96;
 }
-

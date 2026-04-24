@@ -47,20 +47,18 @@
 #check-btn {
     border: none;
     padding: 1% 2%;
-    background-color: #18206f;
-    color: white;
+    background-color: #d88373;
+    color: #50190f;
     cursor: pointer;
     font-size: calc(10px + .3vw);
+    margin-left: 10px; 
+    margin-right: 10px;
 }
-
-#check-btn:hover {
-    background-color: #18206f;
-}
-
+ 
 #output {
-    margin-top: 1%;
-    font-weight: bold;
-    color: #18206f;
+  margin-top: 1%;
+font-weight: bold;
+color: #50190f;
 }
 
 #page-links {

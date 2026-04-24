@@ -28,7 +28,7 @@ return(
                 <p id="slogan">Find Boston Events Near You</p>
             </div>
         </div>
-              <ShoppingCartIcon sx = {{color: "white"}} className = "shoppingCart" />
+
     </header>
 
     <nav>
@@ -44,7 +44,7 @@ return(
                     <Link href = "/events/museums">Museums</Link>
                 </div>
             </li>
-            <li><Link href="/about_us">About Us</Link></li>
+
             <li><Link href="/contact_us">Contact Us</Link></li>
         </ul>
 

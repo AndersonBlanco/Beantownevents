@@ -5,7 +5,7 @@ footer {
     text-align: center;
     line-height: 2;
     padding: 2% 3%;
-    position:absolute;
+    position:static;
     width: 100%; 
     bottom: 0%;
 }
