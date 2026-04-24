@@ -12,7 +12,7 @@ import zachbryan from "../../src/zachbryan.jpg"
 import gillette_chart from "../../src/gillette-chart.jpg"
 import { useEffect } from "react"
 import {filterSelection, filterButtonListenerSections} from "./jackson-concerts"
-import { handleCheckout } from "../page";
+import { handleCheckout } from "@/libs/stripe/checkoutHandlerer";
 
 export default function Page(){
 

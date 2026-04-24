@@ -5,7 +5,7 @@ import clubs_pages_logic from "../clubpages";
 import { useEffect } from "react";
 import Image from "next/image";
 import BngImage from "../src/bng.jpg"; 
-import { handleCheckout } from "../../page";
+import { handleCheckout } from "@/libs/stripe/checkoutHandlerer";
 export default function Clubs18(){
 	useEffect(() =>{
 		//clubs_pages_logic()
@@ -53,7 +53,7 @@ export default function Clubs18(){
     					textDecoration: "none",
     				fontSize: "calc(10px + .3vw)",
     					marginRight: "2%"
-						}}  href="#" onClick={() => {handleCheckout("prod_UNfPz538dOl6zP")}}>Buy Ticket</a>
+						}}  href="#" onClick={() => {handleCheckout("price_1TPZn6Ho5oc8Dhhw6F6XgfJZ")}}>Buy Ticket</a>
 					</div>
 				</div>
 			</div>

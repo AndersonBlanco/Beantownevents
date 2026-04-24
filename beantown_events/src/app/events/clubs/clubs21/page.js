@@ -9,7 +9,7 @@ import GrandImage from "../src/grand.jpg";
 import IconImage from "../src/icon.jpg"; 
 import clubs_pages_logic from "../clubpages";
 import { useEffect } from "react";
-import { handleCheckout } from "../../page";
+import { handleCheckout } from "@/libs/stripe/checkoutHandlerer";
 export default function Clubs21(){
 	useEffect(() =>{
 		//clubs_pages_logic(); 
@@ -54,7 +54,7 @@ export default function Clubs21(){
     					textDecoration: "none",
     				fontSize: "calc(10px + .3vw)",
     					marginRight: "2%"
-						}}  href="#" onClick={() => {handleCheckout("prod_UNfPz538dOl6zP")}}>Buy Ticket</a>
+						}}  href="#" onClick={() => {handleCheckout("price_1TOu54Ho5oc8DhhwWCznwVhN")}}>Buy Ticket</a>
 						</div>
 					</div>
 				</div>

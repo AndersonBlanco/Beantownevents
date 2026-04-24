@@ -13,7 +13,7 @@ import { createCheckoutSessionAction } from "@/libs/stripe/stripe";
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
-import { handleCheckout } from "../../page";
+import { handleCheckout } from "@/libs/stripe/checkoutHandlerer";
 
 export default function BoxingEventViewer(){
 

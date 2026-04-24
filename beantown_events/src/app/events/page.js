@@ -4,17 +4,7 @@ import Event from "@/app/dataModels/events";
 import "./index.css"
 import "../globals.css"
 import Header from "../components/header/header";
-
-export const handleCheckout = async (priceId, quantity = 1) =>{
-      try {
-        const { url } = await createCheckoutSessionAction({ priceId, quantity: quantity});
-        console.log(url)
-        window.location.href = url;
-        
-      } catch (err) {
-        console.error(err);
-      }
-    } 
+import { handleCheckout } from "@/libs/stripe/checkoutHandlerer";
 
 export default function Events() {
   //js logic: 
