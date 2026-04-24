@@ -9,7 +9,7 @@ import eljaleo from "../../src/museums/eljaleo.jpg"
 import MFA from "./src/MFAFrame.png"
 import train from "../../src/museums/train.jpg"
 import { useEffect, useState } from "react";
-import  "../index.css"
+//import  "../index.css"
 import {Museums_logic, plusSlides, showSlides, currentSlide, } from "./museums-quinn";
 import "./museums.css"
 import Link from "next/link";
@@ -23,8 +23,8 @@ export default function Page(){
         Museums_logic(); 
     })
     return(
-    <div className = "museum_container">
-            <main>
+
+     <div className="main">
     <h2 className="museum-heading">Art Museums in Boston</h2>
         <div id="frames">
             <div id="MFA">
@@ -80,26 +80,26 @@ export default function Page(){
 
     {/*<!--slideshow INFO FROM W3SCHOOLS-->*/}
     <div className="slideshow-container">
-        <h2 className="museum-heading">Famous Paintings in Boston, and where!</h2>
+        <h2 className="museum-heading-slideshow">Famous Paintings in Boston, and where!</h2>
         {/*<!--images display caption texts and number-->*/}
         <div className="mySlides fade">
             <div className="numbertext">1 / 3</div>
             <Link href="/credits" className = "slideshow-image-link"><Image className = "slideshow-image" src={BostonCommon} alt="A dusktime painting of the Boston Common
             by Childe Hassam"/></Link>
-            <div className="text">At Dusk (Boston Common at Twilight) by Childe Hassam at the MFA</div>
+            <p className="text">At Dusk (Boston Common at Twilight) by Childe Hassam at the MFA</p>
         </div>
 
         <div className="mySlides fade">
             <div className="numbertext">2 / 3</div>
              <Link href="/credits"><Image className = "slideshow-image" src={eljaleo}
                                                    alt="A painting of a Spanish Flamenco dancer by John Singer Sargent"/></Link>
-            <div className="text">El Jaleo by John Singer Sargent at the ISG</div>
+            <p className="text">El Jaleo by John Singer Sargent at the ISG</p>
         </div>
 
         <div className="mySlides fade">
             <div className="numbertext">3 / 3</div>
             <Link href="/credits"><Image className = "slideshow-image" src={train} alt="A train entering the station at Saint-Lazare"/></Link>
-            <div className="text">The Gare Saint-Lazare: Arrival of a Train at the Harvard Art Museum</div>
+            <p className="text">The Gare Saint-Lazare: Arrival of a Train at the Harvard Art Museum</p>
         </div>
 
        {/*<!--next&previous buttons-->*/}
@@ -116,7 +116,7 @@ export default function Page(){
     </div>
     {/*<!--end slideshow-->*/}
 
-    </main>
     </div>
+
     )
 }

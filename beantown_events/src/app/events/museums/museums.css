@@ -1,25 +1,27 @@
+/* Quinn */
+
 
 /* slideshow INFO FROM w3SCHOOLS*/
     .slideshow-container {
-        max-width: 50%;
+        max-width: 70%;
+
         position: relative;
+
         margin: auto;
         background-color: #f5e2c8;
-        justify-content: center;
-        align-items: center;
+
+
     }
 
     .slideshow-container .slideshow-image {
-        max-width: 70%;
-        max-height: auto; 
-        object-fit: contain;
+        max-width: 100%;
+        height: inherit;
+
     }
 
     /* hides images by default until activated with click on js */
     .mySlides {
         display: none;
-
-
     }
 
     /* advances photos one slide to next */
@@ -47,16 +49,17 @@
     .text {
         color: #f2f2f2;
         font-size: calc(10px + .4vw);
-        padding: 1% 8%;
+
         position: absolute;
-        bottom: 3%;
+        bottom: 5%;
+
         width: 100%;
         text-align: center;
     }
 
     /* Number text (1/3 etc) */
     .numbertext {
-        color: #292929;
+        color: #f2f2f2;
         font-size: calc(10px + .4vw);
         padding: 2% 2%;
         position: absolute;
@@ -97,7 +100,7 @@
 
 
 /*  MAIN CONTENT SECTION  */
-main {
+.main {
     padding: 2%;
     background-color: #f5e2c8;
 }
@@ -108,6 +111,14 @@ main {
     margin-top: 2%;
     margin-bottom: 3%;
     text-align: center;
+}
+
+.museum-heading-slideshow{ 
+        font-size: calc(26px + 1vw);
+    color: #18206f;
+     text-align: center;
+
+     position: relative; 
 }
 
 .button{
@@ -130,7 +141,7 @@ main {
     justify-content: space-around;
 }
 
-#frames img{
+#frames .slideshow-image{
     padding: 1%;
     margin: 2%;
 }
@@ -205,31 +216,4 @@ main {
     margin-bottom: 0;
 }
 
-/* FOOTER SECTION */
-footer {
-    background-color: #18206f;
-    text-align: center;
-    line-height: 2;
-    padding: 2% 3%;
-}
-
-footer p {
-    font-size: calc(10px + .3vw);
-    color: #f5e2c8;
-}
-
-footer a {
-    color: #d88373;
-    text-decoration: none;
-}
-
-footer a:link {
-}
-
-footer a:visited {
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
+ 

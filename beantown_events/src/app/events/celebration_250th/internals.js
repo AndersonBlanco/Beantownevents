@@ -1,6 +1,7 @@
 "use client"; 
 
 import "./groupproject.css"
+
 import "./timeline.css"
 import Harbor from "./src/harbor.jpg"
 import Tea from "./src/tea.jpg"
