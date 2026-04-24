@@ -19,11 +19,11 @@ function getStripe() {
 const success_url = process.env.SUCCESS_URL
 const cancel_url = process.env.CANCEL_URL
 
-async function createCheckoutSession({ priceId, quantity=1, success_url, cancel_url}) {
+async function createCheckoutSession({ priceId, success_url, cancel_url}) {
   const stripe = getStripe();
   return stripe.checkout.sessions.create({
     mode: "payment",
-    line_items: [{ price: priceId, quantity }],
+    line_items: priceId, // expecting an array like [{ price: "price_xxx", quantity: 1 }]
     success_url: success_url,
     cancel_url: cancel_url,
   });
@@ -31,18 +31,17 @@ async function createCheckoutSession({ priceId, quantity=1, success_url, cancel_
 
 
 
-export async function createCheckoutSessionAction({ priceId, quantity = 1, success_url, cancel_url}) {
-  if (!priceId || typeof priceId !== "string") {
-    console.log("invalid price id")
+export async function createCheckoutSessionAction({ priceId, success_url, cancel_url}) {
+  if (!Array.isArray(priceId) || priceId.length === 0) {
+    console.log("invalid line items")
   }
 
-  const session = await createCheckoutSession({ priceId, quantity, success_url, cancel_url});
+  const session = await createCheckoutSession({ priceId, success_url, cancel_url});
   if (!session.url) {
     console.log("no checkout session URL created")
   }
 
   return { url: session.url };
 }
-
 
 

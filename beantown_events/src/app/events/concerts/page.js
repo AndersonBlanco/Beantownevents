@@ -87,7 +87,7 @@ export default function Page(){
                                 the energy he brings to the stage, this tour is a must-see for a Hip-Hop fan in Boston.
                             </p>
                             <div className="card-actions">
-                             <button className="btn-primary" onClick={() => handleCheckout("price_1TP4iDHo5oc8Dhhwr2pQLhOT",1, `${uri}/${path}`, `${uri}/${path}`)}>Get Tickets</button>
+                             <button className="btn-primary" onClick={() => handleCheckout([{ price: "price_1TP4iDHo5oc8Dhhwr2pQLhOT", quantity: 1 }], `${uri}/${path}`, `${uri}/${path}`)}>Get Tickets</button>
                                 <button className="btn-secondary seating-btn"> See Seating Chart</button>
                             </div>
                             {/* inline style display: none is used here instead of external CSS because
@@ -130,7 +130,7 @@ export default function Page(){
                                 then this show is for you!
                             </p>
                             <div className="card-actions">
-                             <button className="btn-primary" onClick={() => handleCheckout("price_1TP4iTHo5oc8DhhwHK8vlmaG",1, `${uri}/${path}`, `${uri}/${path}`)}>Get Tickets</button>
+                             <button className="btn-primary" onClick={() => handleCheckout([{ price: "price_1TP4iTHo5oc8DhhwHK8vlmaG", quantity: 1 }], `${uri}/${path}`, `${uri}/${path}`)}>Get Tickets</button>
                                 <button className="btn-secondary seating-btn"> See Seating Chart</button>
                             </div>
                             {/* inline style display: none is used here instead of external CSS because
@@ -171,7 +171,7 @@ export default function Page(){
                                 If you are in Boston around this date and love pop music, this show is the one for you.
                             </p>
                             <div className="card-actions">
-                             <button className="btn-primary" onClick={() => handleCheckout("price_1TP4ifHo5oc8DhhwKvpLLZan",1, `${uri}/${path}`, `${uri}/${path}`)}>Get Tickets</button>
+                             <button className="btn-primary" onClick={() => handleCheckout([{ price: "price_1TP4ifHo5oc8DhhwKvpLLZan", quantity: 1 }], `${uri}/${path}`, `${uri}/${path}`)}>Get Tickets</button>
                                 <button className="btn-secondary seating-btn"> See Seating Chart</button>
                             </div>
                             {/* inline style display: none is used here instead of external CSS because
@@ -218,7 +218,7 @@ export default function Page(){
                                 Boston where you can take the MBTA Commuter Rail right to the Stadium.
                             </p>
                             <div className="card-actions">
-                             <button className="btn-primary" onClick={() => handleCheckout("price_1TP4ipHo5oc8DhhwMYiJPLFX",1, `${uri}/${path}`, `${uri}/${path}`)}>Get Tickets</button>
+                             <button className="btn-primary" onClick={() => handleCheckout([{ price: "price_1TP4ipHo5oc8DhhwMYiJPLFX", quantity: 1 }], `${uri}/${path}`, `${uri}/${path}`)}>Get Tickets</button>
                                 <button className="btn-secondary seating-btn"> See Seating Chart</button>
                             </div>
                             {/* inline style display: none is used here instead of external CSS because
@@ -245,7 +245,7 @@ export default function Page(){
                     </p>
                     <div className="card-actions">
                          <button 
-                         id="selling-fast-btn" onClick={() => handleCheckout("price_1TP4iDHo5oc8Dhhwr2pQLhOT",1, `${uri}/${path}`, `${uri}/${path}`)}>Get Tickets Before They're Gone!</button>
+                         id="selling-fast-btn" onClick={() => handleCheckout([{ price: "price_1TP4iDHo5oc8Dhhwr2pQLhOT", quantity: 1 }], `${uri}/${path}`, `${uri}/${path}`)}>Get Tickets Before They're Gone!</button>
 
                     </div>
                 </div>

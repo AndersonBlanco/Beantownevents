@@ -1,9 +1,9 @@
 "use client"; 
 import { createCheckoutSessionAction } from "./stripe";
 
-export const handleCheckout = async (priceId, quantity = 1, success_url, cancel_url) =>{
+export const handleCheckout = async (priceId, success_url, cancel_url) =>{
       try {
-        const { url } = await createCheckoutSessionAction({ priceId, quantity: quantity, success_url, cancel_url});
+        const { url } = await createCheckoutSessionAction({ priceId, success_url, cancel_url});
         console.log(url)
         window.location.href = url;
 

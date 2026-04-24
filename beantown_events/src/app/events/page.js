@@ -15,7 +15,7 @@ export default function Events() {
   const CheckoutButton = ({priceId}) =>{
    
 
-    return <button onClick = {() => handleCheckout(priceId, 1, `${uri}/${path}`, `${uri}/${path}` )}>Checkout</button>
+    return <button onClick = {() => handleCheckout([{ price: priceId, quantity: 1 }], `${uri}/${path}`, `${uri}/${path}` )}>Checkout</button>
   }
 
   const TestEvent = new Event(
