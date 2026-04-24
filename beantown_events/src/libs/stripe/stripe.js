@@ -19,7 +19,7 @@ function getStripe() {
 const success_url = process.env.SUCCESS_URL
 const cancel_url = process.env.CANCEL_URL
 
-async function createCheckoutSession({ priceId, quantity=1 }) {
+async function createCheckoutSession({ priceId, quantity=1, success_url, cancel_url}) {
   const stripe = getStripe();
   return stripe.checkout.sessions.create({
     mode: "payment",
@@ -31,12 +31,12 @@ async function createCheckoutSession({ priceId, quantity=1 }) {
 
 
 
-export async function createCheckoutSessionAction({ priceId, quantity = 1 }) {
+export async function createCheckoutSessionAction({ priceId, quantity = 1, success_url, cancel_url}) {
   if (!priceId || typeof priceId !== "string") {
     console.log("invalid price id")
   }
 
-  const session = await createCheckoutSession({ priceId, quantity });
+  const session = await createCheckoutSession({ priceId, quantity, success_url, cancel_url});
   if (!session.url) {
     console.log("no checkout session URL created")
   }

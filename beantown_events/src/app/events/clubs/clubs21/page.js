@@ -10,7 +10,12 @@ import IconImage from "../src/icon.jpg";
 import clubs_pages_logic from "../clubpages";
 import { useEffect } from "react";
 import { handleCheckout } from "@/libs/stripe/checkoutHandlerer";
+import { usePathname } from "next/navigation";
 export default function Clubs21(){
+	   const uri = "https://beantown-events.vercel.app/"
+		  const path = usePathname(); 
+	
+
 	useEffect(() =>{
 		//clubs_pages_logic(); 
 	})
@@ -54,7 +59,7 @@ export default function Clubs21(){
     					textDecoration: "none",
     				fontSize: "calc(10px + .3vw)",
     					marginRight: "2%"
-						}}  href="#" onClick={() => {handleCheckout("price_1TOu54Ho5oc8DhhwWCznwVhN")}}>Buy Ticket</a>
+						}}  href="#" onClick={() => {handleCheckout("price_1TOu54Ho5oc8DhhwWCznwVhN",1, `${uri}/${path}`, `${uri}/${path}`)}}>Buy Ticket</a>
 						</div>
 					</div>
 				</div>
@@ -82,7 +87,7 @@ export default function Clubs21(){
 						<p className="club-description">Exciting nightclub with lively Saturday events and a high-energy crowd.</p>
 						<div id="card-actions">
 							<a href="https://www.venuboston.com/" target="_blank">Learn More</a>
-							<a href="#" onClick={() => {handleCheckout("prod_UNfPz538dOl6zP")}}>Buy Ticket</a>
+							<a href="#" onClick={() => {handleCheckout("prod_UNfPz538dOl6zP", 1, `${uri}/${path}`, `${uri}/${path}`)}}>Buy Ticket</a>
 						</div>
 					</div>
 				</div>
@@ -111,7 +116,7 @@ export default function Clubs21(){
 						<p className="club-description">Big Night Live hosts shows with major DJs and has a late-night club atmosphere.</p>
 						<div id="card-actions">
 							<a href="https://bignightlive.com/" target="_blank">Learn More</a>
-							<a href="#" onClick={() => {handleCheckout("prod_UNfPz538dOl6zP")}}>Buy Ticket</a>
+							<a href="#" onClick={() => {handleCheckout("prod_UNfPz538dOl6zP", 1, `${uri}/${path}`, `${uri}/${path}`)}}>Buy Ticket</a>
 						</div>
 					</div>
 				</div>
@@ -138,7 +143,7 @@ export default function Clubs21(){
 						<p className="club-description">One of Boston's biggest nightlife venues with Friday events, and a high-energy vibe.</p>
 						<div id="card-actions">
 							<a href="https://thegrandboston.com/" target="_blank">Learn More</a>
-							<a href="#" onClick={() => {handleCheckout("prod_UNfPz538dOl6zP")}}>Buy Ticket</a>
+							<a href="#" onClick={() => {handleCheckout("prod_UNfPz538dOl6zP", 1, `${uri}/${path}`, `${uri}/${path}`)}}>Buy Ticket</a>
 						</div>
 					</div>
 				</div>

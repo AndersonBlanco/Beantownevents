@@ -1,6 +1,6 @@
 "use client"; 
 import Image from "next/image"
-import { useParams } from "next/navigation"
+import { useParams, usePathname } from "next/navigation"
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import "./eventViewer.css"
@@ -16,6 +16,9 @@ import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
 import { handleCheckout } from "@/libs/stripe/checkoutHandlerer";
 
 export default function BoxingEventViewer(){
+
+      const uri = "https://beantown-events.vercel.app/"
+      const path = usePathname(); 
 
 
 
@@ -44,7 +47,7 @@ export default function BoxingEventViewer(){
     const PurchaseTickets = ( 
         <div className = "ticketSaleContainer">
             {ticketCounterCOmponent}
-            <button onClick = {() => handleCheckout("price_1TOu4kHo5oc8DhhwrGEseqvl", ticketsToVuy)}>Buy Now</button>
+            <button onClick = {() => handleCheckout("price_1TOu4kHo5oc8DhhwrGEseqvl", ticketsToVuy, `${uri}/${path}`, `${uri}/${path}`)}>Buy Now</button>
 
             </div>
     )

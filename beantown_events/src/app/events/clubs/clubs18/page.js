@@ -6,7 +6,11 @@ import { useEffect } from "react";
 import Image from "next/image";
 import BngImage from "../src/bng.jpg"; 
 import { handleCheckout } from "@/libs/stripe/checkoutHandlerer";
+import { usePathname } from "next/navigation";
 export default function Clubs18(){
+	   const uri = "https://beantown-events.vercel.app/"
+		  const path = usePathname(); 
+	
 	useEffect(() =>{
 		//clubs_pages_logic()
 	});
@@ -53,7 +57,7 @@ export default function Clubs18(){
     					textDecoration: "none",
     				fontSize: "calc(10px + .3vw)",
     					marginRight: "2%"
-						}}  href="#" onClick={() => {handleCheckout("price_1TPZn6Ho5oc8Dhhw6F6XgfJZ")}}>Buy Ticket</a>
+						}}  href="#" onClick={() => {handleCheckout("price_1TPZn6Ho5oc8Dhhw6F6XgfJZ", 1, `${uri}/${path}`, `${uri}/${path}`)}}>Buy Ticket</a>
 					</div>
 				</div>
 			</div>
