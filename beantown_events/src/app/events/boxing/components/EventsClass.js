@@ -9,50 +9,64 @@ const boxingImages = {
     silverGlovesYouth: {
         img: NewEnglandSilverGlovesImage,
         citation: "../src/boxing/NewEnglandSIlverGlovesImg1.jpg",
+        source: "https://www.nationalsilvergloves.org",
     },
     goldenGlovesPro: {
         img: MidAtlanticImage,
         citation: "../src/boxing/MidAlantic.jpg",
+        source: "https://www.goldenglovesusa.org"
     },
     collegiateDual: {
         img: NewEnglandSilverGlovesImage,
         citation: "../src/boxing/NewEnglandSIlverGlovesImg1.jpg",
+         source: "https://www.nationalsilvergloves.org",
     },
     championshipNight: {
         img: GreatLakesImage,
         citation: "../src/boxing/GreatLakes.png",
+        source: "https://miamiredhawks.com/news/2025/6/9/hockey-miami-to-face-michigan-tech-in-gli-opener"
     },
     provingGrounds: {
         img: WestCoastImage,
         citation: "../src/boxing/WestCoast.png",
+        source: "https://www.strideevents.com/proving-grounds/event-information"
     },
     internationalExchange: {
         img: InternationalAmateurShowcaseImage,
         citation: "../src/boxing/IntrenationalAmateurShowcase.png",
+        source: "https://www.facebook.com/events/25777980761861048/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22external_search_engine%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D",
     },
     goldenGlovesQualifier: {
         img: NewEnglandGoldenGlovesImage,
         citation: "../src/boxing/NewEnglandGoldenGloves.png",
+        source: "https://www.lowellgoldengloves.com"
     },
     mastersEveningCard: {
         img: MidAtlanticImage,
         citation: "../src/boxing/MidAlantic.jpg",
+        source: "https://www.goldenglovesusa.org"
     },
     youthDevelopment: {
         img: NewEnglandSilverGlovesImage,
         citation: "../src/boxing/NewEnglandSIlverGlovesImg1.jpg",
+        source: "https://www.nationalsilvergloves.org"
     },
     silverGlovesJuniors: {
         img: GreatLakesImage,
         citation: "../src/boxing/GreatLakes.png",
+        source: "https://miamiredhawks.com/news/2025/6/9/hockey-miami-to-face-michigan-tech-in-gli-opener"
+
     },
     collegiateInvitational: {
         img: WestCoastImage,
         citation: "../src/boxing/WestCoast.png",
+        source: "https://www.strideevents.com/proving-grounds/event-information"
+
     },
     internationalChampionship: {
         img: InternationalAmateurShowcaseImage,
         citation: "../src/boxing/IntrenationalAmateurShowcase.png",
+        source: "https://www.facebook.com/events/25777980761861048/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22external_search_engine%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D",
     },
 };
 
