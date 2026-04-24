@@ -242,7 +242,7 @@ export default function Page(){
         <>
         {//this renders the shopping cart only if both conditions is true, of which the html component is true and thus the andn statement can only be true if the shopping cart is of > 0 length
             itemsInCart_count > 0 && <div className = "my_cart_quick_view_slip">
-                <h2>{itemsInCart_count} Items</h2>
+                <h2>{Object.key(itemsInCart).length} Items</h2>
                 <h2>${cartPrice} </h2>
             <button className = "checkout_button" onClick = {() =>{
                 handleCheckout(Object.values(itemsInCart), `${uri}/${path}`, `${uri}/${path}`)
