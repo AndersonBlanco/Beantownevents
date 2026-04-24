@@ -47,7 +47,7 @@ export default function BoxingEventViewer(){
     const PurchaseTickets = ( 
         <div className = "ticketSaleContainer">
             {ticketCounterCOmponent}
-            <button onClick = {() => handleCheckout([{ price: "price_1TOu4kHo5oc8DhhwrGEseqvl", quantity: ticketsToVuy }], `${uri}/${path}`, `${uri}/${path}`)}>Buy Now</button>
+            <button onClick = {() => handleCheckout([{ price: obj.id, quantity: ticketsToVuy }], `${uri}/${path}`, `${uri}/${path}`)}>Buy Now</button>
 
             </div>
     )

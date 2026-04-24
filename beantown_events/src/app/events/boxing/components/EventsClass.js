@@ -64,7 +64,7 @@ export class Event{
         this.img= img;
         this.imgCitation = imgCitation;
         this.attributes = attributes;
-         this.id = id; 
+         this.id = id; //the same as the price_id of the product in stripe backend (ie this id is mapped to the event's corresponding stripe price_id)
          this.price = price; 
          this.instancesInCart = instancesInCart; 
 
@@ -81,8 +81,8 @@ export class Event{
              boxingImages.silverGlovesYouth.img,
              boxingImages.silverGlovesYouth.citation,
              ["New England", "Youth", "Open", "Flyweight", "Silver Gloves", "Tournament Bracket", "Community Gym"],
-             "ab",
-             200,
+             "price_1TPmXkHo5oc8Dhhw0rpllgCv",
+             15,
             0),
         new Event(
             "Mid-Atlantic Golden Gloves Fall Pro Card",
@@ -91,8 +91,8 @@ export class Event{
             boxingImages.goldenGlovesPro.img,
             boxingImages.goldenGlovesPro.citation,
             ["Mid-Atlantic", "Adult", "Elite", "Lightweight", "Golden Gloves", "Pro Card", "Arena"],
-            "abc",
-            50,
+            "price_1TPmQjHo5oc8DhhwOxgSzlIU",
+            20,
             0
         ),
        new Event(
@@ -102,8 +102,8 @@ export class Event{
             boxingImages.collegiateDual.img,
             boxingImages.collegiateDual.citation,
             ["Southeast", "Teen", "Qualifier", "Welterweight", "NCAA Boxing", "Team Dual", "College Fieldhouse"],
-            "abcd",
-            500,
+            "price_1TPmRBHo5oc8Dhhw7hNOVlxo",
+            25,
             0
         ),
        new Event(
@@ -113,8 +113,8 @@ export class Event{
             boxingImages.championshipNight.img,
             boxingImages.championshipNight.citation,
             ["Great Lakes", "Adult", "Elite", "Middleweight", "USA Boxing", "Title Fight", "Arena"],
-            "abcde",
-            50,
+            "price_1TPmRgHo5oc8DhhwWikqDtgT",
+            30,
             0
         ),
        new Event(
@@ -124,8 +124,8 @@ export class Event{
             boxingImages.provingGrounds.img,
             boxingImages.provingGrounds.citation,
             ["West Coast", "Adult", "Novice", "Heavyweight", "Independent", "Pro Card", "Casino"],
-            "acbd",
-            50,
+            "price_1TPmS3Ho5oc8DhhwSzWGuFvX",
+            35,
             0
         ),
        new Event(
@@ -135,9 +135,9 @@ export class Event{
             boxingImages.internationalExchange.img,
             boxingImages.internationalExchange.citation,
             ["International", "Junior", "Invitational", "Bantamweight", "USA Boxing", "Exhibition", "Outdoor Ring"],
-            "acd",
-            50,
-            0
+             "price_1TPmSWHo5oc8DhhwWpcR9B7c",
+            40,
+           0
         ),
         new Event(
             "New England Golden Gloves Qualifier",
@@ -146,8 +146,8 @@ export class Event{
             boxingImages.goldenGlovesQualifier.img,
             boxingImages.goldenGlovesQualifier.citation,
             ["New England", "Teen", "Qualifier", "Featherweight", "Golden Gloves", "Tournament Bracket", "Community Gym"],
-            "aacd",
-            50,
+            "price_1TPmSqHo5oc8DhhwktskDrLu",
+            45,
             0
         ),
         new Event(
@@ -157,7 +157,7 @@ export class Event{
             boxingImages.mastersEveningCard.img,
             boxingImages.mastersEveningCard.citation,
             ["Mid-Atlantic", "Masters", "Open", "Welterweight", "Independent", "Amateur Card", "Casino"],
-            "aacda",
+            "prod_UOZcYYnijhVAvu",
             50,
             0
         ),
@@ -168,8 +168,8 @@ export class Event{
             boxingImages.youthDevelopment.img,
             boxingImages.youthDevelopment.citation,
             ["Southeast", "Youth", "Novice", "Flyweight", "USA Boxing", "Exhibition", "Outdoor Ring"],
-            "aabbc",
-            50,
+            "price_1TPmUzHo5oc8DhhwWKk2Q14i",
+            55,
             0
         ),
        new Event(
@@ -179,8 +179,8 @@ export class Event{
             boxingImages.silverGlovesJuniors.img,
             boxingImages.silverGlovesJuniors.citation,
             ["Great Lakes", "Junior", "Open", "Bantamweight", "Silver Gloves", "Amateur Card", "Community Gym"],
-            "aabbec",
-            50,
+            "price_1TPmVNHo5oc8DhhwUVZcbFmq",
+            60,
             0
         ),
        new Event(
@@ -190,8 +190,8 @@ export class Event{
             boxingImages.collegiateInvitational.img,
             boxingImages.collegiateInvitational.citation,
             ["West Coast", "Adult", "Invitational", "Lightweight", "NCAA Boxing", "Team Dual", "College Fieldhouse"],
-            "aabbeec",
-            50,
+            "price_1TPmViHo5oc8DhhwmqX0mbfv",
+            65,
             0
         ),
        new Event(
@@ -201,8 +201,8 @@ export class Event{
             boxingImages.internationalChampionship.img,
             boxingImages.internationalChampionship.citation,
             ["International", "Masters", "Elite", "Featherweight", "Golden Gloves", "Title Fight", "Arena"],
-            "abcdbbba",
-            50,
+            "price_1TPmWNHo5oc8DhhwZV9MDdlU",
+            70,
             0
         ),
     ];

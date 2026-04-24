@@ -1,15 +1,19 @@
 'use client'; 
 import "./boxing.css"
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import {Events} from "./components/EventsClass";
 
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 
 import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
+import { handleCheckout } from "@/libs/stripe/checkoutHandlerer";
 
 export default function Page(){
+    const path = usePathname();
+        const uri = "https://beantown-events.vercel.app/"
+
     const router = useRouter(); 
     //used Gemini to egnetate fdummy filters
     const [filters, setFilters] = useState([
@@ -140,7 +144,10 @@ export default function Page(){
                 setItemsInCart(prev => {
                         return{
                                 ...prev,
-                                [event.id]: prev[event.id] ? 1 + prev[event.id] : 1
+                                [event.id]: {
+                                    price: event.id, 
+                                    quantity: prev[event.id] ? 1 + prev[event.id].quantity : 1
+                                }
                             }
                         });
 
@@ -159,7 +166,10 @@ export default function Page(){
             setItemsInCart(prev =>{
                 return{
                     ...prev,
-                    [event.id]: prev[event.id] && prev[event.id] - 1 
+                    [event.id]: {
+                        price: event.id,
+                        quantity: prev[event.id].quantity - 1 
+                    }
                 }
             });
 
@@ -213,7 +223,7 @@ export default function Page(){
 
                 }}
                     />
-                    <h2>{itemsInCart[event.id] ? itemsInCart[event.id] : 0 }</h2>
+                    <h2>{itemsInCart[event.id] ? itemsInCart[event.id].quantity : 0 }</h2>
                     <AddCircleIcon className = "addCircleIcon"  
                     onClick = {() => handleAddButton(event)}
                     />
@@ -234,7 +244,9 @@ export default function Page(){
             itemsInCart_count > 0 && <div className = "my_cart_quick_view_slip">
                 <h2>{itemsInCart_count} Items</h2>
                 <h2>${cartPrice} </h2>
-            <button className = "checkout_button" onClick = {{/* nav to My Cart page */}}>Checkout</button>
+            <button className = "checkout_button" onClick = {() =>{
+                handleCheckout(Object.values(itemsInCart), `${uri}/${path}`, `${uri}/${path}`)
+            }}>Checkout</button>
         </div>
         }
         </>
