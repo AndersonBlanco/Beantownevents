@@ -242,9 +242,15 @@ export default function Page(){
         <>
         {//this renders the shopping cart only if both conditions is true, of which the html component is true and thus the andn statement can only be true if the shopping cart is of > 0 length
             itemsInCart_count > 0 && <div className = "my_cart_quick_view_slip">
-                <h2>{Object.key(itemsInCart).length} Items</h2>
+                {/*Below: 
+                the .reduce method is used as a "sponta ous sum" method of an array. 
+                this method is the same as iterating through the array and adding up (or thereby concatinating) specific preprties of each object (or the element itself) 
+                without keeping a global variable tracking the sum at every entry - hence htis i sthe reason why i picked it, because I didnt want to use a global variable causing more work 
+                */}
+                <h2>{Object.values(itemsInCart).reduce((itm_prev, itm_next) => {return itm_prev + itm_next.quantity}, 0)} Items</h2>
                 <h2>${cartPrice} </h2>
             <button className = "checkout_button" onClick = {() =>{
+                //here, Object.{method} is just a constructor function that serves almost like a preset of for whatn object data type is and provides valid methods applicable on object data types only - this allow for direct manipulation without hard coding it yourself 
                 handleCheckout(Object.values(itemsInCart), `${uri}/${path}`, `${uri}/${path}`)
             }}>Checkout</button>
         </div>
