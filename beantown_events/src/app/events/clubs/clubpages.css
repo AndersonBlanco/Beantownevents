@@ -165,6 +165,6 @@
     }
 }
 
-.table-headers th, .comparison-table-wrapper h2{
+.table-headers th, .comparison-table-wrapper h2, .comparison-table th{
     color: #d88373;
 }

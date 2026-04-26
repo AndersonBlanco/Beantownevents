@@ -57,7 +57,7 @@ export default function Clubs18(){
     					textDecoration: "none",
     				fontSize: "calc(10px + .3vw)",
     					marginRight: "2%"
-						}}  onClick={() => {handleCheckout([{ price: "price_1TPZn6Ho5oc8Dhhw6F6XgfJZ", quantity: 1 }], `${uri}/${path}`, `${uri}/${path}`)}}>Buy Ticket</a>
+						}}  onClick={() => {handleCheckout([{ price: "price_1TQXdAHo5oc8DhhwEnEVOylq", quantity: 1 }], `${uri}/${path}`, `${uri}/${path}`)}}>Buy Ticket</a>
 					</div>
 				</div>
 			</div>

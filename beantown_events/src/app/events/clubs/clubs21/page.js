@@ -87,7 +87,7 @@ export default function Clubs21(){
 						<p className="club-description">Exciting nightclub with lively Saturday events and a high-energy crowd.</p>
 						<div id="card-actions">
 							<a href="https://www.venuboston.com/" target="_blank">Learn More</a>
-							<a onClick={() => {handleCheckout([{ price: "prod_UNfPz538dOl6zP", quantity: 1 }], `${uri}/${path}`, `${uri}/${path}`)}}>Buy Ticket</a>
+							<a onClick={() => {handleCheckout([{ price: "price_1TOu54Ho5oc8DhhwWCznwVhN", quantity: 1 }], `${uri}/${path}`, `${uri}/${path}`)}}>Buy Ticket</a>
 						</div>
 					</div>
 				</div>
@@ -116,7 +116,7 @@ export default function Clubs21(){
 						<p className="club-description">Big Night Live hosts shows with major DJs and has a late-night club atmosphere.</p>
 						<div id="card-actions">
 							<a href="https://bignightlive.com/" target="_blank">Learn More</a>
-							<a   onClick={() => {handleCheckout([{ price: "prod_UNfPz538dOl6zP", quantity: 1 }], `${uri}/${path}`, `${uri}/${path}`)}}>Buy Ticket</a>
+							<a   onClick={() => {handleCheckout([{ price: "price_1TOu54Ho5oc8DhhwWCznwVhN", quantity: 1 }], `${uri}/${path}`, `${uri}/${path}`)}}>Buy Ticket</a>
 						</div>
 					</div>
 				</div>
@@ -143,7 +143,7 @@ export default function Clubs21(){
 						<p className="club-description">One of Boston's biggest nightlife venues with Friday events, and a high-energy vibe.</p>
 						<div id="card-actions">
 							<a href="https://thegrandboston.com/" target="_blank">Learn More</a>
-							<a   onClick={() => {handleCheckout([{ price: "prod_UNfPz538dOl6zP", quantity: 1 }], `${uri}/${path}`, `${uri}/${path}`)}}>Buy Ticket</a>
+							<a   onClick={() => {handleCheckout([{ price: "price_1TOu54Ho5oc8DhhwWCznwVhN", quantity: 1 }], `${uri}/${path}`, `${uri}/${path}`)}}>Buy Ticket</a>
 						</div>
 					</div>
 				</div>
@@ -152,9 +152,9 @@ export default function Clubs21(){
 
 		{/* COMPARISON TABLE */}
 			{/* Comparison table layout based on W3Schools: https://www.w3schools.com/howto/howto_css_comparison_table.asp */}
-	<div class="comparison-table-wrapper">
+	<div className="comparison-table-wrapper">
 			<h2>Compare Boston Venues</h2>
-			<table class="comparison-table">
+			<table className="comparison-table">
 				<tr className = "table-headers">
 					<th>Venue</th>
 					<th>Age</th>

@@ -110,3 +110,7 @@ color: #50190f;
         margin: 2% auto;
     }
 }
+
+.table-headers th, .comparison-table-wrapper h2{
+    color: #d88373;
+}
