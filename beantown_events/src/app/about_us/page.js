@@ -1,6 +1,6 @@
 'use client';
 import { createCheckoutSessionAction } from "../../libs/stripe/stripe";
-import Event from "@/app/dataModels/events";
+
 import "../globals.css"
 import "./about_us.css"
 

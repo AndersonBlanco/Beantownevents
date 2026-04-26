@@ -4,7 +4,7 @@ import Home from "./home/page"
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import "./globals.css"
-import Events from "./events/page";
+
 
 export default function App(){
 //js logic 
