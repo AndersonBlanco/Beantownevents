@@ -15,6 +15,7 @@
 // by saying: document.getElementById("get-time").addEventListener("click", function () {}
 // Both do the same thing, just one adds the event in the HTML and the other in the JavaScript.
 // This technique is used in this code.
+
 import { useEffect } from "react";
 export default function credits_logic(){
 

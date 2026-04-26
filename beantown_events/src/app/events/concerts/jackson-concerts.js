@@ -1,7 +1,18 @@
 // Jackson //
 
+// addEventLister tag
+// It is shown in the slides a little, but I looked into it more on W3Schools as well.
+// https://www.w3schools.com/Js/js_htmldom_eventlistener.asp
+// addEventListener() adds an event handler to the element that is mentioned.
+// this would be used so instead of in the HTML saying <button onClick="showTime">,
+// you can say <button id="show-time">, then in the Java code, you specify what the event is
+// by saying: document.getElementById("get-time").addEventListener("click", function () {}
+// Both do the same thing, just one adds the event in the HTML and the other in the JavaScript.
+// This technique is used throughout this code.
+
 // Parallel arrays: BtnIds[i] is the id of the button, btnCategories[i] is the category it filters.
 // Same index ties them together, so one loop can wire up all 8 buttons.
+
 const btnIds = ["btn-all", "btn-hip-hop", "btn-pop", "btn-country", "btn-rock", "btn-tdgarden", "btn-lbp", "btn-gillette"];
 const btnCategories = ["all", "hip-hop", "pop", "country", "rock", "tdgarden", "lbp", "gillette"];
 
