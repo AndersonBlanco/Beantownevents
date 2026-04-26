@@ -3,7 +3,7 @@
 
 /*  HEADER SECTION */
 header {
-    background-color: #18206f;
+ 
     padding: 2% 3%;
     display: flex; 
     flex-direction: row;
@@ -39,14 +39,24 @@ header {
 
 /*  NAV SECTION */
 nav {
-    background-color: #17255a;
+
     padding: 0 3%;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    display: flex;
+
 }
 
 nav ul {
     display: flex;
     flex-direction: row;
     list-style: none;
+        gap: 10px;
+    display: flex;
+    width: 100%;
+
 }
 
 nav ul li {
@@ -54,11 +64,16 @@ nav ul li {
     padding: 1% 2%;
     color: #ffffff;
     font-size: calc(10px + 0.75vw);
+ 
+
+
+    
 }
 
 nav ul li a {
     text-decoration: none;
     color: #f5e2c8;
+    
 }
 
 nav ul li a:link {
@@ -88,7 +103,7 @@ nav ul li a:active {
     position: absolute;
     
     top: 100%;
-    left: 0;
+    left: -50px;
     background-color: #50190f;
     z-index: 1;
     border: 2px solid #d88373;
@@ -126,20 +141,14 @@ nav ul li a:active {
 
 .headerContainerDiv{
     display: flex; 
-    flex-direction: column;
+    flex-direction: row;
     gap: 0px; 
 
-
-
-}
-
-.shoppingCart{
-    fill: white;
-     height: 20vw; 
-     width: auto; 
-     cursor: pointer; 
+    background-color: #18206f;
 
 }
+
+ 
 
 .shoppingCart :active{
      opacity: 0.5;
