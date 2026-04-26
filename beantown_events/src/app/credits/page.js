@@ -193,18 +193,18 @@ export default function Credits() {
 
                 <div className="credits-content" id="content-boxing">
                     <ul className="credit-list">
-                        <li>The image for <a href="../events/boxing">New England Silver Gloves Youth Bracket</a> uses the local asset <a href="../src/boxing/NewEnglandSIlverGlovesImg1.jpg">NewEnglandSIlverGlovesImg1.jpg</a>.</li>
-                        <li>The image for <a href="../events/boxing">Mid-Atlantic Golden Gloves Fall Pro Card</a> uses the local asset <a href="../src/boxing/MidAlantic.jpg">MidAlantic.jpg</a>.</li>
-                        <li>The image for <a href="../events/boxing">Southeast Collegiate Team Dual Classic</a> uses the local asset <a href="../src/boxing/NewEnglandSIlverGlovesImg1.jpg">NewEnglandSIlverGlovesImg1.jpg</a>.</li>
-                        <li>The image for <a href="../events/boxing">Great Lakes Championship Night</a> uses the local asset <a href="../src/boxing/GreatLakes.png">GreatLakes.png</a>.</li>
-                        <li>The image for <a href="../events/boxing">West Coast Proving Grounds</a> uses the local asset <a href="../src/boxing/WestCoast.png">WestCoast.png</a>.</li>
-                        <li>The image for <a href="../events/boxing">International Amateur Exchange Showcase</a> uses the local asset <a href="../src/boxing/IntrenationalAmateurShowcase.png">IntrenationalAmateurShowcase.png</a>.</li>
-                        <li>The image for <a href="../events/boxing">New England Golden Gloves Qualifier</a> uses the local asset <a href="../src/boxing/NewEnglandGoldenGloves.png">NewEnglandGoldenGloves.png</a>.</li>
-                        <li>The image for <a href="../events/boxing">Mid-Atlantic Masters Evening Card</a> uses the local asset <a href="../src/boxing/MidAlantic.jpg">MidAlantic.jpg</a>.</li>
-                        <li>The image for <a href="../events/boxing">Southeast Youth Development Festival</a> uses the local asset <a href="../src/boxing/NewEnglandSIlverGlovesImg1.jpg">NewEnglandSIlverGlovesImg1.jpg</a>.</li>
-                        <li>The image for <a href="../events/boxing">Great Lakes Silver Gloves Juniors</a> uses the local asset <a href="../src/boxing/GreatLakes.png">GreatLakes.png</a>.</li>
-                        <li>The image for <a href="../events/boxing">West Coast Collegiate Invitational Duals</a> uses the local asset <a href="../src/boxing/WestCoast.png">WestCoast.png</a>.</li>
-                        <li>The image for <a href="../events/boxing">International Golden Gloves Championship Series</a> uses the local asset <a href="../src/boxing/IntrenationalAmateurShowcase.png">IntrenationalAmateurShowcase.png</a>.</li>
+                        <li>The image of <a href="../events/boxing">New England Silver Gloves Youth Bracket</a> in the Boxing Page is provided by <a href="https://www.nationalsilvergloves.org">National Silver Gloves</a>.</li>
+                        <li>The image of <a href="../events/boxing">Mid-Atlantic Golden Gloves Fall Pro Card</a> in the Boxing Page is provided by <a href="https://www.goldenglovesusa.org">Golden Gloves of America</a>.</li>
+                        <li>The image of <a href="../events/boxing">Southeast Collegiate Team Dual Classic</a> in the Boxing Page is provided by <a href="https://www.nationalsilvergloves.org">National Silver Gloves</a>.</li>
+                        <li>The image of <a href="../events/boxing">Great Lakes Championship Night</a> in the Boxing Page is provided by <a href="https://miamiredhawks.com/news/2025/6/9/hockey-miami-to-face-michigan-tech-in-gli-opener">Miami of Ohio</a>.</li>
+                        <li>The image of <a href="../events/boxing">West Coast Proving Grounds</a> in the Boxing Page is provided by <a href="https://www.strideevents.com/proving-grounds/event-information">Stride Events</a>.</li>
+                        <li>The image of <a href="../events/boxing">International Amateur Exchange Showcase</a> in the Boxing Page is provided by <a href="https://www.facebook.com/events/25777980761861048/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22external_search_engine%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D">Facebook Events</a>.</li>
+                        <li>The image of <a href="../events/boxing">New England Golden Gloves Qualifier</a> in the Boxing Page is provided by <a href="https://www.lowellgoldengloves.com">Lowell Golden Gloves</a>.</li>
+                        <li>The image of <a href="../events/boxing">Mid-Atlantic Masters Evening Card</a> in the Boxing Page is provided by <a href="https://www.goldenglovesusa.org">Golden Gloves of America</a>.</li>
+                        <li>The image of <a href="../events/boxing">Southeast Youth Development Festival</a> in the Boxing Page is provided by <a href="https://www.nationalsilvergloves.org">National Silver Gloves</a>.</li>
+                        <li>The image of <a href="../events/boxing">Great Lakes Silver Gloves Juniors</a> in the Boxing Page is provided by <a href="https://miamiredhawks.com/news/2025/6/9/hockey-miami-to-face-michigan-tech-in-gli-opener">Miami of Ohio</a>.</li>
+                        <li>The image of <a href="../events/boxing">West Coast Collegiate Invitational Duals</a> in the Boxing Page is provided by <a href="https://www.strideevents.com/proving-grounds/event-information">Stride Events</a>.</li>
+                        <li>The image of <a href="../events/boxing">International Golden Gloves Championship Series</a> in the Boxing Page is provided by <a href="https://www.facebook.com/events/25777980761861048/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22external_search_engine%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D">Facebook Events</a>.</li>
                     </ul>
                 </div>
             </div>
@@ -218,31 +218,31 @@ export default function Credits() {
 
                         <li>The image of a <a href="https://www.flickr.com/photos/oldsaleminc/28872350330">carriage</a>
 in the 250th Anniversary Page is provided by <a href="https://www.flickr.com/photos/oldsaleminc/">Old Salem Inc.</a>
-under a <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/deed.en">CC BY-NC-ND 2.0</a> </li>
+licenced under a <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/deed.en">CC BY-NC-ND 2.0</a> being used under U.S. Code 17 U.S.C. § 107 (Fair Use) — educational, non-commercial purpose</li>
 
 <li>
 The image of a <a href="https://www.flickr.com/photos/boscdanjou/49851998968">horse</a>
 in the 250th Anniversary Page is provided by <a href="https://www.flickr.com/photos/boscdanjou/">Bosc d'Anjou</a>
-under a <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/deed.en">CC BY-NC-ND 2.0</a>
+licenced under a <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/deed.en">CC BY-NC-ND 2.0</a> being used under U.S. Code 17 U.S.C. § 107 (Fair Use) — educational, non-commercial purpose
 </li>
 
 <li>
 The image of a <a href="https://www.flickr.com/photos/ballookey/33809441">tea</a>
 in the 250th Anniversary Page is provided by <a href="https://www.flickr.com/photos/ballookey/">Ballookey Klugeypop</a>
-under a <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/deed.en">CC BY-NC-ND 2.0</a>
+licenced under a <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/deed.en">CC BY-NC-ND 2.0</a> being used under U.S. Code 17 U.S.C. § 107 (Fair Use) — educational, non-commercial purpose
 </li>
 
 <li>
 
 The image of a <a href="https://www.flickr.com/photos/joiseyshowaa/28288594445">harbor</a>
 in the 250th Anniversary Page is provided by <a href="https://www.flickr.com/photos/joiseyshowaa/">B K (joiseyshowaa)</a>
-under a <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/deed.en">CC BY-NC-ND 2.0</a> 
+licenced under a <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/deed.en">CC BY-NC-ND 2.0</a> being used under U.S. Code 17 U.S.C. § 107 (Fair Use) — educational, non-commercial purpose
 </li>
 
 <li>
 The image of a <a href="https://www.flickr.com/photos/subhash_roy/54463226234">harbor</a>
 in the 250th Anniversary Page is provided by <a href="https://www.flickr.com/photos/subhash_roy/">Subhash Roy</a>
-under a <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/deed.en">CC BY-NC-ND 2.0</a>
+licenced under a <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/deed.en">CC BY-NC-ND 2.0</a> being used under U.S. Code 17 U.S.C. § 107 (Fair Use) — educational, non-commercial purpose
 </li>
 
 
