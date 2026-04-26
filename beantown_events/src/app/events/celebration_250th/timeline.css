@@ -29,12 +29,13 @@
     content: ''; /* needed so the pseudo element shows up*/
     position: absolute; /*lets you place it exactly where you want inside*/
     width: 6px; /* controls how the line looks*/
-    background-color: white; /* controls how the line looks in terms of color*/
+    background-color: black; /* controls how the line looks in terms of color*/
     top: 0; /*the line starts at the top*/
     bottom: 0; /* the line goes to the bottom*/
     left: 50%; /*this places the line in middle of the container*/
     margin-left: -3px; /* lets you shift the line slightly so it's perfectly centered (since it has width)*/
 }
+
 
 /* Container around content */
 .container {
@@ -45,8 +46,22 @@
     
 }
 
+ 
 /* This creates the dots that sit on the timeline at each date */
 
+/* This creates the dots that sit on the timeline at each date */
+.container::after {
+    content: ''; /*required for pseudo-elements*/
+    position: absolute;
+    width: 25px; /* sets the size of the circle*/
+    height: 25px; /*sets the height of the circle*/
+    right: -17px; /*pushes the circle slightly outside of the container*/
+    background-color: #d88373;
+    border: 4px solid #18206f;
+    top: 15px;
+    border-radius: 50%; /*turns squares into circles*/
+    z-index: 1; /*makes sure they appear above other elements*/
+}
 
 .right::after {
     content: ''; /*required for pseudo-elements*/
@@ -54,8 +69,7 @@
     width: 25px; /* sets the size of the circle*/
     height: 25px; /*sets the height of the circle*/
     right: -17px; /*pushes the circle slightly outside of the container*/
-    background-color: white;
-    border: 4px solid #FF9F55;
+ 
     top: 15px;
     border-radius: 50%; /*turns squares into circles*/
     z-index: 1; /*makes sure they appear above other elements*/
@@ -68,8 +82,7 @@
     width: 25px; /* sets the size of the circle*/
     height: 25px; /*sets the height of the circle*/
     right: calc(5.5 * -17px); /*pushes the circle slightly outside of the container*/
-    background-color: white;
-    border: 4px solid #FF9F55;
+ 
     top: 15px;
     border-radius: 50%; /*turns squares into circles*/
     z-index: 1; /*makes sure they appear above other elements*/
@@ -77,12 +90,18 @@
 
 /* Place the container to the left */
 .left {
-    left: 0;
+    left: 0.9%;
 }
 
 /* Place the container to the right */
 .right {
     left: 50%;
+}
+
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px; /*repositions the circle for the right side items*/
 }
 
 /* Add arrows to the left container (pointing right) */
@@ -130,6 +149,7 @@
 
 .content a{
 text-decoration: underline;
+    color: #2a37a9;
 }
 img {
     object-fit: contain; /*helps to keep the image proportions (no stretching)*/

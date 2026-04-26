@@ -24,10 +24,15 @@ h1 {
     font-weight: bold;
     color: #30364F;
     text-align: center;
+    cursor: pointer;
 }
 
 .nav a:hover{
   background-color: transparent;
+}
+
+.nav a:active {
+    font-size: calc(2px + 1vw);
 }
 
 .nav  ul{
@@ -217,5 +222,9 @@ img {
     justify-content: center;
     align-items: center;
     display: flex;
+
+}
+
+nav{ /* empty nav style block to override the style block with the same selector in components/header/.css file */
 
 }
