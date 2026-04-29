@@ -1,3 +1,5 @@
+// By Jackson 
+
 // COLLAPSIBLE SECTIONS - coding techniques from W3Schools Collapsible
 // https://www.w3schools.com/howto/howto_js_collapsible.asp
 // parentElement - from W3Schools https://www.w3schools.com/jsref/prop_node_parentelement.asp
@@ -16,8 +18,8 @@
 // Both do the same thing, just one adds the event in the HTML and the other in the JavaScript.
 // This technique is used in this code.
 
-import { useEffect } from "react";
-export default function credits_logic(){
+
+export default function credits_logic(){ //Anders wrapped in curly brakcets to execute in the page.js 
 
 let collapsibleBtns=document.getElementsByClassName("collapsible-btn");
 for (let i = 0; i < collapsibleBtns.length; i++) {

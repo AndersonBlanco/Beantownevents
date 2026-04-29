@@ -10,7 +10,7 @@ const ccIconStyle = {
     marginLeft: ".2em",
 }
 
-function ccIcon(name) {
+function ccIcon(name) { //Anderson made a function to for the copy-right images so its re-usable across all pages. However, Jackson searched the icon sources 
     return (
         <Image
             src={`https://mirrors.creativecommons.org/presskit/icons/${name}`}
@@ -25,7 +25,7 @@ function ccIcon(name) {
 
 export default function Credits() {
     useEffect(() =>{
-        credits_logic(); 
+        credits_logic();  
     }, [])
     return (
         <>
@@ -47,19 +47,19 @@ export default function Credits() {
                         <li>The photo of the <a href="../src/logo-light.jpg"> Light Beantown Events logo</a>
                             on all pages is provided by <a href="https://quinntessentialism.cargo.site">Quinn Whitney</a>
                             is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"> CC BY-NC-ND 4.0</a>
-                            {ccIcon("cc.svg")}
-                            {ccIcon("by.svg")}
-                            {ccIcon("nc.svg")}
-                            {ccIcon("nd.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ ccIcon("cc.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ ccIcon("by.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ ccIcon("nc.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ ccIcon("nd.svg")}
                         </li>
                         <li>
                             The photo of the <a href="../src/logo-dark.jpg"> Dark Beantown Events logo</a>
                             on all pages is provided by <a href="https://quinntessentialism.cargo.site">Quinn Whitney</a>
                             is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"> CC BY-NC-ND 4.0</a>
-                            {ccIcon("cc.svg")}
-                            {ccIcon("by.svg")}
-                            {ccIcon("nc.svg")}
-                            {ccIcon("nd.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ccIcon("cc.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ccIcon("by.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ccIcon("nc.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ccIcon("nd.svg")}
                         </li>
                         <li>{/* ANY OTHER CREDITS THAT ARE THE SAME ON ALL PAGES */}</li>
                         <li>{/* ANY OTHER CREDITS THAT ARE THE SAME ON ALL PAGES */}</li>
@@ -101,17 +101,17 @@ export default function Credits() {
                             The photo of <a href="https://www.flickr.com/photos/lunchboxstudios/12779878355/in/album-72157641531951474"> The Fray</a>
                             in the Concerts Page is provided by <a href="https://www.flickr.com/photos/lunchboxstudios/"> Lunchbox LP</a>
                             under a <a href="https://creativecommons.org/licenses/by/2.0/deed.en"> CC BY 2.0</a>
-                            {ccIcon("cc.svg")}
-                            {ccIcon("by.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ccIcon("cc.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ccIcon("by.svg")}
                         </li>
                         <li>
                             The photo of <a href="https://www.flickr.com/photos/nrk-p3/54106057382/in/photolist-2qvyLsS-2qrgsoy-2qraFQj-2o4obMW-2pWJUF4-2pWJmFg-2pWJkTz-2pWHfgH-2pWJkPG-2pWCqiH-2pWHfmY-2pWCqZx-2pWHfRL-2pWJmsA-2pWJmvg-2pWHfnz-2pWCrbE-2pWJmr3-2rqtX7R-2pWCrbp-2rwG3Qg-2q39435-2rw3oVW-2rqW2nL-2rqbU7e-2rVna39-2rujzq9-2rsUkKq-2rqPoWf-2rU3kPg"> Benson Boone</a>
                             in the Concerts Page is provided by <a href="https://www.flickr.com/photos/nrk-p3/"> NRK P3</a>
                             under a <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/deed.en"> CC BY-NC-SA 2.0</a>
-                            {ccIcon("cc.svg")}
-                            {ccIcon("by.svg")}
-                            {ccIcon("nc.svg")}
-                            {ccIcon("sa.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ccIcon("cc.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ccIcon("by.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ccIcon("nc.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ccIcon("sa.svg")}
                         </li>
                         <li>
                             The photo of <a href="https://unsplash.com/photos/a-man-with-a-beard-playing-a-guitar-Svmi68elV-Q"> Zach Bryan</a>
@@ -122,40 +122,40 @@ export default function Credits() {
                             The photo of the TD Garden, Benson Boone <a href="../src/tdgarden-chart-boone.jpg"> seating chart</a>
                             in the Concerts Page is provided by <a href="https://www.ticketmaster.com/discover/boston?categoryId=KZFzniwnSyZfZ7v7nJ"> Ticketmaster <sup className="trademark">&reg;</sup></a>
                             licenced under a <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"> CC BY-NC-ND 4.0</a>
-                            {ccIcon("cc.svg")}
-                            {ccIcon("by.svg")}
-                            {ccIcon("nc.svg")}
-                            {ccIcon("nd.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ccIcon("cc.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ccIcon("by.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ccIcon("nc.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ccIcon("nd.svg")}
                             being used under U.S. Code<a href="https://www.law.cornell.edu/uscode/text/17/107"> 17 U.S.C. § 107</a> (Fair Use) - educational, non-commercial purpose
                         </li>
                         <li>
                             The photo of the TD Garden, J. Cole <a href="../src/tdgarden-chart-jcole.jpg"> seating chart</a>
                             in the Concerts Page is provided by <a href="https://www.ticketmaster.com/discover/boston?categoryId=KZFzniwnSyZfZ7v7nJ"> Ticketmaster <sup className="trademark">&reg;</sup></a>
                             licenced under a <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"> CC BY-NC-ND 4.0</a>
-                            {ccIcon("cc.svg")}
-                            {ccIcon("by.svg")}
-                            {ccIcon("nc.svg")}
-                            {ccIcon("nd.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ccIcon("cc.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ccIcon("by.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ccIcon("nc.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ccIcon("nd.svg")}
                             being used under U.S. Code<a href="https://www.law.cornell.edu/uscode/text/17/107"> 17 U.S.C. § 107</a> (Fair Use) - educational, non-commercial purpose
                         </li>
                         <li>
                             The photo of the Leader Bank Pavilion, The Fray <a href="../src/lbp-chart.jpg"> seating chart</a>
                             in the Concerts Page is provided by <a href="https://www.ticketmaster.com/discover/boston?categoryId=KZFzniwnSyZfZ7v7nJ"> Ticketmaster <sup className="trademark">&reg;</sup></a>
                             licenced under a <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"> CC BY-NC-ND 4.0</a>
-                            {ccIcon("cc.svg")}
-                            {ccIcon("by.svg")}
-                            {ccIcon("nc.svg")}
-                            {ccIcon("nd.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ccIcon("cc.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ccIcon("by.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ccIcon("nc.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ccIcon("nd.svg")}
                             being used under U.S. Code<a href="https://www.law.cornell.edu/uscode/text/17/107"> 17 U.S.C. § 107</a> (Fair Use) - educational, non-commercial purpose
                         </li>
                         <li>
                             The photo of the Gillette Stadium, Zach Bryan <a href="../src/gillette-chart.jpg"> seating chart</a>
                             in the Concerts Page is provided by <a href="https://www.ticketmaster.com/discover/boston?categoryId=KZFzniwnSyZfZ7v7nJ"> Ticketmaster <sup className="trademark">&reg;</sup></a>
                             licenced under a <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"> CC BY-NC-ND 4.0</a>
-                            {ccIcon("cc.svg")}
-                            {ccIcon("by.svg")}
-                            {ccIcon("nc.svg")}
-                            {ccIcon("nd.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ccIcon("cc.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ccIcon("by.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ccIcon("nc.svg")}
+                            {/* Anderson embedded the return output of the re-usable icon function */ccIcon("nd.svg")}
                             being used under U.S. Code<a href="https://www.law.cornell.edu/uscode/text/17/107"> 17 U.S.C. § 107</a> (Fair Use) - educational, non-commercial purpose
                         </li>
                         <li>

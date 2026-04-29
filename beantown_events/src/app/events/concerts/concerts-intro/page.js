@@ -6,7 +6,7 @@ import Logic from "./concert-intro"
 import Link from "next/link";
 export default function Page(){
     useEffect(() =>{
-       Logic()
+       Logic() //javascript is externally loaded in via useEffect in order to handle how the DOM loads in the content. However, the javascript logic is still laoded in externally 
 
     })
     return(
