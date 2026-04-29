@@ -1,10 +1,14 @@
+//Anderson 
+
 import GreatLakesImage from "../../../src/boxing/GreatLakes.png";
 import InternationalAmateurShowcaseImage from "../../../src/boxing/IntrenationalAmateurShowcase.png";
 import MidAtlanticImage from "../../../src/boxing/MidAlantic.jpg";
 import NewEnglandGoldenGlovesImage from "../../../src/boxing/NewEnglandGoldenGloves.png";
 import NewEnglandSilverGlovesImage from "../../../src/boxing/NewEnglandSIlverGlovesImg1.jpg";
 import WestCoastImage from "../../../src/boxing/WestCoast.png";
+import "../../../globals.css"
 
+//used an object of objects to easily reference the specific image objects by name 
 const boxingImages = {
     silverGlovesYouth: {
         img: NewEnglandSilverGlovesImage,
@@ -70,8 +74,8 @@ const boxingImages = {
     },
 };
 
-export class Event{
-    constructor(title, description, date, img, imgCitation, attributes, id, price, instancesInCart = 0){
+export class Event{ //Im using a class to i can re-use the schema and create several instances of an Event, while also mantianing semi-type strict coding style where I can reference the proeprties using the "." operator (class.proeprty) 
+    constructor(title, description, date, img, imgCitation, attributes, id, price, instancesInCart = 0){ //the constructer sets the general schema for the class (ie how would the data be organized, and what types o fpossible data types it is expected to have for each variable) 
         this.title = title;
         this.description = description;
         this.date = date;
@@ -81,12 +85,14 @@ export class Event{
          this.id = id; //the same as the price_id of the product in stripe backend (ie this id is mapped to the event's corresponding stripe price_id)
          this.price = price; 
          this.instancesInCart = instancesInCart; 
-
+        
+         // NOTE: this.something, the "this" acts like "self". Imagine you have a car, you.car would reference your car. 
     }
 }
 
 
  //used gemini to generate dummy data and scrape web fro valid URL for learnMore links per Event 
+ //Uisng an array so i can easiy ioterate through it and dynamically render each of the events in the page.js 
   export  const Events = [
        new Event(
             "New England Silver Gloves Youth Bracket",
@@ -95,7 +101,7 @@ export class Event{
              boxingImages.silverGlovesYouth.img,
              boxingImages.silverGlovesYouth.citation,
              ["New England", "Youth", "Open", "Flyweight", "Silver Gloves", "Tournament Bracket", "Community Gym"],
-             "price_1TPmXkHo5oc8Dhhw0rpllgCv",
+             "price_1TPmXkHo5oc8Dhhw0rpllgCv", //very important. this is the pirce id in the stripe backend dashboard. this is a uniqu eid that refrences a specific price item 
              15,
             0),
         new Event(

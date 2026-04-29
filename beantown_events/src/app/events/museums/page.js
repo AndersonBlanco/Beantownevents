@@ -88,21 +88,21 @@ export default function Page(){
         {/*<!--images display caption texts and number-->*/}
         <div className="mySlides-museums fade-museums">
             <div className="numbertext-museums">1 / 3</div>
-            <Link href="/credits"><Image src={BostonCommon} alt="A dusktime painting of the Boston Common
+            <Link className="link" href="/credits"><Image width ={700}  src={BostonCommon} alt="A dusktime painting of the Boston Common
             by Childe Hassam"/></Link>
             <p className="text-museums">At Dusk (Boston Common at Twilight) by Childe Hassam at the MFA</p>
         </div>
 
         <div className="mySlides-museums fade-museums">
             <div className="numbertext-museums">2 / 3</div>
-             <Link href="/credits"><Image src={eljaleo}
+             <Link className="link" href="/credits"><Image width ={700} src={eljaleo}
                                                    alt="A painting of a Spanish Flamenco dancer by John Singer Sargent"/></Link>
             <p className="text-museums">El Jaleo by John Singer Sargent at the ISG</p>
         </div>
 
         <div className="mySlides-museums fade-museums">
             <div className="numbertext-museums">3 / 3</div>
-            <Link href="/credits"><Image src={train} alt="A train entering the station at Saint-Lazare"/></Link>
+            <Link className="link" href="/credits"><Image width ={700} src={train} alt="A train entering the station at Saint-Lazare"/></Link>
             <p className="text-museums">The Gare Saint-Lazare: Arrival of a Train at the Harvard Art Museum</p>
         </div>
 

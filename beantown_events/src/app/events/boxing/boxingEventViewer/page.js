@@ -1,9 +1,12 @@
+//Anderson 
+
 "use client"; 
 import Image from "next/image"
 import { useParams, usePathname } from "next/navigation"
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import "./eventViewer.css"
+import "../../../globals.css"
 
 
 import AddCircleIcon from '@mui/icons-material/AddCircle';
@@ -14,11 +17,11 @@ import { handleCheckout } from "@/libs/stripe/checkoutHandlerer";
 export default function BoxingEventViewer(){
 
       const uri = "https://beantown-events.vercel.app/"
-      const path = usePathname(); 
+      const path = usePathname(); //use usePathname to extract the the active path (directory) of the site 
 
 
 
-    const [obj, setObj] = useState(null);
+    const [obj, setObj] = useState(null); //using state variable to save the object loaded in from localstorage. The useState variable also allows to update a specific DOM component, which is needs re-rendering and is precisely what useState offers / allows to do 
         const [ticketsToVuy, setTicketsToBuy] = useState(1); 
 
     useEffect(() =>{ //use useEffect here to use window.localStorage after the DOM and the window loads in and are existing. I i do not use useEffect, there error will be missing components since they have yet to be created abd loaded in 
@@ -54,13 +57,13 @@ export default function BoxingEventViewer(){
     return(
         <div className = "preview_container-boxing">
             <div className = "row-boxing" >
+                {/* Used Image tag from next js to load in the image since <img is not optimal in next js */} 
                 <Image alt = {`${obj.title} boxing event image`} src = {obj.img} className = "image-boxing" width = {1200} height = {800} />
                 <div className = "column-boxing" >
-                    <h2>{obj.title}</h2>
+                    <h2>{obj.title}</h2> {/*using '.' to access the properties of the object. This is possible becasue i used the JSON.parse which coberst it from ao string to aj actual object (josn format) */}
                     <p>{obj.description}</p>
-                            {PurchaseTickets}
+                            {/*embedded variable so the content i houses is rendered instead of inclduing it inline. this is the purpose of components in jsx and one of its advantages*/ PurchaseTickets} 
                 </div>
-                
             </div>
 
 

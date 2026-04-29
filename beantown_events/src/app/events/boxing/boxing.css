@@ -1,3 +1,4 @@
+/*Anderson Blanco */
 .boxing_container-boxing{ 
     display: flex; 
     flex-direction: row-reverse;
@@ -11,11 +12,11 @@
     border: solid 2px rgb(0, 73, 128);
     color: black; 
 
-    width: inherit; 
+    width: 60vw; 
     height: fit-content; 
     margin: 10px; 
-    padding-inline: 50px; 
-    padding-block: 10px; 
+    padding-inline: 50px; /* sets the padding equally for both -right and -left */
+    padding-block: 10px; /* sets the padding equally for both -top and -bottom */
 
     display: flex;
     flex-direction: row;
@@ -36,13 +37,13 @@
 .item_container-boxing .img-boxing{
     height: calc(5px + 5vw);
     width: auto; 
-    align-self: center;
+    align-self: center; /* the component aligns itself in reference to its parent cross axis (diagnal) */
      
 }
 
 .item_container-boxing h1{
     font-size: calc(1px + 1.5vw); 
-    max-lines: 1; 
+    max-lines: 1; /* restricts the line number for the text to 1 when the viewport is shrunk, por expanded and the font size varies and dimensions of the tag / component*/
 }
 
 
@@ -57,7 +58,7 @@
 
 
 .filter_menu-boxing{
-background-color: transparent;
+background-color: transparent; /* sets the background to transparent., rather than colored*/
 color: rgb(0, 0, 0);  
 border-radius: 5px;
 padding-block: 1px;
@@ -78,7 +79,7 @@ flex-direction: column;
 
 
 .filter_checbox_row-boxing{
-    justify-content: space-between;
+    justify-content: space-between; /* (horizontally) sets the space distibution between children to be between them with 0 gap between the inner walls and the next closes surface or children, ecccentially keeping the spacing restriucted to between the elements and not around if there arent children adjacent to each other*/
     display: flex;
 }
 
@@ -88,7 +89,7 @@ flex-direction: column;
 .my_cart_quick_view_slip-boxing{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-evenly;/*  (horiozntally) distributes the spacing between the chjildren, and also between the children and inner walls of the parent ocntainer, to equal amounts */
     align-items: center;
     padding-block: 10px; 
     width: 100vw; 
@@ -115,7 +116,7 @@ flex-direction: column;
     align-items: center;
     display: flex;
     flex-direction: row;
-    gap: 20px; 
+    gap: 20px;  /* sets the spacing between children*/
     width: 50px;
     padding-inline: 10px; 
 

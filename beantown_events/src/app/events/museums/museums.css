@@ -3,6 +3,11 @@ padding: 2%;
 background-color: #f5e2c8;
 }
 
+.link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .dropdown-museums {
     position: relative;
 }

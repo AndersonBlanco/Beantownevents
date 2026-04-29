@@ -4,6 +4,7 @@ import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import {Events} from "./components/EventsClass";
+import "../../globals.css"
 
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 
