@@ -59,7 +59,7 @@ export default function Page(){
                              From W3Schools: https://www.w3schools.com/html/html_entities.asp */}
                         <p id="triangle-bottom">&#9650;</p>
                         <p id="triangle-top">&#9660;</p>
-                        <div className="timeline-usa">
+                        <div className="timeline-usa" id = "timeline-usa">
                             <div id="inside">
                                 <div className="container-usa left-usa">
                                     <div className="content-usa">
