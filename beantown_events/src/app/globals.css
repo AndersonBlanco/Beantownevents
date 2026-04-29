@@ -5,6 +5,7 @@
 }
 
 html, body{ 
+    font-family: Arial, sans-serif;
     font-size: 20px;
     overflow-x: hidden; /* forces any content that overflows beyond the visible viewport width to be hidden and unable to be viewed not even by scrolling (disables horizontal scroll */ 
 }

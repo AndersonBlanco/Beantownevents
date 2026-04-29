@@ -199,54 +199,73 @@ export default function Credits() {
                 <div className="credits-content-credits" id="content-boxing-credits">
                     {/* Anderson START */}
                     <ul className="credit-list-credits">
-                        <li>
-                            The image of <a href="https://www.nationalsilvergloves.org/wp-content/uploads/2025/12/2026_boxing_silver_gloves-m.pdf">New England Silver Gloves Youth Bracket</a>
-                            in the Boxing Page is provided by <a href="https://www.nationalsilvergloves.org/"> National Silver Gloves</a>
-                        </li>
-                        <li>
-                            The image of <a href="https://pagoldengloves.org/wp-content/uploads/2024/02/2024-GG-Fact-Sheet-1.pdf">Mid-Atlantic Golden Gloves Fall Pro Card</a>
-                            in the Boxing Page is provided by <a href="https://www.goldenglovesusa.org/"> Golden Gloves of America</a>
-                        </li>
-                        <li>
-                            The image of <a href="https://www.nationalsilvergloves.org/wp-content/uploads/2025/12/2026_boxing_silver_gloves-m.pdf">Southeast Collegiate Team Dual classNameic</a>
-                            in the Boxing Page is provided by <a href="https://www.nationalsilvergloves.org/"> National Silver Gloves</a>
-                        </li>
-                        <li>
-                            The image of <a href=""> Great Lakes Championship Night</a>
-                            in the Boxing Page is provided by <a href=""> Miami of Ohio</a>
-                        </li>
-                        <li>
-                            The image of <a href="">West Coast Proving Grounds</a>
-                            in the Boxing Page is provided by <a href=""> </a>
-                        </li>
-                        <li>
-                            The image of <a href=""> International Amateur Exchange Showcase</a>
-                            in the Boxing Page is provided by <a href=""> </a>
-                        </li>
-                        <li>
-                            The image of <a href=""> New England Golden Gloves Qualifier</a>
-                            in the Boxing Page is provided by <a href=""> </a>
-                        </li>
-                        <li>
-                            The image of <a href=""> Mid-Atlantic Masters Evening Card</a>
-                            in the Boxing Page is provided by <a href=""> </a>
-                        </li>
-                        <li>
-                            The image of <a href=""> Southeast Youth Development Festival</a>
-                            in the Boxing Page is provided by <a href=""> </a>
-                        </li>
-                        <li>
-                            The image of <a href=""> Great Lakes Silver Gloves Juniors</a>
-                            in the Boxing Page is provided by <a href=""> </a>
-                        </li>
-                        <li>
-                            The image of <a href=""> West Coast Collegiate Invitational Duals</a>
-                            in the Boxing Page is provided by <a href=""> </a>
-                        </li>
-                        <li>
-                            The image of <a href=""> International Golden Gloves Championship Series</a>
-                            in the Boxing Page is provided by <a href=""> </a>
-                        </li>
+                        <li>The image of <a href="../events/boxing">New England Silver Gloves Youth Bracket</a> in the Boxing Page is provided by <a href="https://www.nationalsilvergloves.org">National Silver Gloves</a>. licenced under a <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/deed.en"> CC BY-NC-ND 2.0</a>
+                            {/*Anderson embedded icon from output of function */ccIcon("cc.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("by.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("nc.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("nd.svg")}
+                            being used under U.S. Code<a href="https://www.law.cornell.edu/uscode/text/17/107"> 17 U.S.C. § 107</a> (Fair Use) — educational, non-commercial purpose</li>
+                        <li>The image of <a href="../events/boxing">Mid-Atlantic Golden Gloves Fall Pro Card</a> in the Boxing Page is provided by <a href="https://www.goldenglovesusa.org">Golden Gloves of America</a>.  licenced under a <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/deed.en"> CC BY-NC-ND 2.0</a>
+                            {/*Anderson embedded icon from output of function */ccIcon("cc.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("by.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("nc.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("nd.svg")}
+                            being used under U.S. Code<a href="https://www.law.cornell.edu/uscode/text/17/107"> 17 U.S.C. § 107</a> (Fair Use) — educational, non-commercial purpose</li>
+                        <li>The image of <a href="../events/boxing">Southeast Collegiate Team Dual Classic</a> in the Boxing Page is provided by <a href="https://www.nationalsilvergloves.org">National Silver Gloves</a>.  licenced under a <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/deed.en"> CC BY-NC-ND 2.0</a>
+                            {/*Anderson embedded icon from output of function */ccIcon("cc.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("by.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("nc.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("nd.svg")}
+                            being used under U.S. Code<a href="https://www.law.cornell.edu/uscode/text/17/107"> 17 U.S.C. § 107</a> (Fair Use) — educational, non-commercial purpose</li>
+                        <li>The image of <a href="../events/boxing">Great Lakes Championship Night</a> in the Boxing Page is provided by <a href="https://miamiredhawks.com/news/2025/6/9/hockey-miami-to-face-michigan-tech-in-gli-opener">Miami of Ohio</a>.  licenced under a <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/deed.en"> CC BY-NC-ND 2.0</a>
+                            {/*Anderson embedded icon from output of function */ccIcon("cc.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("by.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("nc.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("nd.svg")}
+                            being used under U.S. Code<a href="https://www.law.cornell.edu/uscode/text/17/107"> 17 U.S.C. § 107</a> (Fair Use) — educational, non-commercial purpose</li>
+                        <li>The image of <a href="../events/boxing">West Coast Proving Grounds</a> in the Boxing Page is provided by <a href="https://www.strideevents.com/proving-grounds/event-information">Stride Events</a>.  licenced under a <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/deed.en"> CC BY-NC-ND 2.0</a>
+                            {/*Anderson embedded icon from output of function */ccIcon("cc.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("by.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("nc.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("nd.svg")}
+                            being used under U.S. Code<a href="https://www.law.cornell.edu/uscode/text/17/107"> 17 U.S.C. § 107</a> (Fair Use) — educational, non-commercial purpose</li>
+                        <li>The image of <a href="../events/boxing">International Amateur Exchange Showcase</a> in the Boxing Page is provided by <a href="https://www.facebook.com/events/25777980761861048/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22external_search_engine%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D">Facebook Events</a>.</li>
+                        <li>The image of <a href="../events/boxing">New England Golden Gloves Qualifier</a> in the Boxing Page is provided by <a href="https://www.lowellgoldengloves.com">Lowell Golden Gloves</a>.  licenced under a <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/deed.en"> CC BY-NC-ND 2.0</a>
+                            {/*Anderson embedded icon from output of function */ccIcon("cc.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("by.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("nc.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("nd.svg")}
+                            being used under U.S. Code<a href="https://www.law.cornell.edu/uscode/text/17/107"> 17 U.S.C. § 107</a> (Fair Use) — educational, non-commercial purpose</li>
+                        <li>The image of <a href="../events/boxing">Mid-Atlantic Masters Evening Card</a> in the Boxing Page is provided by <a href="https://www.goldenglovesusa.org">Golden Gloves of America</a>.  licenced under a <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/deed.en"> CC BY-NC-ND 2.0</a>
+                            {/*Anderson embedded icon from output of function */ccIcon("cc.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("by.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("nc.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("nd.svg")}
+                            being used under U.S. Code<a href="https://www.law.cornell.edu/uscode/text/17/107"> 17 U.S.C. § 107</a> (Fair Use) — educational, non-commercial purpose</li>
+                        <li>The image of <a href="../events/boxing">Southeast Youth Development Festival</a> in the Boxing Page is provided by <a href="https://www.nationalsilvergloves.org">National Silver Gloves</a>.  licenced under a <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/deed.en"> CC BY-NC-ND 2.0</a>
+                            {/*Anderson embedded icon from output of function */ccIcon("cc.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("by.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("nc.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("nd.svg")}
+                            being used under U.S. Code<a href="https://www.law.cornell.edu/uscode/text/17/107"> 17 U.S.C. § 107</a> (Fair Use) — educational, non-commercial purpose</li>
+                        <li>The image of <a href="../events/boxing">Great Lakes Silver Gloves Juniors</a> in the Boxing Page is provided by <a href="https://miamiredhawks.com/news/2025/6/9/hockey-miami-to-face-michigan-tech-in-gli-opener">Miami of Ohio</a>.  licenced under a <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/deed.en"> CC BY-NC-ND 2.0</a>
+                            {/*Anderson embedded icon from output of function */ccIcon("cc.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("by.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("nc.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("nd.svg")}
+                            being used under U.S. Code<a href="https://www.law.cornell.edu/uscode/text/17/107"> 17 U.S.C. § 107</a> (Fair Use) — educational, non-commercial purpose</li>
+                        <li>The image of <a href="../events/boxing">West Coast Collegiate Invitational Duals</a> in the Boxing Page is provided by <a href="https://www.strideevents.com/proving-grounds/event-information">Stride Events</a>.  licenced under a <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/deed.en"> CC BY-NC-ND 2.0</a>
+                            {/*Anderson embedded icon from output of function */ccIcon("cc.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("by.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("nc.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("nd.svg")}
+                            being used under U.S. Code<a href="https://www.law.cornell.edu/uscode/text/17/107"> 17 U.S.C. § 107</a> (Fair Use) — educational, non-commercial purpose</li>
+                        <li>The image of <a href="../events/boxing">International Golden Gloves Championship Series</a> in the Boxing Page is provided by <a href="https://www.facebook.com/events/25777980761861048/?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22external_search_engine%22%7D%2C%7B%22mechanism%22%3A%22attachment%22%2C%22surface%22%3A%22newsfeed%22%7D]%2C%22ref_notif_type%22%3Anull%7D">Facebook Events</a>.  licenced under a <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/deed.en"> CC BY-NC-ND 2.0</a>
+                            {/*Anderson embedded icon from output of function */ccIcon("cc.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("by.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("nc.svg")}
+                            {/*Anderson embedded icon from output of function */ccIcon("nd.svg")}
+                            being used under U.S. Code<a href="https://www.law.cornell.edu/uscode/text/17/107"> 17 U.S.C. § 107</a> (Fair Use) — educational, non-commercial purpose</li>
                     </ul>
                     {/* Anderson END */}
 
