@@ -8,6 +8,8 @@ header {
     display: flex; 
     flex-direction: row;
     align-items: center;
+    position: static;
+    z-index:10;
  
 }
 

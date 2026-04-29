@@ -1,12 +1,13 @@
 /* Yana */
 
 /*  MAIN SECTION  */
-#main {
+#main-clubs {
+    max-width: 100%;
     padding: 3%;
     background-color: #f4f8f2;
 }
 
-#clubs-heading {
+#main-clubs #clubs-heading-clubs {
     font-size: calc(16px + .8vw);
     color: #18206f;
     margin-bottom: 2%;
@@ -14,7 +15,7 @@
 }
 
 /* AGE GATE */
-#age-gate {
+#main-clubs #age-gate-clubs {
     width: 100%;
     max-width: 900px;
     margin: 0 auto 4% auto;
@@ -24,18 +25,18 @@
     text-align: center;
 }
 
-#age-gate h3 {
+#main-clubs #age-gate-clubs h3 {
     font-size: calc(16px + .7vw);
     color: #18206f;
     margin-bottom: 2%;
 }
 
-#age-gate-text {
+#main-clubs #age-gate-text-clubs {
     font-size: calc(10px + .35vw);
     margin-bottom: 3%;
 }
 
-#age {
+#main-clubs #age-clubs {
     width:22%;
     padding: 1% 2%;
     font-size: calc(10px + .3vw);
@@ -44,73 +45,70 @@
     margin-left: 1%;
 }
 
-#check-btn {
+#main-clubs #check-btn-clubs {
     border: none;
     padding: 1% 2%;
     background-color: #d88373;
     color: #50190f;
     cursor: pointer;
     font-size: calc(10px + .3vw);
-    margin-left: 10px; 
-    margin-right: 10px;
-}
- 
-#output {
-  margin-top: 1%;
-font-weight: bold;
-color: #50190f;
 }
 
-#page-links {
+#main-clubs #check-btn-clubs:hover {
+    background-color: #d88373;
+}
+
+#main-clubs #output-clubs {
+    margin-top: 1%;
+    font-weight: bold;
+    color: #50190f;
+}
+
+#main-clubs #page-links-clubs {
     margin-top: 2%;
     display: none;
 }
 
-#page-links .link {
+#main-clubs #page-links-clubs a {
     display: inline-block;
     margin: 1%;
     padding: 1.5% 3%;
     background-color: #18206f;
-
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     font-size: calc(10px + .3vw);
-    color: white;
 }
 
-#page-links .link:hover {
-    background-color: #2735b4;
-    color: white;
+#main-clubs #page-links-clubs a:hover {
+    background-color: #18206f;
+    color: #ffffff;
 }
 
-#link-18 {
+#main-clubs #link-18-clubs {
     display: none;
 }
 
-#link-21 {
+#main-clubs #link-21-clubs {
     display: none;
 }
 
 
 @media screen and (max-width: 980px) {
-    #age {
+    #main-clubs #age-clubs {
         width: 60%;
         margin-right: 0;
         margin-bottom: 2%;
     }
 
-    #check-btn {
+    #main-clubs #check-btn-clubs {
         display: block;
         margin: 0 auto;
     }
 
-    #page-links .link {
+    #main-clubs #page-links-clubs a {
         display: block;
         width: 80%;
         margin: 2% auto;
     }
-}
-
-.table-headers th, .comparison-table-wrapper h2{
-    color: #d88373;
 }

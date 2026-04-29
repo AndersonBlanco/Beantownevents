@@ -2,13 +2,13 @@
 "use client"; 
 
 export default function checkAge() {
-    let age = document.getElementById("age").value;
+    let age = document.getElementById("age-clubs").value;
     age = Number(age);
 
-    let output = document.getElementById("output");
-    let pageLinks = document.getElementById("page-links");
-    let link18 = document.getElementById("link-18");
-    let link21 = document.getElementById("link-21");
+    let output = document.getElementById("output-clubs");
+    let pageLinks = document.getElementById("page-links-clubs");
+    let link18 = document.getElementById("link-18-clubs");
+    let link21 = document.getElementById("link-21-clubs");
 
     output.innerHTML = "";
     pageLinks.style.display = "none";

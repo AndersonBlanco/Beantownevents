@@ -1,100 +1,89 @@
 /* Yana */
 
 
-
 /*  MAIN SECTION  */
+#main-clubs {
+    padding: 3%;
+    background-color: #f4f8f2;
+}
 
-
-#clubs-heading {
+#main-clubs #clubs-heading-clubs {
     font-size: calc(16px + .8vw);
-    color: #1b5e20;
+    color: #18206f;
     margin-bottom: 2%;
     text-align: center;
 }
 
-.container {
+#main-clubs .container-clubs {
     display: flex;
     flex-direction: column;
     margin-bottom: 4%;
 }
 
-.filterDiv {
+#main-clubs .filterDiv-clubs {
     width: 100%;
     border: 2px solid #18206f;
     background-color: #ffffff;
     margin-bottom: 2%;
 }
 
-.card-body {
-    padding: 3%;
+#main-clubs .card-body-clubs {
+    padding: 2%;
 }
 
-.card-top {
+#main-clubs .card-top-clubs {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.card-left {
-    width: 55%;
-    padding-right: 3%;
+#main-clubs .card-left-clubs {
+    width: 52%;
+    padding-right: 2%;
 }
 
-.card-right {
-    width: 45%;
+#main-clubs .card-right-clubs {
+    width: 48%;
 }
 
-.club-name {
-    font-size: calc(14px + .4vw);
+#main-clubs .club-name-clubs {
+    font-size: calc(22px + .4vw);
     color: #18206f;
     margin-bottom: 1%;
 }
 
-.club-type {
-    font-size: calc(10px + .3vw);
+#main-clubs .club-type-clubs {
+    font-size: calc(18px + .3vw);
     color: #18206f;
     margin-bottom: 3%;
 }
 
-.club-details {
+#main-clubs .club-details-clubs {
     list-style: none;
-    font-size: calc(10px + .3vw);
+    font-size: calc(18px + .25vw);
     color: #333333;
     margin-bottom: 3%;
 }
 
-.expand-btn {
-    border: none;
-    background-color: #18206f;
-    color: white;
-    padding: 2% 4%;
-    font-size: calc(10px + .3vw);
-    margin-top: 2%;
-}
-
-.expand-btn:hover {
-    background-color: #18206f;
-}
-
-.club-photo {
+#main-clubs .club-photo-clubs {
     width: 100%;
     height: 24vw;
     display: block;
 }
 
-.card-details {
-    margin-top: 2%;
-
+#main-clubs .card-details-clubs {
+    margin-top: 1%;
+    display: block;
 }
 
-#card-actions {
+#main-clubs .card-actions-clubs {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-top: 1%;
 }
 
-#card-actions a {
+#main-clubs .card-actions-clubs a {
     padding: 1.5% 3%;
     background-color: #d88373;
     color: #50190f;
@@ -103,41 +92,40 @@
     margin-right: 2%;
 }
 
-
-.card-action a:hover {
-    background-color: #18206f;
-    color: #ffd700;
+#main-clubs .card-action a:hover {
+    background-color: #d88373;
+    color: #50190f;
 }
 
 /* COMPARISON TABLE */
-.comparison-table-wrapper {
+#main-clubs .comparison-table-wrapper-clubs {
     background-color: #18206f;
     padding: 3%;
     margin-bottom: 3%;
 }
 
-.comparison-table-wrapper h2{
+#main-clubs .comparison-table-wrapper-clubs h2{
     font-size: calc(14px + .5vw);
-    color: white;
+    color: #d88373;
     margin-bottom: 2%;
 }
 
-.comparison-table {
+#main-clubs .comparison-table-clubs {
     width: 100%;
     background-color: #ffffff;
     color: #1a1a1a;
 }
 
-.comparison-table th {
-    border-bottom: 1px solid #18206f;
-    color: white;
+#main-clubs .comparison-table-clubs th {
+    border-bottom: 1px solid #50190f;
+    color: #d88373;
     padding: 1%;
     text-align: left;
     font-size: calc(10px + .3vw);
 }
 
-.comparison-table td {
-    border-bottom: 1px solid #18206f;
+#main-clubs .comparison-table-clubs td {
+    border-bottom: 1px solid #50190f;
     padding: 1%;
     text-align: left;
     font-size: calc(10px + .3vw);
@@ -145,26 +133,22 @@
 
 
 @media screen and (max-width: 980px) {
-    .card-top {
+    #main-clubs .card-top-clubs {
         flex-direction: column;
         align-items: center;
     }
 
-    .card-left {
+    #main-clubs .card-left-clubs {
         width: 100%;
         padding-right: 0;
     }
 
-    .card-right {
+    #main-clubs .card-right-clubs {
         width: 100%;
         margin-top: 3%;
     }
 
-    .club-photo {
+    #main-clubs .club-photo-clubs {
         height: auto;
     }
-}
-
-.table-headers th, .comparison-table-wrapper h2, .comparison-table th{
-    color: #d88373;
 }

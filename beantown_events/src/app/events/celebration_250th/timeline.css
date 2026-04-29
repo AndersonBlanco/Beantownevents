@@ -1,375 +1,472 @@
-/*page made by Sara K --> information taken from w3 schools */
-/* https://www.w3schools.com/howto/howto_css_timeline.asp */
+/*  page made by Sara K
+    Timeline structure adapted from W3Schools:
+    https://www.w3schools.com/howto/howto_css_timeline.asp
+*/
 
 
 
-/* sets the background color of the timeline */
-.celeb_container {
-    background-color: #F0F0DB;
-    font-family: Helvetica, sans-serif;
+/* MAIN */
 
+main {
+    background-color: #fbfaf2;
+    padding-bottom: 5%;
+    padding-top: 3%;
+}
+
+#main-title {
+    position: relative;
+    font-family: Georgia, Times, serif;
+    z-index: 2;
+    font-size: calc(18px + 1.5vw);
+    color: #367BCA;
+    width: 83%;
+    margin: 0 auto 3%;
+    background-color: white;
+    padding: 1%;
+    text-align: center;
+    border: 3px solid #B31942;
+    text-transform: uppercase;
+}
+
+#main-subtitle {
+    position: relative;
+    z-index: 2;
+    line-height: 1.6;
+    font-family: Georgia, Times, serif;
+    font-size: calc(6px + .8vw);
+    margin: 0 auto 5%;
+    width: 85%;
+    background-color: #f6f5f5;
+    padding: 2%;
+    border-radius: 10px;
+    border: 2px ridge #3f56a8;
+    text-align: center;
+}
+
+#instruct {
+    display: flex;
+}
+
+.instructions {
+    width: 30%;
+    margin: 0 auto 5%;
+    text-align: center;
+    font-size: calc(6px + 1vw);
+    font-family: Georgia, Times, serif;
+    font-weight: bold;
+    color: #B22234;
+    background-color: #f6f5f5;
+    position: relative;
+    z-index: 2;
+    padding: 1%;
+    border: 3px double #6b1f1f;
+    transition: transform .2s ease;
+}
+
+.instructions:hover {
+    /* transform: scale()
+       It applies a 2D transformation that grows or shrinks the element.
+       Used here to slightly enlarge the instructions box on hover.
+       From W3Schools: https://www.w3schools.com/cssref/css3_pr_transform.php */
+    transform: scale(1.01);
+}
+
+#box {
+    background-color: #d8d8d8;
+    width: 90%;
+    padding-top: 4%;
+    padding-bottom: 6.5%;
+    margin: auto;
+    border-radius: 8px;
+    border: 4px ridge #002868;
+}
+
+#triangle-top {
+    font-size: calc(10px + 3vw);
+    position: absolute;
+    z-index: 5;
+    left: 48.7%;
+    top: 15%;
+}
+
+#triangle-bottom {
+    font-size: calc(10px + 3vw);
+    position: absolute;
+    z-index: 5;
+    left: 48.7%;
+    top: 261%;
+}
+
+
+/* TIMELINE
+   Pattern from W3Schools: https://www.w3schools.com/howto/howto_css_timeline.asp */
+
+   #page-wrapper-usa{
+
+    padding-block: 40px;
+   }
+
+#page-wrapper-usa .timeline-usa {
+    position: relative;
+    /* max-width
+       It sets the largest width an element is allowed to grow to.
+       Used here to cap the timeline's width at 85% of its parent.
+       From W3Schools: https://www.w3schools.com/cssref/pr_dim_max-width.php */
+    max-width: 85%;
     margin: auto;
 
-    padding-bottom: 5%;
 }
 
-.timeline-container{
-    padding-top: 5%;
+#inside {
+    position: relative;
+    z-index: 5;
 }
 
-/* This is what creates the outer container for the whole timeline */
-.timeline {
-    position: relative; /*makes this the reference point for anything inside with absolute positioning (like the vertical line)*/
-    max-width: 1200px;
-    margin: 0 auto;
+/* This is what actually creates the vertical line going down the middle.
+   ::after / ::before pseudo-elements
+   They generate decorative content before or after an element without
+   adding extra HTML. Used here to draw the timeline's vertical line.
+   From W3Schools: https://www.w3schools.com/css/css_pseudo_elements.asp */
+#page-wrapper-usa .timeline-usa::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: black;
+    top: -34.5%;
+    bottom: 0;
+    left: 50%;
+    margin-left: auto;
+    transition: 1.5s ease;
+    z-index: 1;
+    height: 0;
 }
-
-/* This is what actually creates the vertical line going down the middle */
-.timeline::after { /*:: resets the page so nothing looks random*/
-    content: ''; /* needed so the pseudo element shows up*/
-    position: absolute; /*lets you place it exactly where you want inside*/
-    width: 6px; /* controls how the line looks*/
-    background-color: black; /* controls how the line looks in terms of color*/
-    top: 0; /*the line starts at the top*/
-    bottom: 0; /* the line goes to the bottom*/
-    left: 50%; /*this places the line in middle of the container*/
-    margin-left: -3px; /* lets you shift the line slightly so it's perfectly centered (since it has width)*/
-}
-
 
 /* Container around content */
-.container {
-    padding: 10px 40px; /*space inside each timeline item*/
+#page-wrapper-usa .container-usa {
+    padding: 10px 40px;
     position: relative;
-    background-color: inherit; /*uses the parent's background color*/
-    width: 36%; /* makes each item take up 36 percent the timeline*/
-    
-}
-
- 
-/* This creates the dots that sit on the timeline at each date */
-
-/* This creates the dots that sit on the timeline at each date */
-.container::after {
-    content: ''; /*required for pseudo-elements*/
-    position: absolute;
-    width: 25px; /* sets the size of the circle*/
-    height: 25px; /*sets the height of the circle*/
-    right: -17px; /*pushes the circle slightly outside of the container*/
-    background-color: #d88373;
-    border: 4px solid #18206f;
-    top: 15px;
-    border-radius: 50%; /*turns squares into circles*/
-    z-index: 1; /*makes sure they appear above other elements*/
-}
-
-.right::after {
-    content: ''; /*required for pseudo-elements*/
-    position: absolute;
-    width: 25px; /* sets the size of the circle*/
-    height: 25px; /*sets the height of the circle*/
-    right: -17px; /*pushes the circle slightly outside of the container*/
- 
-    top: 15px;
-    border-radius: 50%; /*turns squares into circles*/
-    z-index: 1; /*makes sure they appear above other elements*/
-}
-
-
-.left::after {
-    content: ''; /*required for pseudo-elements*/
-    position: absolute;
-    width: 25px; /* sets the size of the circle*/
-    height: 25px; /*sets the height of the circle*/
-    right: calc(5.5 * -17px); /*pushes the circle slightly outside of the container*/
- 
-    top: 15px;
-    border-radius: 50%; /*turns squares into circles*/
-    z-index: 1; /*makes sure they appear above other elements*/
+    background-color: inherit;
+    width: 50%;
 }
 
 /* Place the container to the left */
-.left {
-    left: 0.9%;
+#page-wrapper-usa .left-usa {
+    left: -11%;
 }
 
 /* Place the container to the right */
-.right {
+#page-wrapper-usa .right-usa {
     left: 50%;
 }
 
+/* This creates the dots that sit on the timeline at each date */
+#page-wrapper-usa .container-usa::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -19px;
+    background-color: #d88373;
+    border: 4px solid #18206f;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
 
 /* Fix the circle for containers on the right side */
-.right::after {
-    left: -16px; /*repositions the circle for the right side items*/
+#page-wrapper-usa .right-usa::after {
+    left: -14px;
 }
 
-/* Add arrows to the left container (pointing right) */
-.left::before {
-    content: " "; /*required for pseudo-elements*/
-    height: 0; /*when used with width:0, it helps make a triangle shape --> in this case the arrow*/
+/* Fix the circle for containers on the left side */
+#page-wrapper-usa .left-usa::after {
     position: absolute;
-    top: 22px;
-    width: 0; /*when used with height:0, it helps make a triangle shape --> in this case the arrow*/
-    z-index: 1; /*makes sure they appear above other elements*/
-    right: 30px;
-    border: 2px solid white; /*this helps add a border so the triangle/arrow is complete*/
+    right: -82px;
 }
 
-/* Add arrows to the right container (pointing left) */
-.right::before {
-    content: " "; /*required for pseudo-elements*/
+
+/* Add arrows to the left container (pointing right).
+   Triangle-via-borders trick from W3Schools:
+   https://www.w3schools.com/howto/howto_css_arrows.asp */
+#page-wrapper-usa .left-usa::before {
+    content: " ";
     height: 0;
     position: absolute;
     top: 22px;
     width: 0;
-    z-index: 1; /*makes sure they appear above other elements*/
+    z-index: 1;
+    right: 30px;
+    border-style: solid;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+#page-wrapper-usa .right-usa::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
     left: 30px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0; /*helps to define the triangle shape*/
-    border-color: transparent white transparent transparent; /*makes it so one side is visible and finishes off the triangle shape*/
+    border-style: solid;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
 }
 
-
-/* Fix the circle for containers on the right side */
-.right::after {
-    left: -16px; /*repositions the circle for the right side items*/
-}
-
-/* The actual content */
-.content {
-    padding: 20px 20px; /*space inside the box*/
+/* The actual content card */
+#page-wrapper-usa .content-usa {
+    padding: 20px 30px;
     background-color: white;
     position: relative;
-    border-radius: 6px; /*rounds the corners of the rectangle*/
-    border: 2px solid black;
-    height: fit-content; /*adjusts height based on the content inside the box*/
-    width: 100%; /*fills the container*/
+    border-radius: 6px;
+    border: 2px solid #18206f;
+    /* fit-content
+       It sizes a box to its inner content rather than a fixed value.
+       Used here so the content card auto-sizes to whatever's inside it.
+       From W3Schools: https://www.w3schools.com/cssref/pr_dim_height.php */
+    height: fit-content;
+    width: 100%;
 }
 
-.content a{
-text-decoration: underline;
-    color: #2a37a9;
-}
-img {
-    object-fit: contain; /*helps to keep the image proportions (no stretching)*/
-    height: 17vh;
-    width: auto; /*makes the width adjust automatically*/
+#page-wrapper-usa .content-usa h2 {
+    text-align: center;
+    font-family: Georgia, Times, serif;
 }
 
-/* BUTTONS  - the clickable triggers that will open thr popup */
-/* each button use position: absolute so you can place them anywhere */
-
-
-/* BUTTON POSITIONS
-top/left to move them.*/
-
-#tea-btn {
-    bottom: 5%; /*moves the position of the box up or down*/
-    right: 0%; /*moves the position of the box right or right*/
-    margin-left: 20%;
-    margin-top: 10%; 
-
+#page-wrapper-usa .content-usa h2 a {
+    text-decoration: none;
+    color: #3f56a8;
+    transition: color .2s;
 }
 
-#paul-btn {
-    bottom: 5%; /*moves the position of the box up or down*/
-    right: 0%; /*moves the position of the box right or right*/
-    margin-left: 20%;
-    margin-top: 10%; 
-
+#page-wrapper-usa .content-usa h2 a:hover {
+    color: #6573a5;
 }
 
-#battle-btn {
-    bottom: 5%; /*moves the position of the box up or down*/
-    right: 0%; /*moves the position of the box right or right*/
-    margin-left: 10%;
-    margin-top: 10%; 
-
-
+#page-wrapper-usa .content-usa p {
+    text-align: center;
+    font-family: Georgia, Times, serif;
+    margin-top: 1%;
 }
 
-#harbor-btn {
-    bottom: 5%; /*moves the position of the box up or down*/
-    right: 0%; /*moves the position of the box right or right*/
-    margin-left: 20%;
-    margin-top: 10%; 
-
-
-
+/* Scoped to timeline images only so it does not affect the header logo */
+#page-wrapper-usa .content-usa img {
+    border: 2px double #6f98b5;
+    border-radius: 5px;
+    max-width: 55%;
+    max-height: 12vw;
+    margin-top: 5%;
 }
 
-/* SHARED STYLE FOR EVERY BUTTON */
-
-.pop-btn {
+.right {
     position: relative;
-
-
-    color: #ca0202; /*text color*/
-    background-color: navy;
-    padding: 5%; /*inner spacing*/
-    border: none; /*removes default borders*/
-    border-radius: 10px; /*creates rounded edges*/
-    font-size: calc(5px + 1vw); /*responsive text sizing*/
-    transition: background-color .2s ease; /* creates hover effect*/
-    z-index: 2; /*sits above timeline elements*/
-}
- 
-
-.pop-btn:hover {
-    background-color: #30364F; /*changes color on hover*/
+    left: 45%;
+    display: flex;
 }
 
-/* OVERLAY - the dark transparent backdrop that looks like a page
-   covering the one behind */
+.left {
+    position: relative;
+    left: 0;
+    margin-top: 5%;
+}
 
-#wrapper {
-    font-family: Arial, sans-serif;
-    position: fixed; /*stays in place even when scrolling*/
+
+/* "SEE MORE" BUTTONS */
+
+#page-wrapper-usa .pop-btn-usa {
+    position: absolute;
+    color: #d88373;
+    background-color: #18206f;
+    padding: 3%;
+    border: none;
+    border-radius: 10px;
+    font-size: calc(5px + 1vw);
+    transition: background-color .2s ease;
+    z-index: 2;
+    display: block;
+    width: 30%;
+}
+
+#harbor-btn-usa {
+    margin-left: 59%;
+    top: 75%;
+}
+
+#paul-btn-usa {
+    margin-left: 59%;
+    top: 75%;
+}
+
+#tea-btn-usa {
+    margin-right: 59%;
+    top: 75%;
+}
+
+#battle-btn-usa {
+    margin-right: 59%;
+    top: 75%;
+}
+
+#page-wrapper-usa .pop-btn-usa:hover {
+    background-color: #30364F;
+}
+
+
+/* POPUP OVERLAY AND BOXES */
+
+#page-wrapper-usa #wrapper-usa {
+    font-family: Georgia, Times, serif;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(83, 83, 83, 0.75); /*semi-transparent overlay*/
+    background-color: rgba(83, 83, 83, 0.75);
     display: none;
-    z-index: 3; /*sits above everything else*/
-    justify-content: center; /*centers content only if display:flex is added to java script*/
+    z-index: 11;
+    justify-content: center;
     align-items: center;
 }
 
-/* Popup box - the panel that appears over the overlay */
-.popup-box {
+#page-wrapper-usa .popup-box-usa {
     background-color: #e3e3e3;
-    width: 100%;
-    height: 100%;
+    width: 85%;
+    height: 95%;
     position: relative;
     padding: 0;
-    z-index: 4; /*sits above everything else*/
+    z-index: 12;
     border: 3px solid #ffd700;
     display: none;
-    overflow-y: auto; /*https://www.w3schools.com/cssref/playdemo.php?filename=playcss_overflow-y */
+    /* overflow-y controls vertical overflow when content exceeds the box height.
+       Set to auto here so the popup gets a scrollbar only when its content is too tall.
+       From W3Schools: https://www.w3schools.com/cssref/pr_pos_overflow-y.asp */
+    overflow-y: auto;
 }
 
-/* Inner box - the white content area inside the popup */
-.inner {
+#page-wrapper-usa .inner-usa {
     background-color: #ffffff;
-    width: 80%; /*content fills less than the full screen*/
+    width: 80%;
     height: 110%;
-    margin: 4.5% auto; /*centers content*/
+    margin: 4.5% auto;
     padding-top: 2%;
     border: 2px double #c9a84c;
     position: relative;
 }
 
-/* Close button - the close button inside each popup */
-.close-popup-btn {
+#page-wrapper-usa .close-popup-btn-usa {
     position: absolute;
     top: 2%;
-    right: 3%;
+    right: 1%;
     padding: 1% 2%;
     background-color: #ca0202;
     color: #e6e6e6;
     border-radius: 50px;
     font-size: calc(10px + .5vw);
-    text-transform: uppercase; /*makes text all capital letters*/
-    z-index: 5;
+    text-transform: uppercase;
+    z-index: 13;
 }
 
-.close-popup-btn:hover {
+#page-wrapper-usa .close-popup-btn-usa:hover {
     color: #ca0202;
     background-color: #e6e6e6;
     border-color: #ca0202;
 }
 
-/* Popup header - title + subtitle row in popup */
-.inner-head {
-    display: flex; /*puts things nect to each other in a row*/
-    flex-direction: row; /*makes them go left to right*/
-    flex-wrap: wrap; /*lets content title move to a new line if needed*/
-    align-items: baseline; /*lines up the text*/
-    border-radius: 14px; /*rounds corners*/
-    background-color: #e1dfd0;
-    width: 90%; /*not the full width*/
-    margin: 0 auto; /*centers the items*/
-    padding: 1% 2%;
-}
-
-.pop-title {
-    font-size: calc(10px + 3vw);
-    color: navy;
-    margin: 0 0 1% 2%; /*adds spacing around item*/
-}
-
-.pop-subtitle {
-    font-size: calc(8px + .85vw);
-    color: #373636;
-    font-style: italic;
-    margin-left: 5%; /*adds space on the left side of the element*/
-}
-
-.pop-body {
+#page-wrapper-usa .inner-head-usa {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap
+       It allows flex children to wrap onto multiple lines instead of overflowing.
+       Used here so a long popup title can drop to a new line if needed.
+       From W3Schools: https://www.w3schools.com/cssref/css3_pr_flex-wrap.php */
+    flex-wrap: wrap;
+    border-radius: 14px;
+    background-color: #e3e2df;
     width: 90%;
-    margin: 3% auto; /*centers item but also adds padding/space around*/
+    margin: 0 auto;
+    padding: 1% 2%;
+    border: 5px solid rgb(202 2 2 / 0.32);
+}
+
+#page-wrapper-usa .pop-title-usa {
+    font-size: calc(10px + 1.5vw);
+    color: #274cca;
+    text-align: center;
+    margin: 0 auto 1%;
+}
+
+
+#page-wrapper-usa .pop-body-usa {
+    width: 90%;
+    margin: 3% auto;
     padding: 2%;
 }
 
-.pop-body h3 {
-    font-size: calc(8px + 1vw);
-    color: #333;
-}
-
-.pop-body p {
+#page-wrapper-usa .pop-body-usa p {
     font-size: calc(6px + .8vw);
-    margin-top: 3%;
+    margin: 2% 0 4%;
     color: #333
 }
 
+/* Style for the "Click the address..." prompt above each popup's location list.
+   Used as a class (not id) since it appears in all four popups. */
+.click-address {
+    font-weight: bold;
+}
 
-/* Media queries - Responsive timeline on screens less than 600px wide */
+/* Sizes the date/location list items inside each popup. */
+#page-wrapper-usa .pop-body-usa ul li {
+    font-size: calc(7px + 1vw);
+}
+
+/* Styles the map link inside each popup's location list item. */
+#page-wrapper-usa .pop-body-usa ul li a {
+    text-decoration: none;
+    color: #831515;
+}
+
+
+
+/* MEDIA QUERIES — Responsive timeline on screens less than 600px wide. */
+
 @media screen and (max-width: 600px) {
     /* Place the timeline to the left */
-    .timeline::after {
-        left: 31px; /*moves the vertical line away from the center and over ot the left*/
+    #page-wrapper-usa .timeline-usa::after {
+        left: 31px;
     }
 
     /* Full-width containers */
-    .container {
+    #page-wrapper-usa .container-usa {
         width: 100%;
-        padding-left: 70px; /*extra padding on the left*/
-        padding-right: 25px; /*extra padding on the right*/
+        padding-left: 70px;
+        padding-right: 25px;
     }
 
     /* Make sure that all arrows are pointing leftwards */
-    .container::before {
-        left: 60px; /*positions the arrow closer to the left side*/
-        border: medium solid white;
-        border-width: 10px 10px 10px 0; /*creates a triangle shape by controlling each side of the border*/
-        border-color: transparent white transparent transparent; /*makes only one side visible*/
+    #page-wrapper-usa .container-usa::before {
+        left: 60px;
+        border-style: solid;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
     }
 
     /* Make sure all circles are at the same spot */
-    .left::after, .right::after {
-        left: 15px; /*moves all the circles to the same position*/
+    #page-wrapper-usa .left-usa::after, #page-wrapper-usa .right-usa::after {
+        left: 15px;
     }
 
+    #page-wrapper-usa .left-usa::after {
+    position: absolute;
+    left: 10px;
+    }
+
+  
     /* Make all right containers behave like the left ones */
-    .right {
-        left: 0%;
-    }
-
-    #tea-btn{
-        top: 20%;
-    }
-
-    #paul-btn {
-
-    }
-
-    #harbor-btn{
-
-    }
-
-    #battle-btn {
-
+    #page-wrapper-usa .right-usa {
+        left: 0;
     }
 }
+
+

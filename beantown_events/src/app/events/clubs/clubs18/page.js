@@ -16,18 +16,18 @@ export default function Clubs18(){
 	});
 
     return(
-        <div id="main">
-		<h2 id="clubs-heading">18+ Club Events in Boston</h2>
+        <div id="main-clubs">
+		<h2 id="clubs-heading-clubs">18+ Club Events in Boston</h2>
 
-		<div className="container">
-			<div className="filterDiv">
-				<div className="card-body">
+		<div className="container-clubs">
+			<div className="filterDiv-clubs">
+				<div className="card-body-clubs">
 					
-					<div className="card-top">
-						<div className="card-left">
-							<h3 className="club-name">Big Night Live 18+ Events</h3>
-							<p className="club-type">Live Event Venue</p>
-							<ul className="club-details">
+					<div className="card-top-clubs">
+						<div className="card-left-clubs">
+							<h3 className="club-name-clubs">Big Night Live 18+ Events</h3>
+							<p className="club-type-clubs">Live Event Venue</p>
+							<ul className="club-details-clubs">
 								<li>Location: Downtown Boston</li>
 								<li>Age: 18+</li>
 								<li>April 16 - Lil Mosey</li>
@@ -36,12 +36,12 @@ export default function Clubs18(){
 							</ul>
 
 						</div>
-						<div className="card-right">
-							<Image src={BngImage} alt="Big Night Live venue in Boston" className="club-photo"/>
+						<div className="card-right-clubs">
+							<Image src={BngImage} alt="Big Night Live venue in Boston" className="club-photo-clubs"/>
 						</div>
 					</div>
 					
-					<div className="card-actions">
+					<div className="card-actions-clubs">
 						<a  style= {{   
 								padding:" 1.5% 3%",
     						backgroundColor: "#d88373",
@@ -66,9 +66,9 @@ export default function Clubs18(){
 
 		{/*<!-- COMPARISON TABLE -->*/}
 		{/*<!-- Comparison table layout based on W3Schools: https://www.w3schools.com/howto/howto_css_comparison_table.asp -->*/}
-		<div className="comparison-table-wrapper">
+		<div className="comparison-table-wrapper-clubs">
 			<h2>Compare Boston Venues</h2>
-			<table className="comparison-table">
+			<table className="comparison-table-clubs">
 				<tr>
 					<th>Venue</th>
 					<th>Age</th>

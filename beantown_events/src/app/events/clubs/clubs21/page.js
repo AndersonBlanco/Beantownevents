@@ -20,30 +20,30 @@ export default function Clubs21(){
 		//clubs_pages_logic(); 
 	})
     return(
-        <div id="main">
-		<h2 id="clubs-heading">21+ Club Events in Boston</h2>
+        <div id="main-clubs">
+		<h2 id="clubs-heading-clubs">21+ Club Events in Boston</h2>
 
-		<div className="container">
-			<div className="filterDiv">
-				<div className="card-body">
-					<div className="card-top">
-						<div className="card-left">
-							<h3 className="club-name">ICON</h3>
-							<p className="club-type">Nightclub</p>
-							<ul className="club-details">
+		<div className="container-clubs">
+			<div className="filterDiv-clubs">
+				<div className="card-body-clubs">
+					<div className="card-top-clubs">
+						<div className="card-left-clubs">
+							<h3 className="club-name-clubs">ICON</h3>
+							<p className="club-type-clubs">Nightclub</p>
+							<ul className="club-details-clubs">
 								<li>Location: Downtown Boston</li>
 								<li>Age: 21+</li>
 								<li>Events: Fridays and Sundays at 10:30PM</li>
 							</ul>
 
 						</div>
-						<div className="card-right">
-							<Image src={IconImage} alt="ICON nightclub in Boston" className="club-photo"/>
+						<div className="card-right-clubs">
+							<Image src={IconImage} alt="ICON nightclub in Boston" className="club-photo-clubs"/>
 						</div>
 					</div>
-					<div className="card-details">
-						<p className="club-description">Popular nightclub with events every Friday and Sunday starting at 10:30PM. Known label music, dancing, and a lively Boston crowd.</p>
-						<div id="card-actions">
+					<div className="card-details-clubs">
+						<p className="club-description-clubs">Popular nightclub with events every Friday and Sunday starting at 10:30PM. Known label music, dancing, and a lively Boston crowd.</p>
+						<div className="card-actions-clubs">
 							<a style= {{   
 								padding:" 1.5% 3%",
     						backgroundColor: "#d88373",
@@ -65,27 +65,27 @@ export default function Clubs21(){
 				</div>
 			</div>
 
-			<div className="filterDiv">
-				<div className="card-body">
-					<div className="card-top">
-						<div className="card-left">
-							<h3 className="club-name">Venu</h3>
-							<p className="club-type">Nightclub</p>
-							<ul className="club-details">
+			<div className="filterDiv-clubs">
+				<div className="card-body-clubs">
+					<div className="card-top-clubs">
+						<div className="card-left-clubs">
+							<h3 className="club-name-clubs">Venu</h3>
+							<p className="club-type-clubs">Nightclub</p>
+							<ul className="club-details-clubs">
 								<li>Location: Downtown Boston</li>
 								<li>Age: 21+</li>
 								<li>Events: Saturdays at 10:30PM</li>
 							</ul>
 
 						</div>
-						<div className="card-right">
-							<Image src={VenuImage} alt="Venu nightclub in Boston" className="club-photo"/>
+						<div className="card-right-clubs">
+							<Image src={VenuImage} alt="Venu nightclub in Boston" className="club-photo-clubs"/>
 
 						</div>
 					</div>
-					<div className="card-details">
-						<p className="club-description">Exciting nightclub with lively Saturday events and a high-energy crowd.</p>
-						<div id="card-actions">
+					<div className="card-details-clubs">
+						<p className="club-description-clubs">Exciting nightclub with lively Saturday events and a high-energy crowd.</p>
+						<div className="card-actions-clubs">
 							<a href="https://www.venuboston.com/" target="_blank">Learn More</a>
 							<a onClick={() => {handleCheckout([{ price: "price_1TOu54Ho5oc8DhhwWCznwVhN", quantity: 1 }], `${uri}/${path}`, `${uri}/${path}`)}}>Buy Ticket</a>
 						</div>
@@ -93,13 +93,13 @@ export default function Clubs21(){
 				</div>
 			</div>
 
-			<div className="filterDiv">
-				<div className="card-body">
-					<div className="card-top">
-						<div className="card-left">
-							<h3 className="club-name">Big Night Live</h3>
-							<p className="club-type">Live Event Venue</p>
-							<ul className="club-details">
+			<div className="filterDiv-clubs">
+				<div className="card-body-clubs">
+					<div className="card-top-clubs">
+						<div className="card-left-clubs">
+							<h3 className="club-name-clubs">Big Night Live</h3>
+							<p className="club-type-clubs">Live Event Venue</p>
+							<ul className="club-details-clubs">
 								<li>Location: Downtown Boston</li>
 								<li>Age: 21+</li>
 								<li>April 18 - Dillon Francis</li>
@@ -108,13 +108,13 @@ export default function Clubs21(){
 							</ul>
 
 						</div>
-						<div className="card-right">
-							<Image src={BngImage} alt="Big Night Live venue in Boston" className="club-photo"/>
+						<div className="card-right-clubs">
+							<Image src={BngImage} alt="Big Night Live venue in Boston" className="club-photo-clubs"/>
 						</div>
 					</div>
-					<div className="card-details">
-						<p className="club-description">Big Night Live hosts shows with major DJs and has a late-night club atmosphere.</p>
-						<div id="card-actions">
+					<div className="card-details-clubs">
+						<p className="club-description-clubs">Big Night Live hosts shows with major DJs and has a late-night club atmosphere.</p>
+						<div className="card-actions-clubs">
 							<a href="https://bignightlive.com/" target="_blank">Learn More</a>
 							<a   onClick={() => {handleCheckout([{ price: "price_1TOu54Ho5oc8DhhwWCznwVhN", quantity: 1 }], `${uri}/${path}`, `${uri}/${path}`)}}>Buy Ticket</a>
 						</div>
@@ -122,26 +122,26 @@ export default function Clubs21(){
 				</div>
 			</div>
 
-			<div className="filterDiv">
-				<div className="card-body">
-					<div className="card-top">
-						<div className="card-left">
-							<h3 className="club-name">The Grand</h3>
-							<p className="club-type">Nightclub</p>
-							<ul className="club-details">
+			<div className="filterDiv-clubs">
+				<div className="card-body-clubs">
+					<div className="card-top-clubs">
+						<div className="card-left-clubs">
+							<h3 className="club-name-clubs">The Grand</h3>
+							<p className="club-type-clubs">Nightclub</p>
+							<ul className="club-details-clubs">
 								<li>Location: Downtown Boston</li>
 								<li>Age: 21+</li>
 								<li>Events: Fridays at 10:00PM</li>
 							</ul>
 
 						</div>
-						<div className="card-right">
-							<Image src={GrandImage} alt="The Grand nightclub in Boston" className="club-photo"/>
+						<div className="card-right-clubs">
+							<Image src={GrandImage} alt="The Grand nightclub in Boston" className="club-photo-clubs"/>
 						</div>
 					</div>
-					<div className="card-details">
-						<p className="club-description">One of Boston's biggest nightlife venues with Friday events, and a high-energy vibe.</p>
-						<div id="card-actions">
+					<div className="card-details-clubs">
+						<p className="club-description-clubs">One of Boston's biggest nightlife venues with Friday events, and a high-energy vibe.</p>
+						<div className="card-actions-clubs">
 							<a href="https://thegrandboston.com/" target="_blank">Learn More</a>
 							<a   onClick={() => {handleCheckout([{ price: "price_1TOu54Ho5oc8DhhwWCznwVhN", quantity: 1 }], `${uri}/${path}`, `${uri}/${path}`)}}>Buy Ticket</a>
 						</div>
@@ -152,10 +152,10 @@ export default function Clubs21(){
 
 		{/* COMPARISON TABLE */}
 			{/* Comparison table layout based on W3Schools: https://www.w3schools.com/howto/howto_css_comparison_table.asp */}
-	<div className="comparison-table-wrapper">
+	<div className="comparison-table-wrapper-clubs">
 			<h2>Compare Boston Venues</h2>
-			<table className="comparison-table">
-				<tr className = "table-headers">
+			<table className="comparison-table-clubs">
+				<tr>
 					<th>Venue</th>
 					<th>Age</th>
 					<th>Location</th>
