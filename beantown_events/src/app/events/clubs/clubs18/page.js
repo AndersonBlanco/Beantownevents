@@ -42,22 +42,8 @@ export default function Clubs18(){
 					</div>
 					
 					<div className="card-actions-clubs">
-						<a  style= {{   
-								padding:" 1.5% 3%",
-    						backgroundColor: "#d88373",
-   					 color: "#50190f",
-    					textDecoration: "none",
-    				fontSize: "calc(10px + .3vw)",
-    					marginRight: "2%"
-						}} href="https://bignightlive.com/" target="_blank">Learn More</a>
-						<a style= {{   
-								padding:" 1.5% 3%",
-    						backgroundColor: "#d88373",
-   					 color: "#50190f",
-    					textDecoration: "none",
-    				fontSize: "calc(10px + .3vw)",
-    					marginRight: "2%"
-						}}  onClick={() => {handleCheckout([{ price: "price_1TQXdAHo5oc8DhhwEnEVOylq", quantity: 1 }], `${uri}/${path}`, `${uri}/${path}`)}}>Buy Ticket</a>
+						<a href="https://bignightlive.com/" target="_blank">Learn More</a>
+						<a onClick={() => {handleCheckout([{ price: "price_1TQXdAHo5oc8DhhwEnEVOylq", quantity: 1 }], `${uri}/${path}`, `${uri}/${path}`)}}>Buy Ticket</a>
 					</div>
 				</div>
 			</div>

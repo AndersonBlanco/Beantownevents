@@ -17,8 +17,8 @@ const btnIds = ["btn-all", "btn-hip-hop", "btn-pop", "btn-country", "btn-rock", 
 const btnCategories = ["all", "hip-hop", "pop", "country", "rock", "tdgarden", "lbp", "gillette"];
 
 export function filterSelection(category) {
-    let cards = document.getElementsByClassName("filterDiv");
-    let buttons = document.getElementsByClassName("btn");
+    let cards = document.getElementsByClassName("filterDiv-concerts");
+    let buttons = document.getElementsByClassName("btn-concerts");
 
     for (let i = 0; i < cards.length; i++) {
         cards[i].style.display = "none";
@@ -29,13 +29,13 @@ export function filterSelection(category) {
         }
     }
 
-    // Reset every button to "btn", then activate the ones whose category matches.
+    // Reset every filter button to the concert button styling hook.
     for (let i = 0; i < buttons.length; i++) {
-        buttons[i].className = "btn";
+        buttons[i].className = "btn-concerts";
     }
     for (let i = 0; i < btnIds.length; i++) {
         if (btnCategories[i] === category) {
-            document.getElementById(btnIds[i]).className = "btn active";
+            document.getElementById(btnIds[i]).className = "btn-concerts";
         }
     }
 }
@@ -58,16 +58,16 @@ filterSelection("all");
 // Declared const because the references themselves never get reassigned.
 
 
-const expandBtn = document.getElementsByClassName("expand-btn");
-const seatingBtn = document.getElementsByClassName("seating-btn");
+const expandBtn = document.getElementsByClassName("expand-btn-concerts");
+const seatingBtn = document.getElementsByClassName("seating-btn-concerts");
 
 // COLLAPSE ALL SECTION
-// Hides all card-details and seating-chart divs at once.
+// Hides all card-details-concerts and seating-chart-concerts divs at once.
 //Resets all expand and seating button text back to default.
 
-document.getElementById("collapse-all-btn").addEventListener("click", function () {
-    let details = document.getElementsByClassName("card-details");
-    let seatingCharts = document.getElementsByClassName("seating-chart");
+document.getElementById("collapse-all-btn-concerts").addEventListener("click", function () {
+    let details = document.getElementsByClassName("card-details-concerts");
+    let seatingCharts = document.getElementsByClassName("seating-chart-concerts");
 
     for (let i = 0; i < details.length; i++) {
         details[i].style.display = "none";
@@ -86,14 +86,14 @@ document.getElementById("collapse-all-btn").addEventListener("click", function (
 // SEATING CHART TOGGLE
 // parentElement from W3Schools https://www.w3schools.com/jsref/prop_node_parentelement.asp
 // This returns the parent element of the specified element.
-// Button is inside card-actions inside card-details.
-// parentElement goes to card-actions, parentElement again goes to card-details,
-// then finds the seating-chart sibling div.
+// Button is inside card-actions-concerts inside card-details-concerts.
+// parentElement goes to card-actions-concerts, parentElement again goes to card-details-concerts,
+// then finds the seating-chart-concerts sibling div.
 // Changes button text between "See Seating Chart" and "Hide Seating Chart".
 
 for (let i = 0; i < seatingBtn.length; i++) {
     seatingBtn[i].addEventListener("click", function () {
-        let chart = this.parentElement.parentElement.getElementsByClassName("seating-chart")[0];
+        let chart = this.parentElement.parentElement.getElementsByClassName("seating-chart-concerts")[0];
         if (chart.style.display === "none") {
             chart.style.display = "block";
             this.innerHTML = "Hide Seating Chart";
@@ -107,12 +107,12 @@ for (let i = 0; i < seatingBtn.length; i++) {
 // EXPAND BUTTON TOGGLE
 // parentElement - https://www.w3schools.com/jsref/prop_node_parentelement.asp
 // Navigated up ParentElement three times from the button to reach card-body,
-// then finds card-details and toggles display.
+// then finds card-details-concerts and toggles display.
 // Changes button text between "Expand" and "Shrink"
 
 for (let i = 0; i < expandBtn.length; i++) {
     expandBtn[i].addEventListener("click", function () {
-        let details = this.parentElement.parentElement.parentElement.getElementsByClassName("card-details")[0];
+        let details = this.parentElement.parentElement.parentElement.getElementsByClassName("card-details-concerts")[0];
         if (details.style.display === "none") {
             details.style.display = "block";
             this.innerHTML = "Shrink";
@@ -138,13 +138,13 @@ for (let i = 0; i < expandBtn.length; i++) {
 // this allows the searched text to appear as it checks to see of the entered value is in the artists name.
 // if indexOf() returns -1, the card is hidden, and otherwise it will be shown.
 
-document.getElementById("search-input").addEventListener("keyup", function () {
-    let input = document.getElementById("search-input");
+document.getElementById("search-input-concerts").addEventListener("keyup", function () {
+    let input = document.getElementById("search-input-concerts");
     let filter = input.value.toUpperCase();
-    let cards = document.getElementsByClassName("filterDiv");
+    let cards = document.getElementsByClassName("filterDiv-concerts");
 
     for (let i = 0; i < cards.length; i++) {
-        let artistName = cards[i].getElementsByClassName("artist-name")[0].innerHTML.toUpperCase();
+        let artistName = cards[i].getElementsByClassName("artist-name-concerts")[0].innerHTML.toUpperCase();
         if (artistName.indexOf(filter) !== -1) {
             cards[i].style.display = "block";
         } else {

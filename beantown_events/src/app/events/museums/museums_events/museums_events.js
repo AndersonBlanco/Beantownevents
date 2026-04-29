@@ -7,12 +7,12 @@ export function Museums_logic(){
 //all classname elements are put in coll and given the variable i (used in loops to count).
 
 
-let coll = document.getElementsByClassName("collapsible");
+let coll = document.getElementsByClassName("collapsible-museums");
 let i;
 
 for (i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
+        this.classList.toggle("active-museums");
         let content = this.nextElementSibling;
         if (content.style.display === "block") {
             content.style.display = "none";

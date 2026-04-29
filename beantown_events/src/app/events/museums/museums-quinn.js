@@ -7,12 +7,12 @@ export function Museums_logic(){
 //all classname elements are put in coll and given the variable i (used in loops to count).
 
 
-let coll = document.getElementsByClassName("collapsible");
+let coll = document.getElementsByClassName("collapsible-museums");
 let i;
 
 for (i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
+        this.classList.toggle("active-museums");
         let content = this.nextElementSibling;
         if (content.style.display === "block") {
             content.style.display = "none";
@@ -49,16 +49,16 @@ export function currentSlide(n) {
     //makes sure that when one slide shows, others do not. (active/display or none)
 export function showSlides(n) {
         let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
+        let slides = document.getElementsByClassName("mySlides-museums");
+        let dots = document.getElementsByClassName("dot-museums");
         if (n > slides.length) {slideIndex = 1}
         if (n < 1) {slideIndex = slides.length}
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
         for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
+            dots[i].className = dots[i].className.replace(" active-museums", "");
         }
         slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
+        dots[slideIndex-1].className += " active-museums";
     }

@@ -8,7 +8,7 @@
 }
 
 #main-clubs #clubs-heading-clubs {
-    font-size: calc(16px + .8vw);
+    font-size: calc(24px + 1.2vw);
     color: #18206f;
     margin-bottom: 2%;
     text-align: center;
@@ -26,20 +26,24 @@
 }
 
 #main-clubs #age-gate-clubs h3 {
-    font-size: calc(16px + .7vw);
+    font-size: calc(24px + 1.05vw);
     color: #18206f;
     margin-bottom: 2%;
 }
 
 #main-clubs #age-gate-text-clubs {
-    font-size: calc(10px + .35vw);
+    font-size: calc(15px + .525vw);
     margin-bottom: 3%;
+}
+
+#main-clubs #age-gate-clubs label {
+    font-size: calc(15px + .45vw);
 }
 
 #main-clubs #age-clubs {
     width:22%;
     padding: 1% 2%;
-    font-size: calc(10px + .3vw);
+    font-size: calc(15px + .45vw);
     border: 2px solid #18206f;
     color: #1a1a1a;
     margin-left: 1%;
@@ -51,7 +55,7 @@
     background-color: #d88373;
     color: #50190f;
     cursor: pointer;
-    font-size: calc(10px + .3vw);
+    font-size: calc(15px + .45vw);
 }
 
 #main-clubs #check-btn-clubs:hover {
@@ -62,6 +66,7 @@
     margin-top: 1%;
     font-weight: bold;
     color: #50190f;
+    font-size: calc(15px + .45vw);
 }
 
 #main-clubs #page-links-clubs {
@@ -77,7 +82,7 @@
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-    font-size: calc(10px + .3vw);
+    font-size: calc(15px + .45vw);
 }
 
 #main-clubs #page-links-clubs a:hover {

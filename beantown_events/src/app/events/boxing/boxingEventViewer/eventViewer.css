@@ -1,15 +1,15 @@
-.preview_container{
+.preview_container-boxing{
      padding-block: 75px;
      display: flex;
      flex-direction: column;
      gap: 50px;
 }
-.image{
+.image-boxing{
     width: calc(100px + 30vw); 
     height: auto; 
 }
 
-.row{ 
+.row-boxing{ 
     display: flex; 
     flex-direction: row;
 
@@ -19,16 +19,16 @@
     gap: 50px;
 }
 
-.row h2{ 
+.row-boxing h2{ 
     font-size: calc(5px + 2vw);
 }
 
-.row p{
+.row-boxing p{
     font-size: calc(1px + 2vw);
 
 }
 
-.column{
+.column-boxing{
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -36,7 +36,7 @@
 
 }
 
-.photoGallery{ 
+.photoGallery-boxing{ 
     background-color: transparent; 
     display:flex;
     flex-wrap: wrap;
@@ -47,7 +47,7 @@
     padding-block: 20px; 
 
 }
-.placeholderImageFrame{
+.placeholderImageFrame-boxing{
     height: 200px;
      width: 200px; 
      background-color: blue;
@@ -55,7 +55,7 @@
 
 
 
-.ticketSaleContainer{
+.ticketSaleContainer-boxing{
     display: inline-flex;
     font-size: calc(10px + 1vw); 
     gap: 50px;
@@ -65,7 +65,7 @@
     width: 100%;
 }
 
-.ticketSaleContainer button{
+.ticketSaleContainer-boxing button{
     outline: none;
     border: none; 
     border-radius: 5px; 
@@ -77,18 +77,18 @@
     cursor: pointer; /*specifies the mouse icon when the element is on hover (ie, mouse-over) */ 
 }
 
-.ticketsCounter{
+.ticketsCounter-boxing{
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
 }
 
-.removeCircleIcon, .addCircleIcon{
+.removeCircleIcon-boxing, .addCircleIcon-boxing{
     cursor: pointer;
 }
 
-.ticketsCounter input{ 
+.ticketsCounter-boxing input{ 
     font-size: calc(5px + 1vw);
     width: fit-content; 
     text-align: center;

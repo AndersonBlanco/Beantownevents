@@ -3,15 +3,18 @@
 
 /*  HEADER SECTION */
 header {
- 
-    padding: 2% 3%;
+
+    padding: 0% 3%;
     display: flex; 
     flex-direction: row;
     align-items: center;
     position: static;
     z-index:10;
+    width: fit-content;
  
 }
+
+ 
 
 
 #logo {
@@ -21,21 +24,30 @@ header {
 }
 
 #site-logo {
-    width: 8%;
+    width: 14%;
     height: auto;
     object-fit: contain;
-    margin-right: 2%;
+    margin-right: 7%;
     
 }
 
 #site-title h1 {
-    font-size: calc(16px + 1.2vw);
+    font-size: calc(16px + 2vw);
     color: #d88373;
 }
 
+#site-title{ 
+
+
+}
+
+
+
 #slogan {
-    font-size: calc(10px + 0.4vw);
+    font-size: calc(10px + 1vw);
     color: #f5e2c8;
+    top: -15%;
+    position: relative;
 }
 
 
@@ -48,6 +60,7 @@ nav {
     align-items: center;
     text-align: center;
     display: flex;
+    
 
 }
 
@@ -59,13 +72,15 @@ nav ul {
     display: flex;
     width: 100%;
 
+    justify-content: flex-end;
+
 }
 
 nav ul li {
     display: block;
     padding: 1% 2%;
     color: #ffffff;
-    font-size: calc(10px + 0.75vw);
+    font-size: calc(10px + 1.25vw);
  
 
 
@@ -75,7 +90,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #f5e2c8;
-    
+
 }
 
 nav ul li a:link {
@@ -91,12 +106,12 @@ nav ul li a:hover {
 
 nav ul li a:active {
     color: #f5e2c8;
-    font-size: calc(10px + .75vw);
+
 }
 
 .dropdown {
     position: relative;
-    z-index: 1;
+
 
 }
 
@@ -118,7 +133,7 @@ nav ul li a:active {
     padding: 4% 6%;
     color: #ffffff;
     text-decoration: none;
-    font-size: calc(10px + .4vw);
+    font-size: calc(10px + 0.75vw);
     border-bottom: 1px solid #d88373;
 }
 

@@ -8,7 +8,7 @@
 }
 
 #main-clubs #clubs-heading-clubs {
-    font-size: calc(16px + .8vw);
+    font-size: calc(24px + 1.2vw);
     color: #18206f;
     margin-bottom: 2%;
     text-align: center;
@@ -47,20 +47,20 @@
 }
 
 #main-clubs .club-name-clubs {
-    font-size: calc(22px + .4vw);
+    font-size: calc(33px + .6vw);
     color: #18206f;
     margin-bottom: 1%;
 }
 
 #main-clubs .club-type-clubs {
-    font-size: calc(18px + .3vw);
+    font-size: calc(27px + .45vw);
     color: #18206f;
     margin-bottom: 3%;
 }
 
 #main-clubs .club-details-clubs {
     list-style: none;
-    font-size: calc(18px + .25vw);
+    font-size: calc(27px + .375vw);
     color: #333333;
     margin-bottom: 3%;
 }
@@ -88,7 +88,7 @@
     background-color: #d88373;
     color: #50190f;
     text-decoration: none;
-    font-size: calc(10px + .3vw);
+    font-size: calc(15px + .45vw);
     margin-right: 2%;
 }
 
@@ -105,7 +105,7 @@
 }
 
 #main-clubs .comparison-table-wrapper-clubs h2{
-    font-size: calc(14px + .5vw);
+    font-size: calc(21px + .75vw);
     color: #d88373;
     margin-bottom: 2%;
 }
@@ -121,14 +121,14 @@
     color: #d88373;
     padding: 1%;
     text-align: left;
-    font-size: calc(10px + .3vw);
+    font-size: calc(15px + .45vw);
 }
 
 #main-clubs .comparison-table-clubs td {
     border-bottom: 1px solid #50190f;
     padding: 1%;
     text-align: left;
-    font-size: calc(10px + .3vw);
+    font-size: calc(15px + .45vw);
 }
 
 

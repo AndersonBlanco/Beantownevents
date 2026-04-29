@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
       <body>
         <div className="globalContainer">
         {
-          !(path == "/contact_us")&& <Header/> 
+          (!(path == "/contact_us") || !path.includes("concerts-intro")) && <Header/> 
           }
         {children}
       {!(path == "/contact_us" || path.includes("concerts-intro"))&& <Footer style = {{}} />}

@@ -1,22 +1,4 @@
-* {
-    margin: 0;
-    box-sizing: border-box;
-}
 
-main {
-    background-color: #0d0608;
-    font-family: Georgia, serif;
-    /*
-      overflow: hidden; from W3Schools
-      https://www.w3schools.com/css/css_overflow.asp
-      overflow controls what happens when content overflow an element's box.
-      It is used to prevent any scrollbars from appearing on the page, since the
-      curtain animation is controlled by the wheel event in JS, not by native scrolling.
-     */
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
-}
 
 /* CONCERT CROWD BACKGROUND */
 #background {

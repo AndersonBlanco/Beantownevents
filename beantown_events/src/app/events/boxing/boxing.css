@@ -1,4 +1,4 @@
-.boxing_container{ 
+.boxing_container-boxing{ 
     display: flex; 
     flex-direction: row-reverse;
     justify-content: space-evenly;
@@ -7,7 +7,7 @@
    
 }
 
-.item_container{
+.item_container-boxing{
     border: solid 2px rgb(0, 73, 128);
     color: black; 
 
@@ -24,29 +24,29 @@
     cursor: pointer; 
     gap: 10px; 
 }
-.item_container .event_item_checkbox{ 
+.item_container-boxing .event_item_checkbox-boxing{ 
     width: 2vh; 
     height: 2vh;
 
 }
-.item_container .text_details{
+.item_container-boxing .text_details-boxing{
     display: block;
 }
 
-.item_container .img{
+.item_container-boxing .img-boxing{
     height: calc(5px + 5vw);
     width: auto; 
     align-self: center;
      
 }
 
-.item_container h1{
+.item_container-boxing h1{
     font-size: calc(1px + 1.5vw); 
     max-lines: 1; 
 }
 
 
-.events{
+.events-boxing{
     display: flex; 
     flex-direction: column;
     align-items: center;
@@ -56,7 +56,7 @@
 }
 
 
-.filter_menu{
+.filter_menu-boxing{
 background-color: transparent;
 color: rgb(0, 0, 0);  
 border-radius: 5px;
@@ -70,14 +70,14 @@ flex-direction: column;
 }
 
 
-.filter_section_container{
+.filter_section_container-boxing{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
 
-.filter_checbox_row{
+.filter_checbox_row-boxing{
     justify-content: space-between;
     display: flex;
 }
@@ -85,7 +85,7 @@ flex-direction: column;
 
 
 
-.my_cart_quick_view_slip{
+.my_cart_quick_view_slip-boxing{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -99,18 +99,18 @@ flex-direction: column;
 }
 
 
-.removeCircleIcon{
+.removeCircleIcon-boxing{
 
 }
 
-.addCircleIcon{
+.addCircleIcon-boxing{
 
 }
 
-.text_details{
+.text_details-boxing{
     width: 32vw;
 }
-.eventItemInstanceInCart{
+.eventItemInstanceInCart-boxing{
     text-align: center;
     align-items: center;
     display: flex;
@@ -121,17 +121,17 @@ flex-direction: column;
 
 }
  
-.my_cart_quick_view_slipz{
+.my_cart_quick_view_slipz-boxing{
     z-index: 2; 
 }
 
-.my_cart_quick_view_slip h2{
+.my_cart_quick_view_slip-boxing h2{
     color: white;
 }
 
 
 
-.checkout_button{
+.checkout_button-boxing{
     background-color: white; 
     color: #18206f;
     outline: none;

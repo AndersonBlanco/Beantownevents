@@ -85,7 +85,7 @@ main {
     font-size: calc(10px + 3vw);
     position: absolute;
     z-index: 5;
-    left: 48.7%;
+    left: 48.5%;
     top: 15%;
 }
 
@@ -93,8 +93,8 @@ main {
     font-size: calc(10px + 3vw);
     position: absolute;
     z-index: 5;
-    left: 48.7%;
-    top: 261%;
+    left: 48.5%;
+    top: 315%;
 }
 
 
@@ -151,7 +151,7 @@ main {
 
 /* Place the container to the left */
 #page-wrapper-usa .left-usa {
-    left: -11%;
+    left: -11.5%;
 }
 
 /* Place the container to the right */
@@ -178,10 +178,13 @@ main {
     left: -14px;
 }
 
+
+
+
 /* Fix the circle for containers on the left side */
 #page-wrapper-usa .left-usa::after {
     position: absolute;
-    right: -82px;
+    right: -65.5px;
 }
 
 

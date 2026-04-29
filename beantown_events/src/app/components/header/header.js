@@ -19,7 +19,7 @@ const pathName = usePathname();
 
 
 return(
-    <div className = "headerContainerDiv">
+    <div className = "headerContainerDiv" style = {{display: pathName.includes("concerts-intro") ? "none" : "flex"}}>
         <header>
         <div id="logo">
             <Image src = {Logo} alt="Beantown Events Logo" id="site-logo" loading = "eager" />
@@ -34,7 +34,7 @@ return(
     <nav>
         <ul>
             <li><Link href="/">Home</Link></li>
-            <li className="dropdown" >
+            <li className="dropdown" style = {{zIndex: pathName == "/contact_us" ? 0: 5}} >
                 <Link href="/">Events</Link>
                    <div className="dropdown-content" id= "dropdown-content">
                     <Link href = "/events/concerts/concerts-intro">Concerts</Link>

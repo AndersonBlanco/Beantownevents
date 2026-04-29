@@ -44,22 +44,8 @@ export default function Clubs21(){
 					<div className="card-details-clubs">
 						<p className="club-description-clubs">Popular nightclub with events every Friday and Sunday starting at 10:30PM. Known label music, dancing, and a lively Boston crowd.</p>
 						<div className="card-actions-clubs">
-							<a style= {{   
-								padding:" 1.5% 3%",
-    						backgroundColor: "#d88373",
-   					 color: "#50190f",
-    					textDecoration: "none",
-    				fontSize: "calc(10px + .3vw)",
-    					marginRight: "2%"
-						}} href="https://www.iconnightclub.com/" target="_blank">Learn More</a>
-							<a style= {{   
-								padding:" 1.5% 3%",
-    						backgroundColor: "#d88373",
-   					 color: "#50190f",
-    					textDecoration: "none",
-    				fontSize: "calc(10px + .3vw)",
-    					marginRight: "2%"
-						}}    onClick={() => {handleCheckout([{ price: "price_1TOu54Ho5oc8DhhwWCznwVhN", quantity: 1 }], `${uri}/${path}`, `${uri}/${path}`)}}>Buy Ticket</a>
+							<a href="https://www.iconnightclub.com/" target="_blank">Learn More</a>
+							<a onClick={() => {handleCheckout([{ price: "price_1TOu54Ho5oc8DhhwWCznwVhN", quantity: 1 }], `${uri}/${path}`, `${uri}/${path}`)}}>Buy Ticket</a>
 						</div>
 					</div>
 				</div>

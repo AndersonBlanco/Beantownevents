@@ -1,23 +1,31 @@
 /* Jackson */
 
 
+#wrapper-concerts {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+
+
 /*  MAIN CONTENT SECTION  */
-.main {
+#main-concerts {
     padding: 3%;
 }
 
-#concerts-heading {
+#main-concerts #concerts-heading-concerts {
     font-size: calc(16px + .8vw);
     color: #367BCA;
     margin-bottom: 2%;
 }
 
 /* Search Section */
-#search-area {
+#main-concerts #search-area-concerts {
     margin-bottom: 2%;
 }
 
-#search-input {
+#main-concerts #search-input-concerts {
     width: 15%;
     padding: 1% 2%;
     font-size: calc(10px + .3vw);
@@ -26,21 +34,21 @@
     transition: width 0.4s ease-in-out;
 }
 
-#search-input:hover {
+#main-concerts #search-input-concerts:hover {
     border: 2px solid #367BCA;
 }
 
-#search-input:focus {
+#main-concerts #search-input-concerts:focus {
     width: 25%;
 }
 
 /* FILTER BUTTONS */
-#myBtnContainer {
+#main-concerts #myBtnContainer-concerts {
     margin-bottom: 2%;
     width: 100%;
 }
 
-.btn {
+#main-concerts .btn-concerts {
     border: 2px ridge #0d315a;
     /* outline: none - from W3Schools
     https://www.w3schools.com/cssref/pr_outline.asp
@@ -61,19 +69,19 @@
     margin: .5% .5% .5% 1.15%;
 }
 
-.btn:hover {
+#main-concerts .btn-concerts:hover {
     background-color: #367BCA;
     color: #ffffff;
 }
 
-.btn:active {
+#main-concerts .btn-concerts:active {
     background-color: #18206f;
     color: #d88373;
     font-size: calc(10px + .28vw);
 }
 
 /*  COLLAPSE ALL BUTTON  */
-#collapse-all-btn {
+#main-concerts #collapse-all-btn-concerts {
     border: 1px solid #DFBC1E;
     background-color: #367BCA;
     color: #F1D302;
@@ -88,20 +96,20 @@
     margin-left: 1%;
 }
 
-#collapse-all-btn:hover {
+#main-concerts #collapse-all-btn-concerts:hover {
     background-color: #367BCA;
 }
 
-#collapse-all-btn:active {
+#main-concerts #collapse-all-btn-concerts:active {
     padding: .85% 1.85%;
 }
 
 
 /* CONTAINER FOR CARDS */
-.container {
+#main-concerts .container-concerts {
     display: flex;
     /* flex-wrap: wrap; controls whether flex items are forced onto one line or
-       can wrap onto multiple lines. It is used to allow concert cards to flow onto the
+       can wrap onto multiple lines. It is used to allow concerts cards to flow onto the
        next row when there is not enough horizontal space for them side by side.
        https://www.w3schools.com/cssref/css3_pr_flex-wrap.php
     */
@@ -117,7 +125,7 @@
 }
 
 /* CARDS */
-.filterDiv {
+#main-concerts .filterDiv-concerts {
     background-color: #ffffff;
     border: 2px solid #367BCA;
     width: 47%;
@@ -125,54 +133,54 @@
     display: none;
 }
 
-.card-body {
+#main-concerts .card-body-concerts {
     padding: 4%;
     background-color: #f1efef;
 }
 
 /* CARD TOP AND LEFT SECTION */
-.card-top {
+#main-concerts .card-top-concerts {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.card-left {
+#main-concerts .card-left-concerts {
     width: 55%;
     padding-right: 3%;
 }
 
 /* CARD RIGHT SECTION */
-.artist-name {
+#main-concerts .artist-name-concerts {
     font-size: calc(14px + .4vw);
     color: #0C2340;
     margin-bottom: 1%;
 }
 
-.card-right {
+#main-concerts .card-right-concerts {
     width: 45%;
 }
 
-.tour-name {
+#main-concerts .tour-name-concerts {
     font-size: calc(10px + .3vw);
     color: #367BCA;
     margin-bottom: 3%;
 }
 
-.concert-details {
+#main-concerts .concert-details-concerts {
     list-style: none;
     font-size: calc(10px + .3vw);
     color: #333333;
     margin-bottom: 3%;
     /* line height sets the vertical space between lines of text. It is used here to
-    add 1.8 spacing between each of the concert detail line to improve readability.
+    add 1.8 spacing between each of the concerts detail line to improve readability.
     https://www.w3schools.com/cssref/pr_dim_line-height.php
      */
     line-height: 1.8;
 }
 
 /* EXPAND BUTTON */
-.expand-btn {
+#main-concerts .expand-btn-concerts {
     border: 1px double #F1D302;
     background-color: #367BCA;
     color: #F1D302;
@@ -187,16 +195,16 @@
     margin-bottom: 2%;
 }
 
-.expand-btn:hover {
+#main-concerts .expand-btn-concerts:hover {
     background-color: #367BCA;
 }
 
-.expand-btn:active {
+#main-concerts .expand-btn-concerts:active {
     padding: 1.75% 3.75%;
 }
 
 /* PHOTOS OF ARTIST */
-.artist-photo {
+#main-concerts .artist-photo-concerts {
     width: 100%;
     height: 20vw;
     object-fit: cover;
@@ -207,15 +215,15 @@
 }
 
 /* CARD DETAILS */
-.card-details {
+#main-concerts .card-details-concerts {
     margin-top: 2%;
 }
 
-.concert-description {
+#main-concerts .concert-description-concerts {
     font-size: calc(10px + .3vw);
     color: #555555;
     /* line height sets the vertical space between lines of text. It is used here to
-    add 1.6 spacing between each of the concert detail line to improve readability.
+    add 1.6 spacing between each of the concerts detail line to improve readability.
     https://www.w3schools.com/cssref/pr_dim_line-height.php
      */
     line-height: 1.6;
@@ -223,13 +231,13 @@
 }
 
 /* CARD ACTIONS */
-.card-actions {
+#main-concerts .card-actions-concerts {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.btn-primary {
+#main-concerts .btn-primary-concerts {
     padding: 2% 4%;
     border: 2px ridge #F1D302;
     background-color: #367BCA;
@@ -245,17 +253,17 @@
     cursor: pointer;
 }
 
-.btn-primary:hover {
+#main-concerts .btn-primary-concerts:hover {
     background-color: #1868c3;
     color: #F1D302;
 }
 
-.btn-primary:active {
+#main-concerts .btn-primary-concerts:active {
     padding: 1.85% 3.85%;
 }
 
 /* SECONDARY BUTTON (Seating chart) */
-.btn-secondary {
+#main-concerts .btn-secondary-concerts {
     padding: 2% 4%;
     background-color: #F1D302;
     color: #367BCA;
@@ -268,22 +276,22 @@
     cursor: pointer;
 }
 
-.btn-secondary:hover {
+#main-concerts .btn-secondary-concerts:hover {
     background-color: #cdb401;
     color: #367BCA;
 }
 
 
-.btn-secondary:active {
+#main-concerts .btn-secondary-concerts:active {
     padding: 1.85% 3.85%;
 }
 
 /* SEATING CHART */
-.seating-chart {
+#main-concerts .seating-chart-concerts {
     margin-top: 3%;
 }
 
-.seating-img {
+#main-concerts .seating-img-concerts {
     width: 100%;
     height: 30vw;
     object-fit: contain;
@@ -291,37 +299,37 @@
 }
 
 /* SELLING FAST SECTION */
-#selling-fast {
+#main-concerts #selling-fast-concerts {
     background-color: #367BCA;
     padding: 3%;
     margin-bottom: 3%;
     border: 3px ridge #18206f;
 }
 
-#selling-fast h2 {
+#main-concerts #selling-fast-concerts h2 {
     font-size: calc(14px + .5vw);
     color: #f5e2c8;
     margin-bottom: 2%;
 }
 
-#selling-fast-choice h3 {
+#main-concerts #selling-fast-choice-concerts h3 {
     font-size: calc(12px + .4vw);
     color: #ffffff;
     margin-bottom: 1%;
 }
 
-#selling-fast-choice p {
+#main-concerts #selling-fast-choice-concerts p {
     font-size: calc(10px + .3vw);
     color: #cccccc;
     /* line height sets the vertical space between lines of text. It is used here to
-    add 1.6 spacing between each of the concert detail line to improve readability.
+    add 1.6 spacing between each of the concerts detail line to improve readability.
     https://www.w3schools.com/cssref/pr_dim_line-height.php
      */
     line-height: 1.6;
     margin-bottom: 2%;
 }
 
-#selling-fast-btn {
+#main-concerts #selling-fast-btn-concerts {
     padding: 1% 3%;
     background-color: #F1D302;
     color: #367BCA;
@@ -335,11 +343,10 @@
     font-weight: bold;
 }
 
-#selling-fast-btn:hover {
+#main-concerts #selling-fast-btn-concerts:hover {
     background-color: #a38f01;
 }
 
-#selling-fast-btn:active {
+#main-concerts #selling-fast-btn-concerts:active {
     padding: .85% 2.85%;
 }
-

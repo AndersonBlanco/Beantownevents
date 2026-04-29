@@ -190,20 +190,20 @@ export default function Page(){
 
     const EventItem = ({event, idx}) =>{
         return(
-            <div key = {idx} className = "item_container" onClick = {() =>{
+            <div key = {idx} className = "item_container-boxing" onClick = {() =>{
    
           
         }}>
 
 
-                    <Image  className = "img" src = {event.img} alt = {`${event.title} event image`} width = {360} height = {240} onClick = {() => {
+                    <Image  className = "img-boxing" src = {event.img} alt = {`${event.title} event image`} width = {360} height = {240} onClick = {() => {
                                  //do window.localsrtorrage for cookie stored data 
                       window.localStorage.setItem("@selectedEvent", JSON.stringify(event)); 
              
                         router.push("/events/boxing/boxingEventViewer");
                     }}/>
 
-                    <div className = "text_details" onClick = {() =>{
+                    <div className = "text_details-boxing" onClick = {() =>{
                            //do window.localsrtorrage for cookie stored data 
                       window.localStorage.setItem("@selectedEvent", JSON.stringify(event)); 
              
@@ -213,8 +213,8 @@ export default function Page(){
                     <h4>{event.date}</h4>
                     </div>
 
-                   <div className = "eventItemInstanceInCart">
-                    <RemoveCircleIcon className = "removeCircleIcon" onClick = {() =>{ 
+                   <div className = "eventItemInstanceInCart-boxing">
+                    <RemoveCircleIcon className = "removeCircleIcon-boxing" onClick = {() =>{ 
                        handleRemoveItemFromCart(event)
 
 
@@ -224,7 +224,7 @@ export default function Page(){
                 }}
                     />
                     <h2>{itemsInCart[event.id] ? itemsInCart[event.id].quantity : 0 }</h2>
-                    <AddCircleIcon className = "addCircleIcon"  
+                    <AddCircleIcon className = "addCircleIcon-boxing"  
                     onClick = {() => handleAddButton(event)}
                     />
 
@@ -241,7 +241,7 @@ export default function Page(){
         //bottom slip with fixed position showing the user's total ex[ected amount to pay dependent on how many tickets tehy've added to their cart thus far]
         <>
         {//this renders the shopping cart only if both conditions is true, of which the html component is true and thus the andn statement can only be true if the shopping cart is of > 0 length
-            itemsInCart_count > 0 && <div className = "my_cart_quick_view_slip">
+            itemsInCart_count > 0 && <div className = "my_cart_quick_view_slip-boxing">
                 {/*Below: 
                 the .reduce method is used as a "sponta ous sum" method of an array. 
                 this method is the same as iterating through the array and adding up (or thereby concatinating) specific preprties of each object (or the element itself) 
@@ -249,7 +249,7 @@ export default function Page(){
                 */}
                 <h2>{Object.values(itemsInCart).reduce((itm_prev, itm_next) => {return itm_prev + itm_next.quantity}, 0)} Items</h2>
                 <h2>${cartPrice} </h2>
-            <button className = "checkout_button" onClick = {() =>{
+            <button className = "checkout_button-boxing" onClick = {() =>{
                 //here, Object.{method} is just a constructor function that serves almost like a preset of for whatn object data type is and provides valid methods applicable on object data types only - this allow for direct manipulation without hard coding it yourself 
                 handleCheckout(Object.values(itemsInCart), `${uri}/${path}`, `${uri}/${path}`)
             }}>Checkout</button>
@@ -264,23 +264,23 @@ export default function Page(){
     return(
         <>
 
-        <div className = "boxing_container">
-            <div className = "filter_menu">
-                {/* depriccated: <input type = "text" placeholder="Search for events..." className="search_bar" onChange = {handleQuery}/> */} 
+        <div className = "boxing_container-boxing">
+            <div className = "filter_menu-boxing">
+                {/* depriccated: <input type = "text" placeholder="Search for events..." className="search_bar-boxing" onChange = {handleQuery}/> */} 
                 {
                     filters.map((filter, idx) => {
                         return (
-                            <div key = {idx} className = "section_outer_container">
+                            <div key = {idx} className = "section_outer_container-boxing">
                                   <h2>{filter.title}</h2>
                                 <hr color="lightgray"/>
 
-                            <div key = {filter.title} className="filter_section_container">
+                            <div key = {filter.title} className="filter_section_container-boxing">
                                 
 
                                 {
                                     filter.options.map((option) => {
                                         return (
-                                            <div className = "filter_checbox_row" key = {`${filter.title}-${option.label}`}>
+                                            <div className = "filter_checbox_row-boxing" key = {`${filter.title}-${option.label}`}>
                                             <label>{option.label}</label><input type = "checkbox" checked = {selectedFilters.includes(option.label)} onChange = {() => handleFilterOptionTozggle(option.label)} />
                                             </div>
                                         )
@@ -293,7 +293,7 @@ export default function Page(){
                 }
             </div>
 
-<div className = "events">
+<div className = "events-boxing">
 
 {
   Events.map((event, idx) =>{
