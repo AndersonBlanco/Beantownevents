@@ -1,7 +1,10 @@
-// page made by Sara K
+// page made by Sara execept for wrapped curly brackets function Logic.  
+// The deisgn and general logic is by Sara. The curly brakcets and the funciton name Logic() (export function Logic()) is by Anderson. 
+/// The rest of the body is done by Sara
+
 "use client" 
 
-export function Logic(){
+export function Logic(){ //Anderson wrapped in curly brakcet function to become an executable and loaded in the page.js
 const popupTea = document.getElementById("popup-tea-usa");
 const wrapper = document.getElementById("wrapper-usa");
 const popupPaul = document.getElementById("popup-paul-usa");
@@ -10,7 +13,7 @@ const popupHarbor = document.getElementById("popup-harbor-usa");
 
 const allPopups = [popupTea, popupPaul, popupBattle, popupHarbor];
 
-function openPopup(activePopup) {
+function openPopup(activePopup) { //Sara function
     wrapper.style.display = "flex";
     for (let i = 0; i < allPopups.length; i++) {
         if (allPopups[i] === activePopup) {
@@ -41,6 +44,8 @@ function closePopup() {
     wrapper.style.display = "none";
 }
 
+
+  //This is one of the two unique functions by Sara
 
     /* document.createElement() creates a new HTML element from JS.
        Used here to build a new <style> tag dynamically that will contain the css content found in line 65 

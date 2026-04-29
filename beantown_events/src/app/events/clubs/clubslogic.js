@@ -1,4 +1,7 @@
 // Yana //
+//All content is by Yana, except for the curly bracets (export defualt function checkAge(){...}
+//  where .. is Yana's code) that warpps around Yana's general logic.
+
 "use client"; 
 
 export default function checkAge() {

@@ -1,3 +1,4 @@
+//Everyhting in this file is done by All 
 
 "use client"; 
 import Image from "next/image"
@@ -38,11 +39,11 @@ export default function Credits() {
 
 
             {/*   GENERAL SITEWIDE CREDITS   */}
-            <div class="credits-section-credits">
-                <button class="collapsible-btn-credits" id="btn-general-credits">General Across All Pages &#9662;</button>
+            <div className="credits-section-credits">
+                <button className="collapsible-btn-credits" id="btn-general-credits">General Across All Pages &#9662;</button>
 
-                <div class="credits-content-credits" id="content-general-credits">
-                    <ul class="credit-list-credits">
+                <div className="credits-content-credits" id="content-general-credits">
+                    <ul className="credit-list-credits">
                         <li>The photo of the <a href="../src/logo-light.jpg"> Light Beantown Events logo</a>
                             on all pages is provided by <a href="https://quinntessentialism.cargo.site">Quinn Whitney</a>
                             is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"> CC BY-NC-ND 4.0</a>
@@ -60,19 +61,18 @@ export default function Credits() {
                             {/*Anderson embedded icon from output of function */ccIcon("nc.svg")}
                             {/*Anderson embedded icon from output of function */ccIcon("nd.svg")}
                         </li>
-                        <li>{/*ANY OTHER CREDITS THAT ARE THE SAME ON ALL PAGES*/}</li>
-                        <li>{/*ANY OTHER CREDITS THAT ARE THE SAME ON ALL PAGES*/}</li>
+                  
                     </ul>
                 </div>
             </div>
             {/*   CONTACT US CREDITS   */}
-            <div class="credits-section-credits">
-                <button class="collapsible-btn-credits" id="btn-contact-credits">Contact Us Page &#9662;</button>
+            <div className="credits-section-credits">
+                <button className="collapsible-btn-credits" id="btn-contact-credits">Contact Us Page &#9662;</button>
 
-                <div class="credits-content-credits" id="content-contact-credits">
+                <div className="credits-content-credits" id="content-contact-credits">
 
                     {/* Sara START */}
-                    <ul class="credit-list-credits">
+                    <ul className="credit-list-credits">
                         <li>
                             The Photo of the <a href="https://pixabay.com/photos/boston-skyline-coast-summer-3690818/"> Boston Skyline</a>
                             in the Contact Us Page Is Provided By <a href="https://pixabay.com/users/usmc0491-3856099/"> usmc0491</a>
@@ -86,14 +86,14 @@ export default function Credits() {
 
             {/*   CONCERTS PAGE CREDITS   */}
             {/* &reg; is the HTML entity for the registered trademark symbol (®). */}
-            <div class="credits-section-credits">
-                <button class="collapsible-btn-credits" id="btn-concerts-credits">Concerts Page &#9662;</button>
+            <div className="credits-section-credits">
+                <button className="collapsible-btn-credits" id="btn-concerts-credits">Concerts Page &#9662;</button>
 
-                <div class="credits-content-credits" id="content-concerts-credits">
+                <div className="credits-content-credits" id="content-concerts-credits">
 
                     {/* Jackson START */}
 
-                    <ul class="credit-list-credits">
+                    <ul className="credit-list-credits">
                         <li>
                             The photo of <a href="https://unsplash.com/photos/grayscale-photo-of-man-in-white-shirt-and-black-shorts-o93itldbEPs">J. Cole</a>
                             in the Concerts Page is provided by <a href="https://unsplash.com/@leo_visions_"> Leo_Visions</a>
@@ -122,7 +122,7 @@ export default function Credits() {
                         </li>
                         <li>
                             The photo of the TD Garden, Benson Boone <a href="../src/tdgarden-chart-boone.jpg"> seating chart</a>
-                            in the Concerts Page is provided by <a href="https://www.ticketmaster.com/discover/boston?categoryId=KZFzniwnSyZfZ7v7nJ"> Ticketmaster <sup class="trademark-credits">&reg;</sup></a>
+                            in the Concerts Page is provided by <a href="https://www.ticketmaster.com/discover/boston?categoryId=KZFzniwnSyZfZ7v7nJ"> Ticketmaster <sup className="trademark-credits">&reg;</sup></a>
                             licenced under a <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"> CC BY-NC-ND 4.0</a>
                             {/*Anderson embedded icon from output of function */ccIcon("cc.svg")}
                             {/*Anderson embedded icon from output of function */ccIcon("by.svg")}
@@ -132,7 +132,7 @@ export default function Credits() {
                         </li>
                         <li>
                             The photo of the TD Garden, J. Cole <a href="../src/tdgarden-chart-jcole.jpg"> seating chart</a>
-                            in the Concerts Page is provided by <a href="https://www.ticketmaster.com/discover/boston?categoryId=KZFzniwnSyZfZ7v7nJ"> Ticketmaster <sup class="trademark-credits">&reg;</sup></a>
+                            in the Concerts Page is provided by <a href="https://www.ticketmaster.com/discover/boston?categoryId=KZFzniwnSyZfZ7v7nJ"> Ticketmaster <sup className="trademark-credits">&reg;</sup></a>
                             licenced under a <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"> CC BY-NC-ND 4.0</a>
                             {/*Anderson embedded icon from output of function */ccIcon("cc.svg")}
                             {/*Anderson embedded icon from output of function */ccIcon("by.svg")}
@@ -142,7 +142,7 @@ export default function Credits() {
                         </li>
                         <li>
                             The photo of the Leader Bank Pavilion, The Fray <a href="../src/lbp-chart.jpg"> seating chart</a>
-                            in the Concerts Page is provided by <a href="https://www.ticketmaster.com/discover/boston?categoryId=KZFzniwnSyZfZ7v7nJ"> Ticketmaster <sup class="trademark-credits">&reg;</sup></a>
+                            in the Concerts Page is provided by <a href="https://www.ticketmaster.com/discover/boston?categoryId=KZFzniwnSyZfZ7v7nJ"> Ticketmaster <sup className="trademark-credits">&reg;</sup></a>
                             licenced under a <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"> CC BY-NC-ND 4.0</a>
                             {/*Anderson embedded icon from output of function */ccIcon("cc.svg")}
                             {/*Anderson embedded icon from output of function */ccIcon("by.svg")}
@@ -152,7 +152,7 @@ export default function Credits() {
                         </li>
                         <li>
                             The photo of the Gillette Stadium, Zach Bryan <a href="../src/gillette-chart.jpg"> seating chart</a>
-                            in the Concerts Page is provided by <a href="https://www.ticketmaster.com/discover/boston?categoryId=KZFzniwnSyZfZ7v7nJ"> Ticketmaster <sup class="trademark-credits">&reg;</sup></a>
+                            in the Concerts Page is provided by <a href="https://www.ticketmaster.com/discover/boston?categoryId=KZFzniwnSyZfZ7v7nJ"> Ticketmaster <sup className="trademark-credits">&reg;</sup></a>
                             licenced under a <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"> CC BY-NC-ND 4.0</a>
                             {/*Anderson embedded icon from output of function */ccIcon("cc.svg")}
                             {/*Anderson embedded icon from output of function */ccIcon("by.svg")}
@@ -193,12 +193,12 @@ export default function Credits() {
             </div>
 
             {/*   BOXING PAGE CREDITS   */}
-            <div class="credits-section-credits">
-                <button class="collapsible-btn-credits" id="btn-boxing-credits">Boxing Page Credits &#9662;</button>
+            <div className="credits-section-credits">
+                <button className="collapsible-btn-credits" id="btn-boxing-credits">Boxing Page Credits &#9662;</button>
 
-                <div class="credits-content-credits" id="content-boxing-credits">
+                <div className="credits-content-credits" id="content-boxing-credits">
                     {/* Anderson START */}
-                    <ul class="credit-list-credits">
+                    <ul className="credit-list-credits">
                         <li>
                             The image of <a href="https://www.nationalsilvergloves.org/wp-content/uploads/2025/12/2026_boxing_silver_gloves-m.pdf">New England Silver Gloves Youth Bracket</a>
                             in the Boxing Page is provided by <a href="https://www.nationalsilvergloves.org/"> National Silver Gloves</a>
@@ -208,7 +208,7 @@ export default function Credits() {
                             in the Boxing Page is provided by <a href="https://www.goldenglovesusa.org/"> Golden Gloves of America</a>
                         </li>
                         <li>
-                            The image of <a href="https://www.nationalsilvergloves.org/wp-content/uploads/2025/12/2026_boxing_silver_gloves-m.pdf">Southeast Collegiate Team Dual Classic</a>
+                            The image of <a href="https://www.nationalsilvergloves.org/wp-content/uploads/2025/12/2026_boxing_silver_gloves-m.pdf">Southeast Collegiate Team Dual classNameic</a>
                             in the Boxing Page is provided by <a href="https://www.nationalsilvergloves.org/"> National Silver Gloves</a>
                         </li>
                         <li>
@@ -254,13 +254,13 @@ export default function Credits() {
             </div>
 
             {/*   250th ANNIVERSARY PAGE CREDITS   */}
-            <div class="credits-section-credits">
-                <button class="collapsible-btn-credits" id="btn-250th-credits">250th Anniversary Page Credits &#9662;</button>
+            <div className="credits-section-credits">
+                <button className="collapsible-btn-credits" id="btn-250th-credits">250th Anniversary Page Credits &#9662;</button>
 
-                <div class="credits-content-credits" id="content-250th-credits">
+                <div className="credits-content-credits" id="content-250th-credits">
 
                     {/* Sara START */}
-                    <ul class="credit-list-credits">
+                    <ul className="credit-list-credits">
                         <li>
                             The image of a <a href="https://www.flickr.com/photos/oldsaleminc/28872350330">carriage</a>
                             in the 250th Anniversary Page is provided by <a href="https://www.flickr.com/photos/oldsaleminc/">Old Salem Inc.</a>
@@ -313,14 +313,14 @@ export default function Credits() {
                 </div>
             </div>
 
-            <div class="credits-section-credits">
-                <button class="collapsible-btn-credits" id="btn-museums-credits">Museums page Credits &#9662;</button>
+            <div className="credits-section-credits">
+                <button className="collapsible-btn-credits" id="btn-museums-credits">Museums page Credits &#9662;</button>
 
-                <div class="credits-content-credits" id="content-museums-credits">
+                <div className="credits-content-credits" id="content-museums-credits">
 
                     {/* Quinn START */}
 
-                    <ul class="credit-list-credits">
+                    <ul className="credit-list-credits">
                         <li>
                             The photo of <a href="https://www.mfa.org/event/guided-tour/gallery-highlights?event=162731"> The MFA Boston</a>
                             in the Museums Page is provided by <a href="https://en.wikipedia.org/wiki/User:Alexf"> Alexf</a>
@@ -357,14 +357,14 @@ export default function Credits() {
             </div>
 
             {/*   CLUBS PAGE CREDITS   */}
-            <div class="credits-section-credits">
-                <button class="collapsible-btn-credits" id="btn-clubs-credits">Clubs Page Credits &#9662;</button>
+            <div className="credits-section-credits">
+                <button className="collapsible-btn-credits" id="btn-clubs-credits">Clubs Page Credits &#9662;</button>
 
-                <div class="credits-content-credits" id="content-clubs-credits">
+                <div className="credits-content-credits" id="content-clubs-credits">
 
                     {/* Yana START */}
 
-                    <ul class="credit-list-credits">
+                    <ul className="credit-list-credits">
                         <li>
                             The photo of <a href="https://bignightlive.com/private-events-overview"> Big Night Live</a>
                             in the Clubs Page is provided by <a href="https://bignightlive.com/private-events-overview"> Big Night Live</a>

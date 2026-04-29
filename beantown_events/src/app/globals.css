@@ -1,3 +1,9 @@
+/* Quinn */
+*{ /*universal selector*/
+    margin: 0;
+    box-sizing: border-box;
+}
+
 html, body{ 
     font-size: 20px;
     overflow-x: hidden; /* forces any content that overflows beyond the visible viewport width to be hidden and unable to be viewed not even by scrolling (disables horizontal scroll */ 

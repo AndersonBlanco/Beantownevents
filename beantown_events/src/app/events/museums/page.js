@@ -1,3 +1,7 @@
+//By Quinn 
+//All of the logic is by uinn, except for the "import" keywords, useEffect, Link, and "export defaqult function Page, is by Anderson 
+//All else, including the image sources, is by Quinn
+
 'use client'; 
 import Image from "next/image"
 import OutsideFacadeMFA from "../../src/museums/MFA.jpg"

@@ -1,4 +1,5 @@
 // Jackson //
+//All code i sby Jackson, except for the kewyords "export"
 
 // addEventLister tag
 // It is shown in the slides a little, but I looked into it more on W3Schools as well.

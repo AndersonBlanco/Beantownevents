@@ -1,3 +1,5 @@
+//Yana
+//All code is by Yana, except for the "useEffect", the "import" keyword resources (exlcuding the source of teh resources), and Link
 "use client"; 
 import "../index.css"
 import "./clubs.css"

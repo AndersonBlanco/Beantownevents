@@ -1,5 +1,8 @@
+// page made by Sara execept for wrapped curly brackets function Logic, inclduing raw images and sources, context/content of the page.  
+// The deisgn and general logic is by Sara.  Anderson added "epxort" for each function but everything else is Sara 
+
 'use client';
-import { useEffect } from "react";
+
 
  
 export function setVariables(){

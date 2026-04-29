@@ -1,4 +1,7 @@
-//Yana 
+//Yana
+// All content if by Yana, except for the functions handleCheckout(..), usePathname(), the uri vairable, and thhe importation of the resources. 
+//Everything else us by Yana, including the images sources, tetxual content, and general html tgas 
+
 "use client"; 
 import Image from "next/image";
 import "../clubpages.css"
@@ -7,18 +10,15 @@ import VenuImage from "../src/venu.jpg"
 import BngImage from "../src/bng.jpg"; 
 import GrandImage from "../src/grand.jpg"; 
 import IconImage from "../src/icon.jpg"; 
-import clubs_pages_logic from "../clubpages";
-import { useEffect } from "react";
+
+
 import { handleCheckout } from "@/libs/stripe/checkoutHandlerer";
 import { usePathname } from "next/navigation";
 export default function Clubs21(){
 	   const uri = "https://beantown-events.vercel.app/"
 		  const path = usePathname(); 
 	
-
-	useEffect(() =>{
-		//clubs_pages_logic(); 
-	})
+ 
     return(
         <div id="main-clubs">
 		<h2 id="clubs-heading-clubs">21+ Club Events in Boston</h2>

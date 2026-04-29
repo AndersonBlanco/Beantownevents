@@ -1,3 +1,8 @@
+//Jackson 
+
+//All logic is by Jackson, including the direct source of the resources importeed, except for the variable
+// uri, keywords "import", tagname <Image, and useEffect and the hanldeCheckout custom function
+
 'use client';
 import "./jackson-concerts.css"
 import Image from "next/image"

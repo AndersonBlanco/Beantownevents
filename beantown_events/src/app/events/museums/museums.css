@@ -60,12 +60,12 @@ background-color: #f5e2c8;
     object-fit: cover;
 }
 
-/* hides images by default until activated with click on js */
+/* hides images by default until activated with click on js  from W3*/
 #main-museums .mySlides-museums {
     display: none;
 }
 
-/* advances photos one slide to next */
+/* advances photos one slide to next from W3*/
 #main-museums .prev-museums, #main-museums .next-museums {
     cursor: pointer;
     position: absolute;
@@ -80,7 +80,7 @@ background-color: #f5e2c8;
     user-select: none;
 }
 
-/* next button to advance to next photo */
+/* next button to advance to next photo from W3*/
 #main-museums .next-museums {
     right: 0;
     border-radius: 2% 0 0 2%;
@@ -117,6 +117,8 @@ background-color: #f5e2c8;
     display: inline-block;
     transition: background-color 0.6s ease;
 }
+
+/* The dots/bullets/indicators, from W3*/
 
 #main-museums #dots-museums{
     text-align: center;
@@ -206,6 +208,8 @@ main {
     line-height: 1.8;
 }
 
+/* line height (found on google) adjusts leading between lines*/
+
 #main-museums .event-button-museums{
     background-color: #18206f;
     color: #ECE7D1;
@@ -234,6 +238,9 @@ main {
     overflow: visible;
 
 }
+
+/* overflow makes sure that the text inside the container behaves a certain way: in this case that it's visible when
+it exceeds the container*/
 
 #main-museums .active-museums, #main-museums .collapsible-museums:hover {
     background-color: #17255a;

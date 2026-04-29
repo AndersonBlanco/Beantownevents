@@ -1,4 +1,5 @@
 // Quinn //
+//All logic is by Quinn, except for the the keywords "export"
     let slideIndex = 1;
 
 export function Museums_logic(){

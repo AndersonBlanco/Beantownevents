@@ -1,3 +1,7 @@
+// page made by Sara execept for wrapped curly brackets function Logic, inclduing raw images and sources, context/content of the page.  
+// The deisgn and general logic is by Sara. The useEffect and the impoortation of the reosurces and images were done by Anderson. 
+/// The rest of the body is done by Sara
+
 "use client"; 
 //import Celebration250Logic from "./logic";
 
