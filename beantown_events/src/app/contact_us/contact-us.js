@@ -1,4 +1,9 @@
+
+//By Jackson 
+
+
 //CONTACT US
+
 
 // addEventLister tag
 // It is shown in the slides a little, but I looked into it more on W3Schools as well.
@@ -20,7 +25,7 @@
 "use client"; 
 
 
-export default function Contact_us_logic(){
+export default function Contact_us_logic(){ 
 
 document.getElementById("close-btn").addEventListener("click", function() {
     history.back();

@@ -5,7 +5,7 @@ main {
     min-height: 63vh;
 }
 /* Credits Banner */
-#credits-banner {
+#credits-banner-credits {
     position: relative;
     text-align: center;
     padding: 5% 3%;
@@ -24,7 +24,7 @@ main {
     a semi-transparent dark overlay on top of the background image without needing an extra HTML tag,
     so the title and subtitle are still readable over the top of the photo.
 */
-#credits-banner::before {
+#credits-banner-credits::before {
     content: "";
     position: absolute;
     background-color: rgb(10 10 34 / 0.65);
@@ -35,11 +35,11 @@ main {
     top: 0;
 }
 
-#credits-title, #underline, #credits-intro {
+#credits-title-credits, #underline-credits, #credits-intro-credits {
     z-index: 2;
 }
 
-#credits-title {
+#credits-title-credits {
     position: relative;
     /* text shadow from W3Schools https://www.w3schools.com/cssref/css3_pr_text-shadow.asp
        Adds shadow effects behind text. Values are horizontal offset, vertical offset, blur radius, color.
@@ -55,7 +55,7 @@ main {
 }
 
 /* Underline accent bar */
-#underline {
+#underline-credits {
     position: relative;
     width: 14%;
     height: 4px;
@@ -66,7 +66,7 @@ main {
 
 
 
-#credits-intro {
+#credits-intro-credits {
     position: relative;
     font-size: calc(10px + .5vw);
     color: #ece8e5;
@@ -83,14 +83,15 @@ main {
 }
 
 /* CREDITS SECTION */
-.credits-section {
+#main-credits .credits-section-credits {
     margin-top: 2%;
     margin-bottom: 2%;
     border: 2px solid #367BCA;
+
 }
 
 /* Collapsible button toggle */
-.collapsible-btn {
+#main-credits .collapsible-btn-credits {
     width: 100%;
     padding: 2% 3%;
     background-color: #f5e2c8;
@@ -105,41 +106,41 @@ main {
     text-align: left;
 }
 
-.collapsible-btn:hover {
+#main-credits .collapsible-btn-credits:hover {
     background-color: rgb(245 226 200 / 0.66);
 }
 
-.collapsible-btn:active {
+#main-credits .collapsible-btn-credits:active {
     background-color: rgb(197 179 155 / 0.85);
     color: #355C96;
     padding: 1.85% 2.85%;
 }
 
 /* Hidden credits by default so the JS toggle will show and hide them */
-.credits-content {
+#main-credits .credits-content-credits {
     display: none;
     padding: 3%;
     background-color: #f9f9f9;
 }
 
-.credit-list {
+#main-credits .credit-list-credits {
     /* Makes the circle for each list have a hollow circle shape */
     list-style-type: circle;
 }
 
-.trademark {
+#main-credits .trademark-credits {
     font-size: calc(8px + .3vw);
     background-color: transparent;
 }
 
-.credit-list li {
+#main-credits .credit-list-credits li {
     padding: 1% 0;
     border-bottom: 1px solid #355C96;
     font-size: calc(10px + .5vw);
     font-style: italic;
 }
 
-.credit-list a {
+#main-credits .credit-list-credits a {
     text-decoration: none;
     color: #355C96;
 }

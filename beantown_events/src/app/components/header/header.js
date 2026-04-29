@@ -19,7 +19,7 @@ const pathName = usePathname();
 
 
 return(
-    <div className = "headerContainerDiv" style = {{display: pathName.includes("concerts-intro") ? "none" : "flex"}}>
+    <div className = "headerContainerDiv" style = {{display: pathName.includes("concerts-intro") ||  pathName.includes("contact_us")  ? "none" : "flex"}}>
         <header>
         <div id="logo">
             <Image src = {Logo} alt="Beantown Events Logo" id="site-logo" loading = "eager" />

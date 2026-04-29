@@ -38,12 +38,12 @@ export default function BoxingEventViewer(){
         <div className = "ticketsCounter-boxing">
             <RemoveCircleIcon className = "removeCircleIcon-boxing" onClick = {() => setTicketsToBuy(ticketsToVuy -1)}/> {/* MaterialUI icon imported using npm library */}
             <input type = "number" value = {ticketsToVuy} onChange={(e) => setTicketsToBuy(JSON.parse(e.currentTarget.value))} /> {/* using onChange of the input tag. This mehtod allows to get the value inputted into the input tag as it changes in a stream style (ie like a water stream). THe callback (body of the ffunction (ie whats done when there are changes n the input), sets the variable to the new updated value of the input )*/}
-            <AddCircleIcon className = "addCircleIcon-boxing"  onClick = {() => setTicketsToBuy(ticketsToVuy +1)}/>
+            <AddCircleIcon className = "addCircleIcon-boxing"  onClick = {() => setTicketsToBuy(ticketsToVuy +1)}/> {/* MaterialUI icon imported using npm library */} 
         </div>
     )
     const PurchaseTickets = ( 
         <div className = "ticketSaleContainer-boxing">
-            {ticketCounterCOmponent}
+            {ticketCounterCOmponent} {/* renders the value of th evariable (it 'return)' */}
             <button onClick = {() => handleCheckout([{ price: obj.id, quantity: ticketsToVuy }], `${uri}/${path}`, `${uri}/${path}`)}>Buy Now</button>
 
             </div>

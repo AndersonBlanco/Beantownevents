@@ -1,3 +1,4 @@
+// Jackson 
 "use client"; 
 import "./contact_us.css"
 import Contact_us_logic from "./contact-us"
@@ -8,10 +9,12 @@ export default function ContactUs(){
         Contact_us_logic(); 
     },[])
     return(
-         <div id="wrapper">
+         <div id="wrapper"> 
             <div id="window">
                 <div id="popup-bar">
                     <h2 id="popup-title">Contact Us</h2>
+                    {/*             <!-- &times; is the HTML entity for the multiplication sign or "x",
+                         it is being used as an "X" close button icon. --> */}
                     <button id="close-btn">&times;</button>
                 </div>
 
@@ -32,6 +35,8 @@ export default function ContactUs(){
                     <div className="contact-radio-group">
                         <input type="radio" id="method-phone" name="contact-method" value="phone"/>
                         <label label="method-phone">Phone</label>
+                        {/*  <!-- Inline style display: none used here so JavaScript can togge visiblity
+                             Based on which radio button the user selects. The JS reads/sets element.style. display directly. -->*/}
                     </div>
 
                     <div id="email-field" style = {{display: "none"}}>{/* style="display: none;" */}
@@ -52,11 +57,14 @@ export default function ContactUs(){
 
                     <button id="contact-submit-btn">Submit</button>
                 </div>
+                
             </div>
 
            {/*<!-- Success alert some techniques labelm W3Schools -->*/}
            {/*<!-- Loading spinner shown after a valid submission goes through and gives the loading affect label the redirecting message. -->*/}
             <div id="contact-success" style = {{display: "none"}} >{/* style="display: none;" */}
+                {/*  <!-- Success alert some techniques from W3Schools -->
+            <!-- Loading spinner shown after a valid submission goes through and gives the loading affect for the redirecting message. --> */}
                 <h3>Message Sent!</h3>
                 <p id="success-message">A member of our team will reach out to you as soon as possible.</p>
                 <div id="loading">

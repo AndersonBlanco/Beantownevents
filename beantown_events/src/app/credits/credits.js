@@ -1,4 +1,4 @@
-// By Jackson 
+// By Jackson - the drop down menu functionality was created by the Jackson
 
 // COLLAPSIBLE SECTIONS - coding techniques from W3Schools Collapsible
 // https://www.w3schools.com/howto/howto_js_collapsible.asp
@@ -19,12 +19,12 @@
 // This technique is used in this code.
 
 
-export default function credits_logic(){ //Anders wrapped in curly brakcets to execute in the page.js 
+export default function credits_logic(){ //Anderson wrapped in curly brakcets to execute in the page.js 
 
-let collapsibleBtns=document.getElementsByClassName("collapsible-btn");
+let collapsibleBtns=document.getElementsByClassName("collapsible-btn-credits");
 for (let i = 0; i < collapsibleBtns.length; i++) {
     collapsibleBtns[i].addEventListener("click", function() {
-        let content=this.parentElement.getElementsByClassName("credits-content")[0];
+        let content=this.parentElement.getElementsByClassName("credits-content-credits")[0];
         if (content.style.display === "none" || content.style.display === "") {
             content.style.display = "block";
         } else {
