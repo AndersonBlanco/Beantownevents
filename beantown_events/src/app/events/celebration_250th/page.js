@@ -1,5 +1,5 @@
 // page made by Sara execept for wrapped curly brackets function Logic, inclduing raw images and sources, context/content of the page.  
-// The deisgn and general logic is by Sara. The useEffect and the impoortation of the reosurces and images were done by Anderson. 
+// The deisgn and general logic is by Sara. The useEffect and the impoortation of the reosurces, vvariable creation ofo Timeline, useState variables, and <Image tag were done by Anderson. 
 /// The rest of the body is done by Sara
 
 "use client"; 
@@ -61,7 +61,7 @@ export default function Page(){
                     <div id="timeline-wrapper-usa">
                         {/* &#9650; and &#9660; are HTML entities for triangle characters.
                              From W3Schools: https://www.w3schools.com/html/html_entities.asp */}
-                        <p id="triangle-bottom">&#9650;</p>
+
                         <p id="triangle-top">&#9660;</p>
                         <div className="timeline-usa" id = "timeline-usa">
                             <div id="inside">
