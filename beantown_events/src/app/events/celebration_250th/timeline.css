@@ -456,20 +456,27 @@ main {
     }
 
     /* Make sure all circles are at the same spot */
-    #page-wrapper-usa .left-usa::after, #page-wrapper-usa .right-usa::after {
+    #page-wrapper-usa .left-usa::after {
         left: 15px;
     }
 
-    #page-wrapper-usa .left-usa::after {
-    position: absolute;
-    left: 10px;
+    #page-wrapper-usa .right-usa::after{ 
+        left: 15px;
     }
+   
 
   
     /* Make all right containers behave like the left ones */
     #page-wrapper-usa .right-usa {
-        left: 0;
+        left: 0px;
     }
+
+
+    #page-wrapper-usa .left-usa {
+        left: 0px;
+    }
+
+    
 }
 
 

@@ -12,7 +12,7 @@ import "./clubs.css"
 import "./clubpages.css"
 export default function Page(){
 
-    useEffect(() =>{
+    useEffect(() =>{ 
         clubs_pages_logic()
     })
 

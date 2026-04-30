@@ -9,6 +9,8 @@ export default function Page(){
        Logic() //javascript is externally loaded in via useEffect in order to handle how the DOM loads in the content. However, the javascript logic is still laoded in externally 
 
     })
+
+    
     return(
         <>
             {/*<!-- CONCERT CROWD BACKGROUND (bottom layer) -->*/}

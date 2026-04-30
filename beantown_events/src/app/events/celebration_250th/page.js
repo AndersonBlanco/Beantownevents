@@ -62,7 +62,7 @@ export default function Page(){
                         {/* &#9650; and &#9660; are HTML entities for triangle characters.
                              From W3Schools: https://www.w3schools.com/html/html_entities.asp */}
 
-                        <p id="triangle-top">&#9660;</p>
+
                         <div className="timeline-usa" id = "timeline-usa">
                             <div id="inside">
                                 <div className="container-usa left-usa">

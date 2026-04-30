@@ -7,6 +7,9 @@ background-color: #f5e2c8;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 400px;
+    overflow: auto; 
+    object-fit: contain;
 }
 .dropdown-museums {
     position: relative;
@@ -60,14 +63,16 @@ background-color: #f5e2c8;
     background-color: #f5e2c8;
 }
 
-#main-museums .slideshow-container-museums img {
-    max-width: 100%;
-    object-fit: cover;
+#main-museums .slideshow-container-museums .img-musmeum-slideshow {
+    width: auto;
+    height: inherit;
+    object-fit: contain;
 }
 
 /* hides images by default until activated with click on js  from W3*/
 #main-museums .mySlides-museums {
     display: none;
+
 }
 
 /* advances photos one slide to next from W3*/

@@ -1,3 +1,11 @@
+//Jackson 
+//All code logi cis. by Jackson, except fior the "import ConcertCrowd", "export default" and the curly brakets that wrapp around the for body of MainLogic (the body is done by Jackson) which action is by Anderson 
+//Everyhting else is by Jackson, inclduing the `url(..)`, functions and variables 
+import ConcertCrowd1 from "../src/concert-crowd-1.jpg";
+import ConcertCrowd2 from "../src/concert-crowd-2.jpg";
+import ConcertCrowd3 from "../src/concert-crowd-3.jpg";
+import ConcertCrowd4 from "../src/concert-crowd-4.jpg";
+
 export default function MainLogic(){
 let curtainLeft=document.getElementById("curtain-left");
 let curtainRight=document.getElementById("curtain-right");
@@ -18,10 +26,10 @@ let currentLight= 0;
 // Multiple concert crowd images with different lighting effects.
 // These cycle after the curtains fully open to create a live concert light show.
 const lightImages= [
-    "../src/concert-crowd-1.jpg",
-    "../src/concert-crowd-2.jpg",
-    "../src/concert-crowd-3.jpg",
-    "../src/concert-crowd-4.jpg",
+    ConcertCrowd1.src,
+    ConcertCrowd2.src,
+    ConcertCrowd3.src,
+    ConcertCrowd4.src,
 ];
 
 // startLightShow() begins cycling through the concert light images.

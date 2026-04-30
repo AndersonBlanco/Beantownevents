@@ -1,3 +1,7 @@
+//Anderson 
+//Just in case: 
+// <></> is like a ghost tag, no real effect just acts as an empty tag without preset style or meaning and validates the children as html like elements that sall 
+
 'use client'; 
 import "./boxing.css"
 import Image from "next/image";
@@ -17,7 +21,7 @@ export default function Page(){
 
     const router = useRouter(); 
     //used Gemini to egnetate fdummy filters
-    const [filters, setFilters] = useState([
+    const [filters, setFilters] = useState([ //used a list of objects to best handle alloed filters 
         {
             title: "Region",
             options: [
@@ -95,13 +99,9 @@ export default function Page(){
     ]);
      
     const [query, setQuery] = useState(""); //search arguemnt, search for title of event 
-    const [selectedFilters, setSelectedFilters] = useState([])
+    const [selectedFilters, setSelectedFilters] = useState([]) //use a distinct array to house the filtyers selected and easily pop or append new ones 
     const [filteredEventTitles, set_filteredEventTitles] = useState([]); //array of event titles that match the search and filter criteria, used to determine which events to show in the UI
-
-    function handleQuery(e){
-        setQuery(String(e.target.value).trim().toLowerCase()); 
-    }
-
+ 
 
 
     
@@ -121,18 +121,15 @@ export default function Page(){
             if (prevSelectedFilters.includes(optionLabel)) {
                 return prevSelectedFilters.filter((label) => label !== optionLabel);
             }
+
+            //Below, the ...prevSelectedFilters just defines the rest of teh value of the variable (or can be looked as the previous value )
             return [...prevSelectedFilters, optionLabel];
         })
       
     }
 
-    useEffect(() =>{
-        console.log(
-            selectedFilters
-        )
-    }, [selectedFilters])
 
-    const [itemsInCart, setItemsInCart] = useState({});
+    const [itemsInCart, setItemsInCart] = useState({}); //using an object to prioritize type and object attributes and not rely on index which can change depednign on how the and which index gets poped 
     const [cartPrice, setCartPrice] = useState(0); 
     const [itemsInCart_count, set_itemsInCart_count] = useState(0); 
 
@@ -152,6 +149,7 @@ export default function Page(){
                             }
                         });
 
+            //the argument prev is the current value of the state variable
             set_itemsInCart_count(prev =>  prev + 1);
             setCartPrice(prev => prev + event.price)
 
@@ -218,10 +216,6 @@ export default function Page(){
                     <RemoveCircleIcon className = "removeCircleIcon-boxing" onClick = {() =>{ 
                        handleRemoveItemFromCart(event)
 
-
-
-
-
                 }}
                     />
                     <h2>{itemsInCart[event.id] ? itemsInCart[event.id].quantity : 0 }</h2>
@@ -263,7 +257,7 @@ export default function Page(){
 
  
     return(
-        <>
+        <> 
 
         <div className = "boxing_container-boxing">
             <div className = "filter_menu-boxing">
@@ -282,6 +276,8 @@ export default function Page(){
                                     filter.options.map((option) => {
                                         return (
                                             <div className = "filter_checbox_row-boxing" key = {`${filter.title}-${option.label}`}>
+
+                                                {/* Below, the array selectedFilters is tehcnically itreated through ti see if it incluydes the respective label filter that was clicked and if so, it is marked as checked */} 
                                             <label>{option.label}</label><input type = "checkbox" checked = {selectedFilters.includes(option.label)} onChange = {() => handleFilterOptionTozggle(option.label)} />
                                             </div>
                                         )
@@ -300,7 +296,7 @@ export default function Page(){
   Events.map((event, idx) =>{
     if(filteredEventTitles.length === 0){
 
-        return <EventItem key = {idx} event = {event} idx = {idx} />
+        return <EventItem key = {idx} event = {event} idx = {idx} /> 
     }
 
   if(filteredEventTitles.includes(event.title)){
